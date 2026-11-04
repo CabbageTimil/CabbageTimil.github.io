@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CabbageTimil · EVE Online 欧服官方合作伙伴 | 新伊甸战地记录</title>
+<meta name="description" content="CabbageTimil：EVE Online 官方合作伙伴，欧服华人视角的战地影像档案。120 部投稿，记录 WWW 世界大战、帝国北伐与 2003~2026 新伊甸全史。">
+<meta name="theme-color" content="#04060c">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="CabbageTimil · EVE Online 欧服合作伙伴">
+<meta property="og:description" content="在七千个星系之间，做一个诚实的记录者。120 部投稿 / 3,229 位关注者。">
+<meta property="og:image" content="https://i2.hdslb.com/bfs/face/1fd2bbc09d4ecabe042fc466691aaad7040e3a09.jpg">
+<link rel="icon" type="image/jpeg" href="data:image/jpeg;base64,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">
+<link rel="apple-touch-icon" href="data:image/jpeg;base64,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">
+<link rel="preconnect" href="https://i0.hdslb.com" crossorigin>
+<noscript><style>[data-reveal]{opacity:1!important;transform:none!important}</style></noscript>
+<style>
+:root{
+  --bg:#04060c; --bg2:#070b15; --panel:rgba(14,20,34,.72); --panel2:rgba(9,13,23,.86);
+  --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.16);
+  --text:#e9eef7; --muted:#8d9aae; --muted2:#65718a;
+  --cyan:#4fd8ff; --cyan-dim:#1b7f9c; --amber:#ffb35c; --violet:#9d7bff;
+  --r:18px; --wrap:1180px;
+  --mono:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:"PingFang SC","HarmonyOS Sans SC","Noto Sans SC","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  line-height:1.65; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+body::before{
+  content:""; position:fixed; inset:0; z-index:-2; pointer-events:none;
+  background:
+    radial-gradient(900px 620px at 78% -8%, rgba(79,216,255,.16), transparent 62%),
+    radial-gradient(760px 520px at 6% 8%, rgba(157,123,255,.13), transparent 60%),
+    radial-gradient(1000px 700px at 50% 108%, rgba(255,179,92,.07), transparent 60%),
+    linear-gradient(180deg,#04060c 0%,#060a12 42%,#04060c 100%);
+}
+#stars{position:fixed; inset:0; z-index:-1; pointer-events:none; opacity:.75}
+img{display:block; max-width:100%}
+a{color:inherit; text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--cyan); outline-offset:3px; border-radius:4px}
+h1,h2,h3{line-height:1.15; letter-spacing:-.02em; margin:0}
+.wrap{width:min(var(--wrap),92vw); margin-inline:auto}
+
+/* nav */
+.nav{
+  position:fixed; top:0; left:0; right:0; z-index:60; height:66px; display:flex; align-items:center;
+  backdrop-filter:blur(16px) saturate(140%); -webkit-backdrop-filter:blur(16px) saturate(140%);
+  background:linear-gradient(180deg,rgba(4,6,12,.92),rgba(4,6,12,.55));
+  border-bottom:1px solid rgba(255,255,255,.06); transition:background .3s;
+}
+.nav-in{width:min(var(--wrap),92vw); margin-inline:auto; display:flex; align-items:center; justify-content:space-between; gap:20px}
+.brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.02em}
+.brand .mark{width:34px; height:34px; flex:0 0 auto; border-radius:10px; object-fit:cover; background:#0c1524;
+  box-shadow:0 0 0 1px rgba(255,255,255,.22), 0 0 0 4px rgba(79,216,255,.06), 0 0 18px rgba(79,216,255,.4);
+  transition:box-shadow .25s, transform .25s}
+.brand:hover .mark{box-shadow:0 0 0 1px rgba(79,216,255,.7), 0 0 0 4px rgba(79,216,255,.12), 0 0 26px rgba(79,216,255,.6); transform:translateY(-1px)}
+.brand small{display:block; font:500 10px/1.2 var(--mono); letter-spacing:.18em; color:var(--muted2)}
+.nav-links{display:flex; gap:26px; font-size:13.5px; color:var(--muted)}
+.nav-links a{position:relative; padding:6px 0; transition:color .2s}
+.nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--cyan);transition:right .25s}
+.nav-links a:hover{color:var(--text)}
+.nav-links a:hover::after{right:0}
+.nav-cta{font-size:13px; padding:9px 16px; border:1px solid var(--line2); border-radius:999px; color:var(--text); transition:.2s}
+.nav-cta:hover{border-color:var(--cyan); box-shadow:0 0 0 3px rgba(79,216,255,.12)}
+
+/* hero */
+.hero{position:relative; padding:150px 0 90px; min-height:min(100svh,860px); display:flex; flex-direction:column; justify-content:center; overflow:hidden}
+.hero-grid{
+  position:absolute; inset:0; pointer-events:none; opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:72px 72px;
+  mask-image:radial-gradient(ellipse 80% 65% at 50% 40%,#000 30%,transparent 78%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 65% at 50% 40%,#000 30%,transparent 78%);
+}
+.hero-inner{position:relative; display:grid; grid-template-columns:1.08fr .92fr; gap:48px; align-items:center}
+.badge{
+  display:inline-flex; align-items:center; gap:9px; font:600 11px/1 var(--mono); letter-spacing:.2em;
+  color:#bff0ff; padding:9px 14px; border-radius:999px; border:1px solid rgba(79,216,255,.3);
+  background:linear-gradient(90deg,rgba(79,216,255,.14),rgba(79,216,255,.03)); margin-bottom:26px;
+}
+.pulse{width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 0 rgba(79,216,255,.6);animation:pulse 2.4s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(79,216,255,0)}100%{box-shadow:0 0 0 0 rgba(79,216,255,0)}}
+.hero h1{font-size:clamp(44px,6.4vw,92px); font-weight:800; letter-spacing:-.045em}
+.hero h1 .accent{background:linear-gradient(100deg,var(--cyan) 10%,#a8e9ff 45%,var(--violet) 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-sub{margin:18px 0 0; font-size:clamp(17px,1.6vw,21px); color:#cfe4f2; font-weight:500}
+.hero-desc{margin:16px 0 0; max-width:36em; color:var(--muted); font-size:15px}
+.hero-actions{display:flex; flex-wrap:wrap; gap:12px; margin:32px 0 0}
+.btn{display:inline-flex; align-items:center; gap:10px; padding:13px 22px; border-radius:999px; font-size:14.5px; font-weight:600; transition:transform .2s, box-shadow .25s, background .25s, border-color .25s}
+.btn.primary{background:linear-gradient(100deg,#5fe0ff,#8ad8ff 45%,#b7a4ff); color:#04101a; box-shadow:0 10px 34px -10px rgba(79,216,255,.65)}
+.btn.primary:hover{transform:translateY(-2px); box-shadow:0 16px 40px -12px rgba(79,216,255,.85)}
+.btn.primary span{transition:transform .2s}
+.btn.primary:hover span{transform:translateX(3px)}
+.btn.ghost{border:1px solid var(--line2); color:var(--text); background:rgba(255,255,255,.02)}
+.btn.ghost:hover{border-color:rgba(255,255,255,.4); background:rgba(255,255,255,.06); transform:translateY(-2px)}
+.stats{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-top:44px; padding-top:26px; border-top:1px solid var(--line)}
+.stat .snum{font-family:var(--mono); font-size:clamp(20px,2.1vw,26px); font-weight:700; letter-spacing:-.02em; color:#eaf6ff}
+.stat .slabel{font-size:11.5px; color:var(--muted2); letter-spacing:.05em; margin-top:2px}
+
+.hero-visual{position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center}
+.hero-visual::before{content:""; position:absolute; width:82%; aspect-ratio:1; border-radius:50%; background:radial-gradient(circle,rgba(79,216,255,.20),rgba(157,123,255,.10) 45%,transparent 68%); filter:blur(28px); z-index:0}
+.stack{position:relative; width:100%; max-width:452px; aspect-ratio:16/11; margin-inline:auto; z-index:1}
+.shot{position:absolute; inset:0; border-radius:14px; overflow:hidden; border:1px solid rgba(255,255,255,.14); box-shadow:0 30px 70px -30px rgba(0,0,0,.9), 0 0 0 1px rgba(0,0,0,.4)}
+.shot img{width:100%;height:100%;object-fit:cover}
+.shot::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,rgba(79,216,255,.10),transparent 40%,rgba(4,6,12,.35))}
+.s1{transform:translate(-11%,-9%) rotate(-8deg) scale(.8); opacity:.5; filter:saturate(.65)}
+.s2{transform:translate(11%,-4%) rotate(6.5deg) scale(.86); opacity:.78}
+.s3{transform:translate(0,6%) rotate(-1.5deg); z-index:3; animation:float 9s ease-in-out infinite}
+@keyframes float{50%{transform:translate(0,3%) rotate(-1.5deg)}}
+.stack-caption{position:relative; z-index:4; margin-top:34px; text-align:center; font:500 10px/1 var(--mono); letter-spacing:.28em; color:var(--muted2)}
+.scroll-hint{position:absolute; left:50%; bottom:26px; transform:translateX(-50%); display:flex; align-items:center; gap:10px; font:500 9.5px/1 var(--mono); letter-spacing:.28em; color:var(--muted2)}
+.scroll-hint span{width:1px;height:34px;background:linear-gradient(180deg,transparent,var(--cyan)); display:block; animation:drop 2.2s infinite}
+@keyframes drop{0%{opacity:0;transform:scaleY(.2)}40%{opacity:1}100%{opacity:0;transform:scaleY(1)}}
+
+/* sections */
+.section{padding:clamp(70px,9vw,120px) 0; border-top:1px solid rgba(255,255,255,.055); position:relative}
+section[id]{scroll-margin-top:84px}
+.sec-head{max-width:760px; margin-bottom:clamp(34px,4.5vw,54px)}
+.eyebrow{display:inline-block; font:600 11px/1 var(--mono); letter-spacing:.24em; color:var(--cyan); margin-bottom:16px}
+.sec-head h2{font-size:clamp(26px,3.5vw,42px); font-weight:750; letter-spacing:-.03em}
+.sec-head p{margin:16px 0 0; color:var(--muted); font-size:15px}
+.pc{display:inline}
+
+/* pillars */
+.pillars{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
+.pillar{position:relative; padding:26px 22px 24px; border:1px solid var(--line); border-radius:var(--r); background:linear-gradient(170deg,rgba(255,255,255,.045),rgba(255,255,255,.012)); overflow:hidden; transition:border-color .25s, transform .25s}
+.pillar:hover{border-color:rgba(79,216,255,.4); transform:translateY(-4px)}
+.pillar .pnum{font:600 10px/1 var(--mono); letter-spacing:.2em; color:var(--muted2)}
+.pillar h3{font-size:17.5px; margin:14px 0 10px}
+.pillar p{margin:0; font-size:13.6px; color:var(--muted); line-height:1.72}
+.quote{margin:clamp(40px,5vw,64px) 0 0; padding:28px 32px; border-left:2px solid var(--cyan); background:linear-gradient(90deg,rgba(79,216,255,.09),transparent 72%); border-radius:0 12px 12px 0}
+.quote p{margin:0; font-size:clamp(16px,1.9vw,21px); font-weight:600; letter-spacing:-.01em}
+.quote cite{display:block; margin-top:10px; font-style:normal; font-size:12.5px; color:var(--muted2)}
+
+/* video grid */
+.vgrid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+.vcard{display:flex; flex-direction:column; gap:12px; border-radius:14px; transition:transform .28s}
+.vcard:hover{transform:translateY(-5px)}
+.thumb{position:relative; aspect-ratio:16/9; border-radius:12px; overflow:hidden; border:1px solid var(--line); background:linear-gradient(140deg,#0d1626,#141d2f)}
+.thumb img{width:100%;height:100%;object-fit:cover; transition:transform .55s cubic-bezier(.2,.7,.3,1), filter .3s; filter:saturate(1.02)}
+.vcard:hover .thumb img{transform:scale(1.07); filter:saturate(1.15) brightness(1.05)}
+.thumb-veil{position:absolute; inset:0; background:linear-gradient(180deg,transparent 45%,rgba(4,6,12,.72)); pointer-events:none}
+.thumb::before{content:""; position:absolute; inset:0; box-shadow:inset 0 0 0 1px rgba(79,216,255,0); transition:box-shadow .3s; z-index:2; border-radius:12px}
+.vcard:hover .thumb::before{box-shadow:inset 0 0 0 1px rgba(79,216,255,.55), 0 12px 40px -12px rgba(79,216,255,.4)}
+.thumb.noimg{background:linear-gradient(140deg,#102033,#1a1530)}
+.thumb.noimg img{display:none}
+.chip{position:absolute; z-index:3; font:600 11px/1 var(--mono); padding:5px 8px; border-radius:6px; background:rgba(4,8,14,.78); color:#dbe9f5; backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,.12)}
+.chip.dur{right:9px; bottom:9px}
+.chip.play{left:9px; bottom:9px; color:#bff0ff; border-color:rgba(79,216,255,.3); background:rgba(6,16,26,.82)}
+.vbody h3{margin:0; font-size:14.6px; font-weight:600; line-height:1.5; letter-spacing:0;
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; min-height:3em}
+.vcard:hover .vbody h3{color:#dff4ff}
+.vmeta{display:flex; justify-content:space-between; gap:10px; margin-top:7px; font:500 11.5px/1 var(--mono); color:var(--muted2); letter-spacing:.02em}
+
+/* recent */
+.recent{margin-top:clamp(38px,5vw,58px); border:1px solid var(--line); border-radius:var(--r); background:var(--panel2); overflow:hidden}
+.recent-head{display:flex; align-items:center; justify-content:space-between; padding:18px 22px; border-bottom:1px solid var(--line)}
+.recent-head h3{margin:0; font-size:14px; letter-spacing:.02em}
+.recent-head a{font:600 12px/1 var(--mono); color:var(--cyan); letter-spacing:.06em}
+.recent-head a:hover{text-decoration:underline}
+.row{display:grid; grid-template-columns:96px 1fr auto; gap:16px; align-items:center; padding:13px 22px; border-top:1px solid rgba(255,255,255,.05); transition:background .2s}
+.row:first-child{border-top:0}
+.row:hover{background:rgba(79,216,255,.05)}
+.rdate{font:500 11.5px/1 var(--mono); color:var(--muted2)}
+.rtitle{font-size:13.8px; color:#cdd9e6; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.rplay{font:500 11.5px/1 var(--mono); color:var(--muted2)}
+
+/* collections */
+.cgrid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px}
+.ccard{display:flex; gap:16px; padding:14px; border:1px solid var(--line); border-radius:14px; background:linear-gradient(150deg,rgba(255,255,255,.04),rgba(255,255,255,.01)); transition:border-color .25s, transform .25s, background .25s}
+.ccard:hover{border-color:rgba(157,123,255,.45); transform:translateY(-3px); background:linear-gradient(150deg,rgba(157,123,255,.09),rgba(255,255,255,.01))}
+.cthumb{flex:0 0 118px; aspect-ratio:4/3; border-radius:10px; overflow:hidden; border:1px solid rgba(255,255,255,.1); background:#0d1626}
+.cthumb img{width:100%;height:100%;object-fit:cover; transition:transform .5s}
+.ccard:hover .cthumb img{transform:scale(1.08)}
+.cthumb.noimg{background:linear-gradient(140deg,#1a1530,#0d1626)}
+.cthumb.noimg img{display:none}
+.cinfo{min-width:0; padding:4px 2px 2px}
+.ctop{display:flex; align-items:center; gap:10px; margin-bottom:8px}
+.tag{font:600 9.5px/1 var(--mono); letter-spacing:.16em; color:#c9b8ff; border:1px solid rgba(157,123,255,.35); padding:4px 6px; border-radius:5px}
+.ccount{font:500 11px/1 var(--mono); color:var(--muted2)}
+.cinfo h3{margin:0 0 7px; font-size:15.5px; font-weight:650}
+.cinfo p{margin:0; font-size:12.8px; color:var(--muted); line-height:1.6}
+.ccard.cta{align-items:center; border-color:rgba(79,216,255,.28); background:linear-gradient(140deg,rgba(79,216,255,.10),rgba(157,123,255,.06) 60%,rgba(255,255,255,.01))}
+.ccard.cta:hover{border-color:rgba(79,216,255,.6); transform:translateY(-3px)}
+.cta-inner{padding:10px 4px}
+.cta-k{font:600 9.5px/1 var(--mono); letter-spacing:.2em; color:#8fd8ee}
+.ccard.cta h3{margin:10px 0 7px; font-size:17px}
+.ccard.cta p{margin:0; font-size:12.8px; color:var(--muted)}
+.cta-go{display:inline-flex; align-items:center; gap:8px; margin-top:14px; font:600 12.5px/1 var(--mono); color:#bff0ff}
+.cta-go span{transition:transform .2s}
+.ccard.cta:hover .cta-go span{transform:translateX(3px)}
+
+/* timeline */
+.timeline{list-style:none; margin:0; padding:0 0 0 8px; position:relative}
+.timeline::before{content:""; position:absolute; left:8px; top:6px; bottom:6px; width:1px; background:linear-gradient(180deg,rgba(79,216,255,.5),rgba(157,123,255,.35),rgba(255,255,255,.05))}
+.tl-item{position:relative; display:grid; grid-template-columns:96px 1fr; gap:28px; padding:0 0 34px 30px}
+.tl-item::before{content:""; position:absolute; left:-3px; top:9px; width:9px; height:9px; border-radius:50%; background:var(--bg); border:1.5px solid var(--cyan); box-shadow:0 0 0 4px rgba(79,216,255,.1)}
+.tl-year{font:700 15px/1.2 var(--mono); color:#bfefff; letter-spacing:.02em; padding-top:2px}
+.tl-body h3{margin:0 0 6px; font-size:16.5px}
+.tl-body p{margin:0; color:var(--muted); font-size:14px; max-width:60ch}
+.tl-link{display:inline-flex; align-items:center; gap:6px; margin-top:11px; font:500 12.5px/1 var(--mono); color:#8fd8ee; border-bottom:1px dashed rgba(79,216,255,.35); padding-bottom:4px; transition:color .2s, border-color .2s}
+.tl-link span{transition:transform .2s}
+.tl-link:hover{color:#d7f6ff; border-color:rgba(79,216,255,.8)}
+.tl-link:hover span{transform:translate(2px,-2px)}
+
+/* contact */
+.contacts{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+.contact{display:block; padding:26px 24px; border:1px solid var(--line); border-radius:var(--r); background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.012)); transition:border-color .25s, transform .25s}
+a.contact:hover{border-color:rgba(79,216,255,.45); transform:translateY(-4px)}
+.clabel{font:600 10px/1 var(--mono); letter-spacing:.22em; color:var(--muted2)}
+.contact h3{margin:14px 0 8px; font-size:19px; font-weight:700; letter-spacing:-.01em}
+.contact p{margin:0; font-size:13px; color:var(--muted); display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+.copy{font:600 10.5px/1 var(--mono); padding:5px 9px; border-radius:5px; border:1px solid var(--line2); background:rgba(255,255,255,.04); color:var(--muted); cursor:pointer; transition:.2s}
+.copy:hover{color:var(--text); border-color:var(--cyan)}
+.note{margin:34px 0 0; font:400 11.5px/1.6 var(--mono); color:var(--muted2); letter-spacing:.02em}
+footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
+.foot{width:min(var(--wrap),92vw); margin-inline:auto; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; font:400 11.5px/1.6 var(--mono); color:var(--muted2); letter-spacing:.04em}
+
+/* reveal */
+[data-reveal]{opacity:0; transform:translateY(16px); transition:opacity .7s cubic-bezier(.2,.7,.3,1), transform .7s cubic-bezier(.2,.7,.3,1)}
+[data-reveal].in{opacity:1; transform:none}
+.is-static [data-reveal]{opacity:1!important; transform:none!important}
+
+/* responsive */
+@media (max-width:1080px){
+  .pillars{grid-template-columns:repeat(2,1fr)}
+  .vgrid{grid-template-columns:repeat(2,1fr)}
+  .contacts{grid-template-columns:1fr}
+}
+@media (max-width:940px){
+  .hero-inner{grid-template-columns:1fr; gap:40px}
+  .hero-visual{order:-1; min-height:0; max-width:520px; margin-inline:auto}
+  .stack{aspect-ratio:16/11}
+  .nav-links{display:none}
+  .stats{grid-template-columns:repeat(2,1fr); row-gap:18px}
+  .cgrid{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr auto; gap:8px 14px}
+  .rdate{grid-column:1/-1}
+  .pc{display:none}
+}
+@media (max-width:620px){
+  .hero{padding-top:154px}
+  .vgrid{grid-template-columns:1fr}
+  .pillars{grid-template-columns:1fr}
+  .quote{padding:22px 20px}
+  .tl-item{grid-template-columns:1fr; gap:6px; padding-left:26px}
+  .cthumb{flex-basis:92px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important; transition:none!important}
+  html{scroll-behavior:auto}
+  [data-reveal]{opacity:1; transform:none}
+}
+</style>
+</head>
+<body>
+<canvas id="stars" aria-hidden="true"></canvas>
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="#home">
+      <img class="mark" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAQDAwQDAwQEBAQFBQQFBwsHBwYGBw4KCggLEA4RERAOEA8SFBoWEhMYEw8QFh8XGBsbHR0dERYgIh8cIhocHRz/2wBDAQUFBQcGBw0HBw0cEhASHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBz/wAARCACAAIADASIAAhEBAxEB/8QAHQAAAgMBAQEBAQAAAAAAAAAABQYEBwgDAgEJAP/EAD8QAAIBAwQABAQDBAcHBQAAAAECAwQFEQAGEiEHEzFBFCJRYTJxgRUjQpEIUmKCobHRFiQzQ2NywTSDkuHw/8QAGwEAAgMBAQEAAAAAAAAAAAAAAwQCBQYAAQf/xAAwEQABBAECBAQFBAMBAAAAAAABAAIDESEEEjFBUWEFEyJxMoGhsdFCkcHwBjPx4f/aAAwDAQACEQMRAD8ApbiQca+hckdanmkbOMa5mnKn071pqWWC4qh1Li6OPbXxIz9NSFjGB9dRKKF1WMOmolTTEdj01OXIAGOtfSnL1HR15SkCl2eDUFoCW4gEk+gHvpmqaLIyB0de6OjajhEyRF6iTIQAZIH20IhTDuiCQ7XulTG7xUjlUXk2SBxH1P0GhlXQT0j+XPC8beoDD1/L66tix2a7PZrvVy1Bp4gqIKXrlUtyBCnvIUYJ/TQe8ObhPNDX0wh81iUVU4rH9OP5aA2VjnFrSCjlkjBucFWbR6A1UdbCw4yESykoORJVifcY6GACftj39dWpt3ZlRdrpSQzwSijmdo2nToJgEk5IxkAZx76J7z8OLb8LTrRPLB8JzQyQojSTI+MlycfMOwCPQH09tL6iQA1zTWnYXerkqUo6rFQHmM9MJ+AXHHgE9E9R37n29dGpvNpRmb54/wCuFwwH3HuPy/lq06/a2391zWg0Eaw1ptdPD5FO3BjUFxEVZfTJAyRjvOgHijT2K1bjjs9vSd7ZbIFpmnpWILTr+OTA9QSWxgdADrUQS0UucA8pQWSjeNST83qCPQ6KUDUClOwxJ7B60ASyNLHJLaa6Kth9TC5Cun6j0/IgaFSVE1JKI5kkgk9lkGM/kfQ/pqOHc1F0LgrzlolcZA71Amo2RgD7+n3/AC0y01g3LuKKnS2WG4UdNWOii51ixxrDGSOUoiZuZwuSoK9nHtqx6Hwj2YlK0cm3qWsY5V6q4Az1EpBxyMjdg/lgfTGpa7x3T6chrPUeyq2QHi/Co8QFfUHX3gRo1ubb8ey92TWaOV2tU9L8dRGdyzQqG4yRFz2VU8SCe8Ngk417tGzt07ltyXO22+hgt8yh6c3GoeOWoQ+jBFQ8FI7BbsjBwNMjxLTmFs7nUHKXlOuggqBnYIv4mOAPvotWBLbxhj4tKOnZuyT/AONAHusVouEtJd1e3XGjkAnp5gWEfYIbmBx4NkYYkA/nkaaK6FqwNNS4dagcZC2MgY6/UH769kna/aWm2o8UZo4yuFLA90dIEiAqX/D1gN+enGS1R2q3JHCnORVw8uO2/wDrXnZtrmatira6TzZKeD4UHIwOuu/brP8APVuWix2mWFWrphDTDslx64GcD66qpte3zDG74QreHw94iErfiKoynuDDngDKjPeoHxIqJpBUx/7sAxYlcjr6D3P5aJbhrbWbnUUNBCxqHY4ZhyQDvJP0Oh9Y/wCzoGamceYv7v4hh22egFHt+WjhrZsxih1/CCXvhxLk9PypO16VY6CrmmxL5szPTyRmRVKDAJxnHLJx7kYPegW6b3HDAlLNK4FQy06ue8FjgEnTLUbhjqLUZqZVNMsYUooCvE4A5Iy/1skkn07/AFKCtotu7Ke5VlxvKWpYJ44IomUu79FmmOPREC5z6g46PeAEucbPFMtDWChgIXbNzvft8UVmghEdwkaNaeraOSOVZHXKRvJ8rAk4AYFgMg4YZ1C3XZ4rfFR19PVyT0tcWAWoAWWJlUMQSOnGGHzDH0IHRLUu/bnsKmrrTClVMlwgjbyZIYR5K/jDQTnLorcsjrkoOBxIBFX3y91l7uKiRIuowqQwZEdOnsgHeBns5JZj6nXQve0+o/JG1MEUmYRgDJND+fl36BDQ3ncagKY5gSFdGIYYP1HevLbhrYEaC5xR3CkP/MdMOB/aIGP1I/UaktCIo1UHOB6n3P11BkXvTjmXxVYx9HHBfonMsoYSRfOR6xn+L8j9dcYGWa3h4WD5UgYP8WSCPzzkH6Y0Q+Gcj/iuP0H+mlqjUWLdksBkD2+9q9RFgYEdWgHmL11+8TD9fxI/11gQ3daT22k7xN8Op9x1tvuscH7RS2000E9rWoenasik4llWVfRvl6B+Vs4OPXT5aJ6S+7boLhaC3wVRAktOMcTwA/AR7EYKkexH201U9AVDH/mN2Sfr/ppItVPJsDb+5qbqWlsPm3CmbGCY5fMl8th9VfkAf6pX3zpgF0kYYeXD5ogG4UptK1HdhXFUE9JKzUboUys3HIfI91zle+ujrOm0YIEtSxq0zwQz1EUJRskwpK6ofv8AKBj8taSpNt10Ox6ey0MslNUfA+S1YE5YmZDycD3w7Fu8Z1nvadEZNt0McKrFJSoaWSNWyA8TGNiD7glSc/fV/wCAMt0gDuX9KHIQwA1YtFLRfq63Vj01vjq4qaqwJGnZRg/wn0//AGdMsNVPb4JFrmapMylcO7Kq/fiCO/udVnJu2niqTTRUs8s5wVQxtydfZgoBOD9etfLz4g36Km5y7eJjXoyTEx56J7AJPoPpp2TQsbL53xnmrVmvkfD5H+scvx1TsYIZA8lJQxSSQjzPLUHsD19PfUgURuFjqJI0FNOVIxImChxgMCfUaG2S5RVltpq2CWLyqmNXIaQApnvv64P+I11S5x0xkX4l6kk5x7D7Z0VzzI4CMH2QmxiJpdIR72kvcVvgpofJil/3h+jKrFSIwoGGOfmOff7fbTbtXwBurUUFxeVY6Q0xZ4UYFOJw3XuSSAM/fSnWT0puE/xEfmZf0JIyB7DV02TxctlHtgW6KgFGi8cjn8oA7/xPtqGpZPE1oiFnmVLTyQSucZTXQKhfFDbtVNuOputXRRukjDnHExUKnHiAPbrrHX8OkV6MUqERw8IskAhOIb760Fc96VtxlqKW126kqZGlEmXjJkzjGFK+g798DvVJ7kir6S51kNWeLhzzVHDqPfHJSQcfnokDy7iKUJ2hoADrSzNj9NQXTJOPTRBhzHXeuLoANHKXC3rsmsqtxUVYbtSoK+2VklvmkiYmCpkjC8pUU9qDy/CfQg4JGDplue3xdoaJQwjlo6uCrifjnBRskY+6ll/vaM23bVJa6i4TUsZR7hP8TOORKmTiqlgPbIVc49SM67Xa62jbVKtVebpQW2mLcRNXVCQIW+gLkAnWJEdutoXbM2F7hpcYGOtDa/aVNcbZd6OUGf8AaYAnDHiCAAAMj0GB/ifro9hWp2qIZYWQxl45C/7sjGQxYfw++R7apiLdG/r/AHXbt+Wz0NLZ4YXrIKJppkSv8wMsbiYqMsY8uqleCCRS+WOEK2OmlxNAIjY7Tt4qXW57a2BuC72v4ZrlQUklTGkwIjPEZJ67OBkgdAkAHA1kiinjpLJ8BRySSCCNoWqTE7F5CCWPyjGeRJJyBnI7xq0fGy9192qbDU01xq49nbpp/hqmlkXBWpgkZ/Ibv92W+dXA/F5HHOPWH4YeEdv8Q7JJcq2KnqBTytS8amrkjjiCxqwKomFJyxJJ9dXmicNJpzMeeO6nFphqJBFdVnPBVXbpTS3aquTpUIPhlj8qk8tmHDPfzHPp1gD20Mr9yLeIGj8l4g3YaorizDo98AoX0P39dNe9tqWrbF1s1fZaeSKkM6U0zmF4kkLg548icr0e+vbr01x2T4lrsDal9t8VGHutTMjU1SYY3EaqGSRSW9DhBjojJOfTTLtS4xB0HrvvX9rmithbv9eD7JPtlTcbHTkR8JLf5hRjjPFuhnPop+nXEk94PqR/2127UzvTSQV9MQ5TnUsxOR13hj/lrlSIlVsTc0rUkSmhaBlrEmYtHzZV8r2DKV5HJHt7+1cXRx8dKW9XVGP3yg001xOLQtjbJpWHc6cxXCkFGHmSsbhwRi/IkZVl9f8AD1zr3WQVVHTsldFJFjKgSeo6B7HqPUaWbNdqmGmtMgkkjkiqFeGQfQOFOP72f5/TT9S1FsajrK6tqC1zVg0KNno94bGMNggden/iW9zc8QhSRtJrgUb8J5aG6X2O0XCrmWlqo2DRoxAqWReSRt9QSOvvjTZvPcG26mhzs9rfQ1jR+WZIoeEwXHasOj+vf66oCSplpphLG7pKDyDq2CG9cgj76DTVUjzc+RD5zyz3n89Jv0YdJ5m4+3JMR6oiPy9o9+aL3n4wVOa/BmAxzCgBx9cgDP8AnperJc4VT+ephv8AVNTvFO61FP7icdr98+o1zvFiuW3qqKlutHLSVMtPDVpHKMExSoHjb9VPp7dj20yDyKFszYX6sJEPXAHeNZ/8bUexb0oLmlBQ3a73Snit1sN0omqaWzRhnaonWIAmaZ8ZCqAeMWCewDoqNOXf1wdJ29L5VbV3d4fXGONZKOevqrdMp6+eamLRYPsS8PH+9j31moqadzuCI2ryq/EFx3DZKmyUV/3Nb71cqSWkpU3BDRmgrnaJgYQKcZpnI5cRyGMfx4K6c6zcwu9t27cZKGui2TNRp8OaOgeomoKmPlHLT1CRhmGCvFWVeIZHU+qkkX2pUbphuoDrbZ//AFNPI6kLDOriSNvyVlB/TS/sbY9bU3PflzsO67vYY6vc1essdMsM8E3Fl5SKkysI3D815JjPH5gcanp3DVQOEjaBPLFojac0oPLtW2+Km3PEO3Sx1dvoZb15lK1TEI56Gp+HgcsFBOGWbLY9cswPZI1n3bO867ZNh3TsO9xyUl2+LRa74YEOqkFWaJj7MnB1J6I6yDrcexbRtyj21FRberae426GWQSVMdStS0s5YtK8kgJ5SF2JYnvJ9utZU/pnWujtV825cLYkv+00lPOapaeISGSgi+bk6+/AlyG9lEn00yIRM0wngfpSYhk8hwkbxCqveG97/e9npQXWogroaSrhnhqDAsUsYQOvfHpi2RnP00l1sAkmuSAAkTyFcj+0SP8APX9UR3ustxidMxuASEUhmxgjviFz6++PvoE1dVSCeSpWmjquf71/NCiMjIIUK3v7/l1p7R6ePTR+XG0NGeHf8oU7/Mduu1NnmSKnaCTiRLgk/wDSVQV+2Tz9fbBxpLrGqbjWSzcBEr/hZ2UAKBgdZz6fbRfzpK2qhgV1dpAFYopwy5z0Tj+EAAAe2rNtmzLzdXcNQVUMg9FaBlY4GfcZ04BiyaSr5NnJVzZqKSeviWJ5GpIuAVW9IlU5OT6ZJ76+p00VhC+h17rpmstVJSzjOD650FrK8SMFjUu7HiFHqSdFFNbxS7nGRy41sq8SAe9NHg94TV/jRuyawUNyp7aIKY1U1RNE0mIw6o3EL1y+fIyQDj10g1tS6xyP5Ex4BuuB9R2R+miuw/Ea/eHt8hvW3bpNRVSMhljjk4x1KK2fLkGeLqexg4PeR3oLiXD0I8bKy4L9BbL4X7Q3BXbOrZvDageotdVNZLhJXRmSanWkjdYJmIwkoYxR4ZlPUq+mNBPHnb22902yO8eIW3ZKVbVTXeZ7lbneGqjp6eoWOmRSQVfzfMUhXBGWJXAzrM25PHzxA3nchVy7qktatUfGxQWhSkcMgj8scWclvwEjHp2TjJzpMrd17onoLjTDeF1q4JYJaeopLhIXjkjlfnIuGJHb/NnGc9gjUW6SUjcjmZnBfp7Cg7+3Whm79p0m9dvVVnq5pqfzSksFVTkCWlnjYPFNGfZ0dVYe3WD0TopB336cgDqai5GPTWfYotGVRlRZfGu91P7GvkW3KqijlVoblRv5FLLxIKS1EDFpXKkBvITijMAGfjkGf4nWyl2htXZeyDUVX7Ar55hcZiSZrkyIZTCxXtnnmcsyr2+GUdE6uigojA3NpnkcjByev5ajXTddns97t1puky009bFLPSzVChYXMQy6iQ9CQKS3H14hiOgcMsoCgE2zbG4FuaSl4c2SDwn8PK+S7/D2m008s9wFIG5JbYCAfK5D1IIJwMgFuC5AGqy8JbXVeJ26dx+K9/oiKS4o1stFHOMiKiGVbr+12p+pMp9GGoe4r/W/0nd4JtPbks0HhxapklulzjyvxzDtVQ/T3Qf+4ehHyt+9XqOgUbI2M9nW+0VvkljpJTyjpUjVVjRlU/KWZ0A5HoZJB04W+W3b+o/QfkoZdvduWAvFeGLbdXT7NpbLis2/VT21qiCBPMrYvMDU2F4kuwiZAT6knHelPdG0rvtilioK5qeKqqo0rqhQxLKWBVRjAAK4OQD6j16GnWspr9ZPFY1m5a+ihu8afGeb5yVwjeXkAX8skB+j17cgfpoV4nX2q3PU0IrgsNXCq03KnyoYM3I5X7Aj8u9NMc1rgwZHNBdZs8Cg1rpNwbNgsO+4rTVRrC8a0tXUUyvT5wcHyz+JcAkE/oQe9X9W+IO4k+LpL1TUwuiMDBdaFgI6tGHUijJaNgPUE476OoKxtX+D9ptLupha1wrGpIPFlUMn3zkAaQtqV0txtaxSSM9ZSkUoB7IQAcSf7pA/MH6aXedwtc4CqVe7hrTW3KpbzBIqSMoZf4gD66C/DvUOIoonlkc9Rp+JsdnH6A9+2ra3hZaa3Uc0sFJTVLw0yo8UrcvJZy/F1C9jAXJGcALnScKWjt81Q1nqJayBqdagTRMyyRqDlkk79iM9euixziU+Uzj9OF5+SI3QPYwaiX4MHBFkWRgHoRR6WF4uVsrLXXLbK6melr/MSKRavEZBI6Zz6Yxn5uxjOtFeDvgNa/Cla7f3imm3v2OsCRWpJ5RWRCWQ9SHywysMABccvUnrAOqvttwivu67FR7043iSmEkskMYCytCBz8nzkK5lK5YHrHEjPzE61DDH4Z+IXhTX+GWzqmut6VVO1TTRV0NQskciuJC2ZuzhsZUHGCcdaWZJuHp4fdNz6R8Dtkg9QFkdOx7/AG4cVR24vDjwY8SbzVHw/wB6xbbuvmMjW+4QOtBO445MfMhoslsAZycH5cDSNvv+jnu7YVla8V89DVUaHErULNJ5I9nfkqniT7j099D/ABA8Or9srcK2y4WpAsoFPST0VP8Aua5U5HkCMlpMElg3zD09ANaZ8Btv08fhnTTSXWa70l6i5zU1R88MB7R4lDDOOsEE4yMgd9tRzSAbbSb2Mu6TJZ/F657Op6eDxCoHkt7orQbntUJkpaiNgCryxL80TEEE4yPoBq1LL4ibOvdKlTb91WWohYZytbGD+oYgj9RqufA+70sVHUeH9e6y11gQ/AGT1rbWW/dsufUxE+Uw9uKE9ONO9f4J+Ht9mM9dtK1yVJ7MkcZiL/f5CO9VwEe6nivb8f8Aq8DSFA3l487O2nSzR0lxhvN4Klaehtx87nJj5VZ1+VRnGeyfoDrPtNeNw/0nbktq3ZdoLNte3yU7TUlBTSL5krkqjM5zwbzFeMMzYVlwF5YYaeh8KNr2ay3Km2/YqKhqqimkhSVE/eAlSAOZy2M499VtW37ZG36a5S09teepvcMklXDaKPD+bwDFZX9FYBmKj0yje4OmBLGxtRMs9TX2/wC+69p1i01WfwKttgpvgKO8bn/ZHJm+AW+zRQsWJLcuAWQ5J7y5z76Fbz8E6z42xXXZN8pdqVtrikpljp6PnEySEFjjI5MSBy5Z5YUkgqDq1do3Ke6bWtVdWK6VE1MjyeYvEk4/ER7Z9f11Tfj74mSUVG20rFU8NwXWE85oz3bqRvleob6MRlYx7seXop0Jr3bu6mVk69fCVm475c6CjrrlW1Nf5VFcKtWaGengVYjVSupwBmOSQg8cgqFz1pbFO91h3BdZ8M1JHEOXHiDLNKPb2+VH69tXBuegp9j+GSxJGIaq8BKWCH3jpUAbj/8AEDP/AHjVQ0m4bYvh5d6GOVmulTcRLKoXI4IpCjP6Me/rpqPAvqhuOcorui51tusuz6Ki8ynWe2iUzQFlYyLGvFevuc4986E2y0Xm9bohgtNDU1jXKP4owQjgHULz5ZJA4qS6k5+mrGomSdbHTPDHUw0VBSzNA8jIHX5BIAVBbJQFRgH8R+uhdLvG5bKnp7vbLXFHVWeonplEmfKMDRqjK8eFZRzUMPox7xnSRmke6SGBtvaL7cq+6ffoxFp49VMaa80P3N/b6q0PD7w3prbFG26VME9wZwsS0wqs+ZGqU/Gr5cYeDFmb2bko5FQRpK8UPB+j281rqJDUWm8XCk8yqtgmin+FkyQqt5S8G5KCflH8LdkDOrdtvifY73aRWG3xxCrgjmly6xmSPhxJCPjkQRjivIAHs561WW646u5qIqe1VfISRzNDFCIYljboFW9Qez8x7wh6UMM5yHxbUWRK3a8fqBr3Wp8N0EL3ta43HzaRYusHt1xlVbarU1n3Bt+Q1C3xYKmForc4kTzARloSSSkasPUE5x9Na+2Rb9pNXrXWqru0V0gRsWu5Vau9MCgUlABl04nAYk+5ODnWYbNb0TdkVHHDBbZaMGqRPmmLMGHs3yt0WOVGRjOc6P713I6XOSemqamkqLbzFHNGrq0ciIsjt1gnkCsfXtn6nV7BqiImySZzjA/j90n4jofM8QfpdKdvps5dyGBk+w7fJaqraSGt8szJlonEkbg4aNh7qfUHHXXsSPfUWKmtu3qGsligp6GjDS1k/lqEQMfmkcgdDOMnVD2nx2q7VTSNW3i03ZPJDc5ahI3gbBx+BcyDtcjGflI9Tqpt4eNO5902iOyGs8i1oCkjQqY5a0f9XLE4JyeII9e/QAWu8LJ7Sr5qrZ+27hQvFWz0Fdb2apo7hRsEmp5PwmRCQQVP4SpBVlBBByNWJafHK47ah8rfFmlq4IsKb3t+Iyxv/alpc+ZE314eYv5DrSXJAZ6uWSF/LMQVFYDAHrkdfmPt3jGky9UlbUVzpFUuULnmyjoH37wMnSxaDxUySFqKw+OPh5uNQLfvKzvNn/gzVCwyr/3RyFWH8tLu7ty+HGzbfX3qKTbtVcy/nR0tReI4YpZS2eXzsVXBJOQpPrgE4GsxXK1UJkcV9NFV09MokkFVEshZ/Zex76/rFtigssX7aNtoKerqcmFYaZEKD6jA6/01ER1zXgcrDun9ITe9+rEpNvmwy07oxepkoKmCliGCF8qSVxJO2cdmFU699ANgWqO+XKoWt+Ke5Cfz71JWyCSomk4ghmcABldcBCoChcgBeJAm7OslPdZau5VsvMoSAPfA+/8APSN4lx0YhMlHeKukmrUanuVLTtgVVEh5osjeq/OG/D2VZgejqYAC4uxZSx40b8i3Rf6+ppqiKa225WpacwuGQlTlyCOu24j+7jSVFsxrF4eG71eRV1lQABn+w5Y/+P56gSxrNWUdEsaJEG5NGowqgfMRj2GcDT94l1vLY1jpI1KokYLAjHzeU3+p0c4LWoXEp4odvq22UuE1TUUctJb/ADYqiBAzKTGAFwfUMcDHR9MEHQCaM0O0qWnemBqi708uR00r4ZgVJz8o5+3ocacbpPFPaIbcwV45IkR4z6HCj/LH6HGle27fvdXuOipbc1JVTVEhjp5q1yXTI5MzYU5Kqh79x7Z0XSzw6bfK/Brj2ChqmTagMgBJaDw7noP+LjaLfSU1TSUVhqq6mumTHT+WzqkIYhnbAY9DHIgZJx+eH6+Xe+VdBDb5IJlrYvLjnqlYeW2OJeRWOCcjPQHrn89DG8Pdw7YvFBXS0lvasSYu1WJ/NiClSG/dFVOT7FTkZ1MkrtxXOKWaGhtjU/IolQ8kiByDglV+YkAjGc9949NY3x7WQarUMdpy0tAuxjN5vh+xX0D/ABDRv08bjqNwcTQs3gDFZNe4S5R26Off9BUEP50dO3AA9EmQDJ/JeXXp39hqD4t2WemjM9LK4kWkd2ZCULcCgYZz0TEcHjgkAaL0VmuNuuq3g3YC5rGYceQDThDnrgTnIJB5Zz16aH7nur1/mwNIK271qSQwxRRhAisc4A7PH6sfZRk9aLptXGNM2FuXdK7qw1nhGpk8Vfrn+iGsm+A21165HdUaiqkSgccfwlSSMfbOvLMFGScDWlqzwUsldb6SSdPKrpIkeSWmdoiSVHqO1PWO+OdLdDsKy7Wr6iqEc88tKCQ9RKH4+n4QABk9DJGezrR2vnNr/9k=" alt="CabbageTimil 头像" width="34" height="34">
+      <span>CabbageTimil<small>EVE ONLINE · EU PARTNER</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#about">关于</a>
+      <a href="#works">精选</a>
+      <a href="#series">合集</a>
+      <a href="#timeline">时间线</a>
+      <a href="#contact">关注</a>
+    </nav>
+    <a class="nav-cta" href="https://space.bilibili.com/279635057" target="_blank" rel="noopener">B 站主页 ↗</a>
+  </div>
+</header>
+<main>
+  <section id="home" class="hero">
+    <div class="hero-grid"></div>
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <div class="badge" data-reveal><span class="pulse"></span> EVE ONLINE · OFFICIAL PARTNER</div>
+        <h1 data-reveal>Cabbage<span class="accent">Timil</span></h1>
+        <p class="hero-sub" data-reveal>在七千个星系之间，做一个诚实的记录者。</p>
+        <p class="hero-desc" data-reveal>
+          欧服华人视角的战地影像档案。从 4-HWWF 首都星城到 49- 星城攻防，
+          把新伊甸正在发生的事，翻译成中文玩家听得懂的语言。
+        </p>
+        <div class="hero-actions" data-reveal>
+          <a class="btn primary" href="https://space.bilibili.com/279635057" target="_blank" rel="noopener">前往 B 站主页 <span>→</span></a>
+          <a class="btn ghost" href="https://www.youtube.com/@CabbageTimil" target="_blank" rel="noopener">YouTube 频道</a>
+        </div>
+        <div class="stats" data-reveal>
+          <div class="stat">
+            <div class="snum" data-count="120" data-prefix="">0</div>
+            <div class="slabel">部投稿</div>
+          </div>
+          <div class="stat">
+            <div class="snum" data-count="3229" data-prefix="">0</div>
+            <div class="slabel">位关注者</div>
+          </div>
+          <div class="stat">
+            <div class="snum" data-count="19373" data-prefix="">0</div>
+            <div class="slabel">次点赞</div>
+          </div>
+          <div class="stat">
+            <div class="snum" data-count="6" data-prefix="Lv.">0</div>
+            <div class="slabel">B站等级</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual" data-reveal>
+        <div class="stack">
+          <div class="shot s1"><img src="https://i0.hdslb.com/bfs/archive/d2f6b97f8360db81c0d999005d9d89bbe214cebe.jpg" alt="" referrerpolicy="no-referrer" loading="lazy"></div>
+          <div class="shot s2"><img src="https://i2.hdslb.com/bfs/archive/0262f6317ed90ef3c5a8803a9ebfb42e1f55f916.jpg" alt="" referrerpolicy="no-referrer" loading="lazy"></div>
+          <div class="shot s3"><img src="https://i0.hdslb.com/bfs/archive/d56f239744a7f129031fe9f797b9f347a64c94e3.jpg" alt="" referrerpolicy="no-referrer" loading="lazy"></div>
+        </div>
+        <div class="stack-caption">NOW RECORDING · NEW EDEN</div>
+      </div>
+    </div>
+    <div class="scroll-hint"><span></span>SCROLL</div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">01 / 关于</span>
+        <h2>把欧服战场，讲给中文玩家听</h2>
+        <p>EVE Online 官方合作伙伴。长期跟拍欧服大型会战，做中文社区里少有人做的那件事：<br class="pc">在战报之外，留下画面、时间线和前因后果。</p>
+      </div>
+      <div class="pillars">
+        <article class="pillar" data-reveal>
+          <span class="pnum">01</span>
+          <h3>战地实录</h3>
+          <p>一线会战视角。诱导亮起、旗舰进场、星城进入结构增强的每一分钟，都尽可能完整地拍下来。</p>
+        </article>
+        <article class="pillar" data-reveal>
+          <span class="pnum">02</span>
+          <h3>局势快讯</h3>
+          <p>WWW 开战以来的战线变化、帝国北伐与凛冬防御，用几分钟把一周的战况讲清楚。</p>
+        </article>
+        <article class="pillar" data-reveal>
+          <span class="pnum">03</span>
+          <h3>中文情报</h3>
+          <p>把英文社区的战报、会议与舆论翻译成中文，让中国玩家和欧服战场保持零时差。</p>
+        </article>
+        <article class="pillar" data-reveal>
+          <span class="pnum">04</span>
+          <h3>历史与百科</h3>
+          <p>从 2003 到 2026，EVE 二十余年的大事件、势力变迁与战争全图，做成能一口气看完的档案。</p>
+        </article>
+      </div>
+      <blockquote class="quote" data-reveal>
+        <p>“星海灿烂，伊甸之广，容得下每一个热爱游戏的玩家。”</p>
+        <cite>—— 《星海灿烂，伊甸之广容得下每一个热爱游戏的玩家》</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section id="works" class="section">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">02 / 精选</span>
+        <h2>值得先看的九部</h2>
+        <p>按播放量挑选。想快速认识这个频道，从这三部开始：<br class="pc">《2003~2026 大事记》《4-HWWF 首都星城》与《星海灿烂》。</p>
+      </div>
+      <div class="vgrid">
+      <a class="vcard" href="https://www.bilibili.com/video/BV19N9EBgEUm" target="_blank" rel="noopener" data-reveal>
+        <div class="thumb">
+          <img src="https://i0.hdslb.com/bfs/archive/d56f239744a7f129031fe9f797b9f347a64c94e3.jpg" alt="【EVE中字】超旗部署 WWW疑似正式开启 EVE势力地图2014~2026" referrerpolicy="no-referrer" loading="lazy" onerror="this.closest('.thumb').classList.add('noimg')">
+          <span class="chip play">▶ 2.2万</span>
+          <span class="chip dur">04:24</span>
+          <span class="thumb-veil"></span>
+        </div>
+        <div class="vbody">
+          <h3>【EVE中字】超旗部署 WWW疑似正式开启 EVE势力地图2014~2026</h3>
+          <div class="vmeta"><span>2026.04.01</span><span>21,516 播放</span></div>
+        </div>
+      </a>
+      <a class="vcard" href="https://www.bilibili.com/video/BV1CQDvBwEBN" target="_blank" rel="noopener" data-reveal>
+        <div class="thumb">
+          <img src="https://i2.hdslb.com/bfs/archive/0262f6317ed90ef3c5a8803a9ebfb42e1f55f916.jpg" alt="【EVE中文】万人会战——凛冬狂怒，帝国之泪下的新世界纪录" referrerpolicy="no-referrer" loading="lazy" onerror="this.closest('.thumb').classList.add('noimg')">
+          <span class="chip play">▶ 2.1万</span>
+          <span class="chip dur">06:40</span>
+          <span class="thumb-veil"></span>
+        </div>
+        <div class="vbody">
+          <h3>【EVE中文】万人会战——凛冬狂怒，帝国之泪下的新世界纪录</h3>
+          <div class="vmeta"><span>2026.04.08</span><span>21,043 播放</span></div>
+        </div>
+      </a>
+      <a class="vcard" href="https://www.bilibili.com/video/BV1hgX2B2Ede" target="_blank" rel="noopener" data-reveal>
+        <div class="thumb">
+          <img src="https://i0.hdslb.com/bfs/archive/d2f6b97f8360db81c0d999005d9d89bbe214cebe.jpg" alt="【EVE中字】远炮无畏三千人会战射爽射建功|帝国 vs FRT 艾蒂斯2026年3月28日 会战混剪" referrerpolicy="no-referrer" loading="lazy" onerror="this.closest('.thumb').classList.add('noimg')">
+          <span class="chip play">▶ 1.4万</span>
+          <span class="chip dur">04:07</span>
+          <span class="thumb-veil"></span>
+        </div>
+        <div class="vbody">
+          <h3>【EVE中字】远炮无畏三千人会战射爽射建功|帝国 vs FRT 艾蒂斯2026年3月28日 会战混剪</h3>
+          <div class="vmeta"><span>2026.03.29</span><span>13,550 播放</span></div>
+        </div>
+      </a>
+      <a class="vcard" href="https://www.bilibili.com/video/BV1LfDMBkEWu" target="_blank" rel="noopener" data-reveal>
+        <div class="thumb">
+          <img src="https://i2.hdslb.com/bfs/archive/069c85ce77be4a0ac354a6b794d7171fdc8b7d61.jpg" alt="【EVE中英字幕】帝国系DC联盟领导人随风发表讲话，向凛冬联盟群正式宣战 W(World)W(War)W(Winter Co)已来！" referrerpolicy="no-referrer" loading="lazy" onerror="this.closest('.thumb').classList.add('noimg')">
+          <span class="chip play">▶ 1.2万</span>
+          <span class="chip dur">15:10</span>
+          <span class="thumb-veil"></span>
+        </div>
+        <div class="vbody">
+          <h3>【EVE中英字幕】帝国系DC联盟领导人随风发表讲话，向凛冬联盟群正式宣战 W(World)W(War)W(Winter Co)已来！</h3>
+          <div class="vmeta"><span>2026.04.05</span><span>11,817 播放</span></div>
+        </div>
+      </a>
+      <a class="vcard" href="https://www.bilibili.com/video/BV1htofBtEBp" target="_blank" rel="noopener" data-reveal>
+        <div class="thumb">
+          <img src="https://i1.hdslb.com/bfs/archive/aba11e940c49c85096620b9cc63530ae64c7aacd.jpg" alt="【EVE中文】从西对舞到 4-HWWF 首都星城被打进结构增强，凛冬梯次防御未能阻挡帝国脚步" referrerpolicy="no-referrer" loading="lazy" onerror="this.closest('.thumb').classList.add('noimg')">
+          <span class="chip play">▶ 1.1万</span>
+          <span class="chip dur">04:40</span>
+          <span class="thumb-veil"></span>
+        </div>
+        <div class="vbody">
+          <h3>【EVE中文】从西对舞到 4-HWWF 首都星城被打进结构增强，凛冬梯次防御未能阻挡帝国脚步</h3>
+          <div class="vmeta"><span>2026.04.26</span><span>11,423 播放</span></div>
+        </div>
+      </a>
+      <a class="vcard" href="https://www.bilibili.com/video/BV1Y4QDBtEys" target="_blank" rel="noopener" data-reveal>
+        <div class="thumb">
+          <img src="https://i1.hdslb.com/bfs/archive/4d75640c25f242c3fa2db85d5dd889892d717e99.jpg" alt="【EVE中字】3.22帝国VS 凛冬 谁来守护我的钻头，旗舰出击！" referrerpolicy="no-referrer" loading="lazy" onerror="this.closest('.thumb').classList.add('noimg')">
+          <span class="chip play">▶ 9,669</span>
+          <span class="chip dur">03:34</span>
+          <span class="thumb-veil"></span>
+        </div>
+        <div class="vbody">
+          <h3>【EVE中字】3.22帝国VS 凛冬 谁来守护我的钻头，旗舰出击！</h3>
+          <div class="vmeta"><span>2026.03.23</span><span>9,669 播放</span></div>
+        </div>
+      </a>
+      <a class="vcard" href="https://www.bilibili.com/video/BV1ACDJBpEGA" target="_blank" rel="noopener" data-reveal>
+        <div class="thumb">
+          <img src="https://i2.hdslb.com/bfs/archive/b9412b749de361d7bd58b2986e1c0551783a31f1.jpg" alt="【EVE中文】解救变送葬！旗舰监狱一天告破|帝国闪电拦截，凛冬增援迟缓致先头舰队全军覆没" referrerpolicy="no-referrer" loading="lazy" onerror="this.closest('.thumb').classList.add('noimg')">
+          <span class="chip play">▶ 8,978</span>
+          <span class="chip dur">02:21</span>
+          <span class="thumb-veil"></span>
+        </div>
+        <div class="vbody">
+          <h3>【EVE中文】解救变送葬！旗舰监狱一天告破|帝国闪电拦截，凛冬增援迟缓致先头舰队全军覆没</h3>
+          <div class="vmeta"><span>2026.04.09</span><span>8,978 播放</span></div>
+        </div>
+      </a>
+      <a class="vcard" href="https://www.bilibili.com/video/BV19BQVBsE1z" target="_blank" rel="noopener" data-reveal>
+        <div class="thumb">
+          <img src="https://i2.hdslb.com/bfs/archive/0c1e761236e44467bc684dea237b92cdcee3ae29.jpg" alt="【EVE中文】西对舞做出回答，龙焰之剑也未尝不利！“诱导已亮，所有旗舰进，向凛冬无畏开火！”" referrerpolicy="no-referrer" loading="lazy" onerror="this.closest('.thumb').classList.add('noimg')">
+          <span class="chip play">▶ 7,676</span>
+          <span class="chip dur">02:59</span>
+          <span class="thumb-veil"></span>
+        </div>
+        <div class="vbody">
+          <h3>【EVE中文】西对舞做出回答，龙焰之剑也未尝不利！“诱导已亮，所有旗舰进，向凛冬无畏开火！”</h3>
+          <div class="vmeta"><span>2026.04.15</span><span>7,676 播放</span></div>
+        </div>
+      </a>
+      <a class="vcard" href="https://www.bilibili.com/video/BV1m7ji6sEUC" target="_blank" rel="noopener" data-reveal>
+        <div class="thumb">
+          <img src="https://i1.hdslb.com/bfs/archive/17ebb66e70a696f5c842ac9d6f17f0d5e2caa489.jpg" alt="【EVE中文】星海灿烂，伊甸之广容得下每一个热爱游戏的玩家" referrerpolicy="no-referrer" loading="lazy" onerror="this.closest('.thumb').classList.add('noimg')">
+          <span class="chip play">▶ 6,660</span>
+          <span class="chip dur">03:31</span>
+          <span class="thumb-veil"></span>
+        </div>
+        <div class="vbody">
+          <h3>【EVE中文】星海灿烂，伊甸之广容得下每一个热爱游戏的玩家</h3>
+          <div class="vmeta"><span>2026.06.19</span><span>6,660 播放</span></div>
+        </div>
+      </a>
+      </div>
+
+      <div class="recent" data-reveal>
+        <div class="recent-head"><h3>最新更新</h3><a href="https://space.bilibili.com/279635057/video" target="_blank" rel="noopener">查看全部 120 部 →</a></div>
+        <div class="rows">
+        <a class="row" href="https://www.bilibili.com/video/BV1qf4G6vEC5" target="_blank" rel="noopener">
+          <span class="rdate">2026.11.03</span>
+          <span class="rtitle">EVE 星战前夜 | 帝国燃烧低安行动遭300+势力联合围攻,WWB3?昔日盟友INIT暴力抽打帝国小航队!</span>
+          <span class="rplay">1,952 播放</span>
+        </a>
+        <a class="row" href="https://www.bilibili.com/video/BV1eG4K6kES5" target="_blank" rel="noopener">
+          <span class="rdate">2026.11.03</span>
+          <span class="rtitle">EVE 星战前夜 | 燃烧低安反致低安大联合?INIT或将联合低安势力对抗蜜蜂?</span>
+          <span class="rplay">2,459 播放</span>
+        </a>
+        <a class="row" href="https://www.bilibili.com/video/BV1st4P69EtB" target="_blank" rel="noopener">
+          <span class="rdate">2026.11.02</span>
+          <span class="rtitle">EVE 星战前夜 | 谁是南方最强FC，记DC创世INIT华人三方混战</span>
+          <span class="rplay">1,473 播放</span>
+        </a>
+        <a class="row" href="https://www.bilibili.com/video/BV1sRno6sEb2" target="_blank" rel="noopener">
+          <span class="rdate">2026.10.26</span>
+          <span class="rtitle">EVE 星战前夜 | 无人机吃鸡区协议终成废纸一张?凛冬与蜜蜂在无人机区爆发正面交火!</span>
+          <span class="rplay">3,988 播放</span>
+        </a>
+        <a class="row" href="https://www.bilibili.com/video/BV1tppp6KEKb" target="_blank" rel="noopener">
+          <span class="rdate">2026.10.12</span>
+          <span class="rtitle">EVE online | 绝地日常约炮玩心眼</span>
+          <span class="rplay">1,267 播放</span>
+        </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="series" class="section">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">03 / 合集</span>
+        <h2>按战役与主题归档</h2>
+        <p>九个合集，从 68 部规模的联盟战史到两三部的小专题，方便按线索一次看完。</p>
+      </div>
+      <div class="cgrid">
+      <a class="ccard" href="https://space.bilibili.com/279635057/lists/1889240?type=season" target="_blank" rel="noopener" data-reveal>
+        <div class="cthumb"><img src="https://archive.biliimg.com/bfs/archive/9a22a0e81b47da70aa35ebe149f53079805cfa8a.jpg" alt="DC联盟战斗合集" referrerpolicy="no-referrer" loading="lazy" onerror="this.parentElement.classList.add('noimg')"></div>
+        <div class="cinfo">
+          <div class="ctop"><span class="tag">合集</span><span class="ccount">68 部</span></div>
+          <h3>DC联盟战斗合集</h3>
+          <p>从 DC 联盟时代一路存档到 WWW 世界大战，欧服华人视角的完整战役库。</p>
+        </div>
+      </a>
+      <a class="ccard" href="https://space.bilibili.com/279635057/lists/2029472?type=season" target="_blank" rel="noopener" data-reveal>
+        <div class="cthumb"><img src="https://archive.biliimg.com/bfs/archive/72f1e4bb6647e232f4a37f046fa4fbb988939215.jpg" alt="瞎编EVE" referrerpolicy="no-referrer" loading="lazy" onerror="this.parentElement.classList.add('noimg')"></div>
+        <div class="cinfo">
+          <div class="ctop"><span class="tag">合集</span><span class="ccount">12 部</span></div>
+          <h3>瞎编EVE</h3>
+          <p>不严肃的新伊甸观察：局势推演、脑洞与吐槽，聊点正史之外的东西。</p>
+        </div>
+      </a>
+      <a class="ccard" href="https://space.bilibili.com/279635057/lists/1406570?type=season" target="_blank" rel="noopener" data-reveal>
+        <div class="cthumb"><img src="https://archive.biliimg.com/bfs/archive/d7fef1e44ee2f17290f1cb882906fa5e9e8bdd4f.jpg" alt="DC联盟会议记录" referrerpolicy="no-referrer" loading="lazy" onerror="this.parentElement.classList.add('noimg')"></div>
+        <div class="cinfo">
+          <div class="ctop"><span class="tag">合集</span><span class="ccount">9 部</span></div>
+          <h3>DC联盟会议记录</h3>
+          <p>联盟会议实录，听指挥层如何讨论战略、分配舰队、决定下一场战役。</p>
+        </div>
+      </a>
+      <a class="ccard" href="https://space.bilibili.com/279635057/lists/5159711?type=season" target="_blank" rel="noopener" data-reveal>
+        <div class="cthumb"><img src="https://archive.biliimg.com/bfs/archive/c8f031d2bf9fab28c9998c89c8684918e842416a.jpg" alt="EVE宇宙记者第三方会战视角" referrerpolicy="no-referrer" loading="lazy" onerror="this.parentElement.classList.add('noimg')"></div>
+        <div class="cinfo">
+          <div class="ctop"><span class="tag">合集</span><span class="ccount">8 部</span></div>
+          <h3>EVE宇宙记者第三方会战视角</h3>
+          <p>不在任何一方的舰队里，只把战场本身记录下来。</p>
+        </div>
+      </a>
+      <a class="ccard" href="https://space.bilibili.com/279635057/lists/1204048?type=season" target="_blank" rel="noopener" data-reveal>
+        <div class="cthumb"><img src="https://archive.biliimg.com/bfs/archive/a67fafa1ac53101c8e9588ac7dedfd95d43e9c4e.jpg" alt="EVE欧服 帝国北伐" referrerpolicy="no-referrer" loading="lazy" onerror="this.parentElement.classList.add('noimg')"></div>
+        <div class="cinfo">
+          <div class="ctop"><span class="tag">合集</span><span class="ccount">6 部</span></div>
+          <h3>EVE欧服 帝国北伐</h3>
+          <p>帝国北上的一条战线：X47、EX6-AO、SNFV-I 与沿途的每一场结构战。</p>
+        </div>
+      </a>
+      <a class="ccard" href="https://space.bilibili.com/279635057/lists/7798827?type=season" target="_blank" rel="noopener" data-reveal>
+        <div class="cthumb"><img src="https://archive.biliimg.com/bfs/archive/afdd9d14b13e1d83a74c24fed0aaa611ec89231c.jpg" alt="EVE快讯" referrerpolicy="no-referrer" loading="lazy" onerror="this.parentElement.classList.add('noimg')"></div>
+        <div class="cinfo">
+          <div class="ctop"><span class="tag">合集</span><span class="ccount">5 部</span></div>
+          <h3>EVE快讯</h3>
+          <p>三分钟讲清楚这几天新伊甸发生了什么——适合没时间看战报的人。</p>
+        </div>
+      </a>
+      <a class="ccard" href="https://space.bilibili.com/279635057/lists/9485398?type=season" target="_blank" rel="noopener" data-reveal>
+        <div class="cthumb"><img src="https://archive.biliimg.com/bfs/archive/3b247e0ed2d0f333006de705937e30b4b524a360.jpg" alt="燃烧低安" referrerpolicy="no-referrer" loading="lazy" onerror="this.parentElement.classList.add('noimg')"></div>
+        <div class="cinfo">
+          <div class="ctop"><span class="tag">合集</span><span class="ccount">2 部</span></div>
+          <h3>燃烧低安</h3>
+          <p>低安势力版图重划，小航队、联合围剿与低安战争的连锁反应。</p>
+        </div>
+      </a>
+      <a class="ccard" href="https://space.bilibili.com/279635057/lists/6737922?type=season" target="_blank" rel="noopener" data-reveal>
+        <div class="cthumb"><img src="https://i0.hdslb.com/bfs/archive/17aca84fc31c5e580070b56015942f4603683a8f.jpg" alt="PanFam系列" referrerpolicy="no-referrer" loading="lazy" onerror="this.parentElement.classList.add('noimg')"></div>
+        <div class="cinfo">
+          <div class="ctop"><span class="tag">合集</span><span class="ccount">2 部</span></div>
+          <h3>PanFam系列</h3>
+          <p>PanFam 阵营的来路与当下，理解欧服权力结构绕不开的一块拼图。</p>
+        </div>
+      </a>
+      <a class="ccard" href="https://space.bilibili.com/279635057/lists/6230997?type=season" target="_blank" rel="noopener" data-reveal>
+        <div class="cthumb"><img src="https://archive.biliimg.com/bfs/archive/e157a69fcb5d54b7fd4a6b9f93df9627b81cf928.jpg" alt="EVE帝国东线战场" referrerpolicy="no-referrer" loading="lazy" onerror="this.parentElement.classList.add('noimg')"></div>
+        <div class="cinfo">
+          <div class="ctop"><span class="tag">合集</span><span class="ccount">2 部</span></div>
+          <h3>EVE帝国东线战场</h3>
+          <p>东线战事档案，帝国与凛冬在东部星域的攻防切片。</p>
+        </div>
+      </a>
+        <a class="ccard cta" href="https://space.bilibili.com/279635057/lists" target="_blank" rel="noopener" data-reveal>
+          <div class="cta-inner">
+            <span class="cta-k">BILIBILI · COLLECTIONS</span>
+            <h3>在 B 站查看全部合集</h3>
+            <p>九个合集持续更新，新战役会第一时间归入对应主题。</p>
+            <span class="cta-go">打开合集页 <span>→</span></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="timeline" class="section">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">04 / 时间线</span>
+        <h2>镜头里的新伊甸</h2>
+        <p>四年，四个阶段。频道几乎与欧服最近一轮大战争同步生长。</p>
+      </div>
+      <ol class="timeline">
+      <li class="tl-item" data-reveal>
+        <span class="tl-year">2023</span>
+        <div class="tl-body">
+          <h3>DC 联盟时代</h3>
+          <p>深渊之路与 X47 星城攻防，DC 联盟的兴衰被一集集记录下来。</p>
+          <a class="tl-link" href="https://www.bilibili.com/video/BV1is4y1K7ib" target="_blank" rel="noopener">代表作 · THIS IS EVE ONLINE! X47 星城结构战 <span>↗</span></a>
+        </div>
+      </li>
+      <li class="tl-item" data-reveal>
+        <span class="tl-year">2024</span>
+        <div class="tl-body">
+          <h3>帝国北伐</h3>
+          <p>EX6-AO、SNFV-I、U-QVWD……帝国舰队一路北上，战线不断拉长。</p>
+          <a class="tl-link" href="https://www.bilibili.com/video/BV1JSefe5ENm" target="_blank" rel="noopener">代表作 · SNFV-I 会战：中国玩家舰队视角 <span>↗</span></a>
+        </div>
+      </li>
+      <li class="tl-item" data-reveal>
+        <span class="tl-year">2025</span>
+        <div class="tl-body">
+          <h3>三千人会战</h3>
+          <p>BWF-ZZ 3500+ 人、PR-8CA 结构战、1DQ1 星城会战，欧服战争规模刷新纪录。</p>
+          <a class="tl-link" href="https://www.bilibili.com/video/BV15PdFYiE3i" target="_blank" rel="noopener">代表作 · BWF-ZZ 3750 人大型会战 <span>↗</span></a>
+        </div>
+      </li>
+      <li class="tl-item" data-reveal>
+        <span class="tl-year">2026</span>
+        <div class="tl-body">
+          <h3>WWW 世界大战</h3>
+          <p>4-HWWF 首都星城被破、49- 星城两千人对轰，2003~2026 全史梳理同期上线。</p>
+          <a class="tl-link" href="https://www.bilibili.com/video/BV1htofBtEBp" target="_blank" rel="noopener">代表作 · 4-HWWF 首都星城被打进结构增强 <span>↗</span></a>
+        </div>
+      </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">05 / 关注与合作</span>
+        <h2>一起看这场战争</h2>
+        <p>视频首发 B 站，海外玩家可看 YouTube 备份。合作、投稿与战报线索，欢迎直接私信。</p>
+      </div>
+      <div class="contacts">
+        <a class="contact" href="https://space.bilibili.com/279635057" target="_blank" rel="noopener" data-reveal>
+          <span class="clabel">BILIBILI</span>
+          <h3>CabbageTimil</h3>
+          <p>主阵地 · 120 部投稿 / 3,229 关注</p>
+        </a>
+        <a class="contact" href="https://www.youtube.com/@CabbageTimil" target="_blank" rel="noopener" data-reveal>
+          <span class="clabel">YOUTUBE</span>
+          <h3>@CabbageTimil</h3>
+          <p>仅供海外玩家观看视频，未专门运营</p>
+        </a>
+        <div class="contact" data-reveal>
+          <span class="clabel">QQ 群</span>
+          <h3 id="qq">1027324687</h3>
+          <p>粉丝群 · 战报讨论与组队<button class="copy" data-copy="1027324687">复制</button></p>
+        </div>
+      </div>
+      <p class="note" data-reveal>页面内容取自 B 站公开主页与投稿接口，数据更新于 2026.11.04。</p>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="foot">
+    <span>© 2026 CabbageTimil · New Eden Field Notes</span>
+    <span>EVE Online is a trademark of CCP hf. 非官方粉丝页面。</span>
+  </div>
+</footer>
+<script>
+(function(){
+  var rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var STATIC = /[?&]static=1/.test(location.search);
+  if (STATIC) document.documentElement.classList.add('is-static');
+
+  /* starfield */
+  var cv = document.getElementById('stars');
+  if (cv && !rm) {
+    var ctx = cv.getContext('2d'), stars = [], w = 0, h = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+    function resize(){
+      w = cv.width = Math.floor(innerWidth * dpr);
+      h = cv.height = Math.floor(innerHeight * dpr);
+      cv.style.width = innerWidth + 'px'; cv.style.height = innerHeight + 'px';
+      var n = Math.round((innerWidth * innerHeight) / 14000);
+      stars = [];
+      for (var i = 0; i < n; i++) stars.push({
+        x: Math.random() * w, y: Math.random() * h,
+        r: (Math.random() * 1.3 + .25) * dpr,
+        a: Math.random() * .55 + .15,
+        s: Math.random() * .00035 + .00008,
+        p: Math.random() * Math.PI * 2,
+        c: Math.random() > .93 ? '157,123,255' : (Math.random() > .86 ? '255,179,92' : '200,230,255')
+      });
+    }
+    function draw(t){
+      ctx.clearRect(0, 0, w, h);
+      for (var i = 0; i < stars.length; i++) {
+        var s = stars[i];
+        var a = s.a * (.62 + .38 * Math.sin(t * s.s + s.p));
+        ctx.beginPath();
+        ctx.arc(s.x, s.y + Math.sin(t * s.s * 2 + s.p) * 4 * dpr, s.r, 0, 6.2832);
+        ctx.fillStyle = 'rgba(' + s.c + ',' + a.toFixed(3) + ')';
+        ctx.fill();
+      }
+      requestAnimationFrame(draw);
+    }
+    resize(); addEventListener('resize', resize); requestAnimationFrame(draw);
+  }
+
+  /* reveal */
+  var items = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window && !rm && !STATIC) {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: .08 });
+    items.forEach(function(el, i){ el.style.transitionDelay = Math.min(i % 4 * 70, 210) + 'ms'; io.observe(el); });
+  } else {
+    items.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* count up */
+  var nums = document.querySelectorAll('[data-count]');
+  function run(el){
+    var target = +el.dataset.count, pre = el.dataset.prefix || '', t0 = null, dur = 1200;
+    if (!target) { el.textContent = pre + '0'; return; }
+    function step(ts){
+      if (!t0) t0 = ts;
+      var p = Math.min((ts - t0) / dur, 1), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = pre + Math.round(target * e).toLocaleString('en-US');
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if ('IntersectionObserver' in window && !rm && !STATIC) {
+    var io2 = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting) { run(e.target); io2.unobserve(e.target); } });
+    }, { threshold: .4 });
+    nums.forEach(function(n){ io2.observe(n); });
+  } else {
+    nums.forEach(function(n){ n.textContent = (n.dataset.prefix || '') + (+n.dataset.count).toLocaleString('en-US'); });
+  }
+
+  /* nav shadow */
+  var nav = document.querySelector('.nav');
+  addEventListener('scroll', function(){
+    if (window.scrollY > 24) nav.style.background = 'linear-gradient(180deg,rgba(4,6,12,.97),rgba(4,6,12,.8))';
+    else nav.style.background = '';
+  }, { passive: true });
+
+  /* copy */
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click', function(){
+      var txt = b.dataset.copy, old = b.textContent;
+      var done = function(){ b.textContent = '已复制'; setTimeout(function(){ b.textContent = old; }, 1400); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(done, fallback);
+      else fallback();
+      function fallback(){
+        var ta = document.createElement('textarea'); ta.value = txt; document.body.appendChild(ta);
+        ta.select(); try { document.execCommand('copy'); done(); } catch(e) { b.textContent = txt; }
+        document.body.removeChild(ta);
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
