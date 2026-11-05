@@ -217,6 +217,16 @@ section[id]{scroll-margin-top:84px}
 .ccard.cta:hover .cta-go span{transform:translateX(3px)}
 
 /* timeline */
+.tl-wrap{position:relative}
+.tl-scroll{position:relative; height:488px; overflow-y:auto; overflow-x:hidden; padding-right:14px;
+  scrollbar-width:thin; scrollbar-color:rgba(79,216,255,.4) transparent; overscroll-behavior:contain}
+.tl-scroll::-webkit-scrollbar{width:6px}
+.tl-scroll::-webkit-scrollbar-track{background:rgba(255,255,255,.045); border-radius:99px; margin:6px 0}
+.tl-scroll::-webkit-scrollbar-thumb{background:linear-gradient(180deg,rgba(79,216,255,.55),rgba(157,123,255,.42)); border-radius:99px}
+.tl-scroll:focus-visible{outline:2px solid var(--cyan); outline-offset:4px; border-radius:4px}
+.tl-fade{position:absolute; left:0; right:14px; bottom:0; height:70px; pointer-events:none; transition:opacity .3s;
+  background:linear-gradient(180deg,rgba(4,6,12,0),rgba(4,6,12,.92))}
+.tl-at-end .tl-fade{opacity:0}
 .timeline{list-style:none; margin:0; padding:0 0 0 8px; position:relative}
 .timeline::before{content:""; position:absolute; left:8px; top:6px; bottom:6px; width:1px; background:linear-gradient(180deg,rgba(79,216,255,.5),rgba(157,123,255,.35),rgba(255,255,255,.05))}
 .tl-item{position:relative; display:grid; grid-template-columns:96px 1fr; gap:28px; padding:0 0 34px 30px}
@@ -651,42 +661,119 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
       <div class="sec-head" data-reveal>
         <span class="eyebrow">04 / 时间线</span>
         <h2>镜头里的新伊甸</h2>
-        <p>四年，四个阶段。频道几乎与欧服最近一轮大战争同步生长。</p>
+        <p>四年，十三个节点。频道几乎与欧服最近一轮大战争同步生长。</p>
       </div>
-      <ol class="timeline">
+      <div class="tl-wrap" data-reveal>
+        <div class="tl-scroll" tabindex="0" role="region" aria-label="新伊甸时间线，可上下滚动">
+          <ol class="timeline">
       <li class="tl-item" data-reveal>
-        <span class="tl-year">2023</span>
+        <span class="tl-year">2023.04</span>
         <div class="tl-body">
-          <h3>DC 联盟时代</h3>
-          <p>深渊之路与 X47 星城攻防，DC 联盟的兴衰被一集集记录下来。</p>
-          <a class="tl-link" href="https://www.bilibili.com/video/BV1is4y1K7ib" target="_blank" rel="noopener">代表作 · THIS IS EVE ONLINE! X47 星城结构战 <span>↗</span></a>
+          <h3>北方战争与 X47 星城</h3>
+          <p>DC 联盟北上黑渊，X47 星城结构战打到深夜，频道最早的成名素材。</p>
+          <a class="tl-link" href="https://www.bilibili.com/video/BV1is4y1K7ib" target="_blank" rel="noopener">代表作 · X47 星城结构战 <span>↗</span></a>
         </div>
       </li>
       <li class="tl-item" data-reveal>
-        <span class="tl-year">2024</span>
+        <span class="tl-year">2023.12</span>
         <div class="tl-body">
-          <h3>帝国北伐</h3>
-          <p>EX6-AO、SNFV-I、U-QVWD……帝国舰队一路北上，战线不断拉长。</p>
+          <h3>深渊之路与铁壁防御</h3>
+          <p>低安与深渊成为日常，U-QVWD 铁壁防御战 400 打 500 优势在我。</p>
+          <a class="tl-link" href="https://www.bilibili.com/video/BV1RN4y1B7oi" target="_blank" rel="noopener">代表作 · U-QVWD 铁壁防御战 <span>↗</span></a>
+        </div>
+      </li>
+      <li class="tl-item" data-reveal>
+        <span class="tl-year">2024.07</span>
+        <div class="tl-body">
+          <h3>SNFV-I 会战</h3>
+          <p>帝国北伐推进到 SNFV-I，中国玩家舰队视角的四分钟。</p>
           <a class="tl-link" href="https://www.bilibili.com/video/BV1JSefe5ENm" target="_blank" rel="noopener">代表作 · SNFV-I 会战：中国玩家舰队视角 <span>↗</span></a>
         </div>
       </li>
       <li class="tl-item" data-reveal>
-        <span class="tl-year">2025</span>
+        <span class="tl-year">2024.08</span>
         <div class="tl-body">
-          <h3>三千人会战</h3>
-          <p>BWF-ZZ 3500+ 人、PR-8CA 结构战、1DQ1 星城会战，欧服战争规模刷新纪录。</p>
+          <h3>东卡彻翻新作战</h3>
+          <p>U-QVWD 一线反复易手，帝国之帚扫过卡彻。</p>
+          <a class="tl-link" href="https://www.bilibili.com/video/BV1pFv9eKEFX" target="_blank" rel="noopener">代表作 · U-QVWD 东卡彻翻新作战 <span>↗</span></a>
+        </div>
+      </li>
+      <li class="tl-item" data-reveal>
+        <span class="tl-year">2025.04</span>
+        <div class="tl-body">
+          <h3>BWF-ZZ 三千七百人</h3>
+          <p>PF 联盟 CTA 暴打低安势力，第三方记者视角记录 3,750 人同星系。</p>
           <a class="tl-link" href="https://www.bilibili.com/video/BV15PdFYiE3i" target="_blank" rel="noopener">代表作 · BWF-ZZ 3750 人大型会战 <span>↗</span></a>
         </div>
       </li>
       <li class="tl-item" data-reveal>
-        <span class="tl-year">2026</span>
+        <span class="tl-year">2025.06</span>
         <div class="tl-body">
-          <h3>WWW 世界大战</h3>
-          <p>4-HWWF 首都星城被破、49- 星城两千人对轰，2003~2026 全史梳理同期上线。</p>
+          <h3>1DQ1 星城落幕</h3>
+          <p>「永不陷落」的星城被击毁，特别篇为它送行。</p>
+          <a class="tl-link" href="https://www.bilibili.com/video/BV1PDgfzSEW2" target="_blank" rel="noopener">代表作 · 1DQ1 星城击毁特别篇 <span>↗</span></a>
+        </div>
+      </li>
+      <li class="tl-item" data-reveal>
+        <span class="tl-year">2025.11</span>
+        <div class="tl-body">
+          <h3>「哥布林」事件</h3>
+          <p>新伊甸史上最大的出卖事件，把名字钉在耻辱柱上。</p>
+          <a class="tl-link" href="https://www.bilibili.com/video/BV1Bw23BCEkt" target="_blank" rel="noopener">代表作 · 哥布林出卖事件 <span>↗</span></a>
+        </div>
+      </li>
+      <li class="tl-item" data-reveal>
+        <span class="tl-year">2025.11</span>
+        <div class="tl-body">
+          <h3>PanFam 解体</h3>
+          <p>帝国在 PanFam 联盟群解体后转入内战。</p>
+          <a class="tl-link" href="https://www.bilibili.com/video/BV1S7kDBwE3B" target="_blank" rel="noopener">代表作 · PanFam 解体后的内战 <span>↗</span></a>
+        </div>
+      </li>
+      <li class="tl-item" data-reveal>
+        <span class="tl-year">2026.01</span>
+        <div class="tl-body">
+          <h3>49- 星城闪击</h3>
+          <p>OF 联盟对凤凰联盟群发动星城闪击，两天从 2,000 人打到 3,000 人。</p>
+          <a class="tl-link" href="https://www.bilibili.com/video/BV1gx69BiERo" target="_blank" rel="noopener">代表作 · 49- 星城闪击战 3000 人 <span>↗</span></a>
+        </div>
+      </li>
+      <li class="tl-item" data-reveal>
+        <span class="tl-year">2026.04</span>
+        <div class="tl-body">
+          <h3>WWW 正式开战</h3>
+          <p>帝国锚定艾蒂斯进攻星城并联盟群 ping 超旗，WWW 拉开帷幕。</p>
+          <a class="tl-link" href="https://www.bilibili.com/video/BV19N9EBgEUm" target="_blank" rel="noopener">代表作 · 超旗部署 WWW 开启 <span>↗</span></a>
+        </div>
+      </li>
+      <li class="tl-item" data-reveal>
+        <span class="tl-year">2026.04</span>
+        <div class="tl-body">
+          <h3>万人会战 10,500 人</h3>
+          <p>艾蒂斯星城上线前的战略决战，刷新 EVE 同星系人数纪录。</p>
+          <a class="tl-link" href="https://www.bilibili.com/video/BV1CQDvBwEBN" target="_blank" rel="noopener">代表作 · 万人会战 10,500 人 <span>↗</span></a>
+        </div>
+      </li>
+      <li class="tl-item" data-reveal>
+        <span class="tl-year">2026.04</span>
+        <div class="tl-body">
+          <h3>4-HWWF 首都星城</h3>
+          <p>帝国深入凛冬 18 跳，把首都星城打进结构增强。</p>
           <a class="tl-link" href="https://www.bilibili.com/video/BV1htofBtEBp" target="_blank" rel="noopener">代表作 · 4-HWWF 首都星城被打进结构增强 <span>↗</span></a>
         </div>
       </li>
-      </ol>
+      <li class="tl-item" data-reveal>
+        <span class="tl-year">2026.04</span>
+        <div class="tl-body">
+          <h3>「复活甲」史诗 BUG</h3>
+          <p>维护后凛冬首星出现复活甲 BUG，三域围攻寂静谷。</p>
+          <a class="tl-link" href="https://www.bilibili.com/video/BV1wJ92BvEhb" target="_blank" rel="noopener">代表作 · 凛冬首星复活甲 BUG <span>↗</span></a>
+        </div>
+      </li>
+          </ol>
+        </div>
+        <div class="tl-fade" aria-hidden="true"></div>
+      </div>
     </div>
   </section>
 
@@ -713,29 +800,29 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
         </div>
       </div>
       <div class="rgrid" id="recruitGrid" data-reveal>
-      <a class="rcard" href="https://tieba.baidu.com/p/11088096593" target="_blank" rel="noopener">
-        <div class="rtop"><span class="rno">#41</span><span class="rkind">军团招新</span></div>
-        <h3 class="rcorp">Sparrow In Cage 笼中雀</h3>
-        <div class="rtags"><span class="rreg o">零零</span><span class="rag">IGC</span></div>
-        <p class="rhl">埃索/非塔/摄魂三区刷怪，10人左右休闲团</p>
+      <a class="rcard" href="https://tieba.baidu.com/p/11113011968" target="_blank" rel="noopener">
+        <div class="rtop"><span class="rno">#37</span><span class="rkind">军团招新</span></div>
+        <h3 class="rcorp">CACX 混沌仲裁者</h3>
+        <div class="rtags"><span class="rreg o">零零</span><span class="rag">FRT（WC联盟群）</span></div>
+        <p class="rhl">自称全EVE最大华人军团，月活1500+</p>
         
-        <div class="rmeta"><span>顶贴 2026-10-28</span><span>回复 25 ↗</span></div>
+        <div class="rmeta"><span>顶贴 2026-11-04</span><span>回复 20 ↗</span></div>
       </a>
-      <a class="rcard" href="https://tieba.baidu.com/p/10949695821" target="_blank" rel="noopener">
-        <div class="rtop"><span class="rno">#80</span><span class="rkind">军团招新</span></div>
-        <h3 class="rcorp">Carouse 将进酒</h3>
-        <div class="rtags"><span class="rreg n">未注明</span></div>
-        <p class="rhl">新建华人团，小规模收割，3E起步物资</p>
-        
-        <div class="rmeta"><span>顶贴 2026-10-03</span><span>回复 22 ↗</span></div>
-      </a>
-      <a class="rcard" href="https://tieba.baidu.com/p/11043472354" target="_blank" rel="noopener">
-        <div class="rtop"><span class="rno">#13</span><span class="rkind">军团招新</span></div>
-        <h3 class="rcorp">Cathead Horde 猫猫头</h3>
+      <a class="rcard" href="https://tieba.baidu.com/p/11128106062" target="_blank" rel="noopener">
+        <div class="rtop"><span class="rno">#11</span><span class="rkind">军团招新</span></div>
+        <h3 class="rcorp">海盗龙骑团</h3>
         <div class="rtags"><span class="rreg y">低安</span></div>
-        <p class="rhl">米玛塔尔卫队区，绕杆子/海军五级（2E+/h）</p>
+        <p class="rhl">低安五级任务＋卫队绕杆，纯低安PVP/海盗</p>
         
-        <div class="rmeta"><span>顶贴 2026-09-24</span><span>回复 8 ↗</span></div>
+        <div class="rmeta"><span>顶贴 2026-11-05</span><span>回复 53 ↗</span></div>
+      </a>
+      <a class="rcard" href="https://tieba.baidu.com/p/11098788213" target="_blank" rel="noopener">
+        <div class="rtop"><span class="rno">#40</span><span class="rkind">军团招新</span></div>
+        <h3 class="rcorp">隐星军团</h3>
+        <div class="rtags"><span class="rreg o">零零</span><span class="rag">DC 龙焰（Dracarys）</span></div>
+        <p class="rhl">2018年老团，大量国服移民，PAP奖励</p>
+        
+        <div class="rmeta"><span>顶贴 2026-11-04</span><span>回复 26 ↗</span></div>
       </a>
       </div>
       <div class="rfoot" data-reveal>
@@ -897,6 +984,19 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
     items.forEach(function(el, i){ el.style.transitionDelay = Math.min(i % 4 * 70, 210) + 'ms'; io.observe(el); });
   } else {
     items.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* timeline: hide the bottom fade once the reader reaches the end */
+  var scroller = document.querySelector('.tl-scroll');
+  if (scroller && scroller.parentElement) {
+    var tlWrap = scroller.parentElement;
+    var updateFade = function(){
+      var atEnd = scroller.scrollTop + scroller.clientHeight >= scroller.scrollHeight - 6;
+      tlWrap.classList.toggle('tl-at-end', atEnd);
+    };
+    scroller.addEventListener('scroll', updateFade, { passive: true });
+    addEventListener('resize', updateFade);
+    updateFade();
   }
 
   /* nav shadow */
