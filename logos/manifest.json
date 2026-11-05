@@ -1,0 +1,68 @@
+{
+ "DC 龙焰（Dracarys）": {
+  "id": 99009163,
+  "name": "Dracarys.",
+  "file": "logos/dracarys.png",
+  "bytes": 115331
+ },
+ "FRT（WC联盟群）": {
+  "id": 99003581,
+  "name": "Fraternity.",
+  "file": "logos/fraternity.png",
+  "bytes": 104336
+ },
+ "INIT（The Initiative.）": {
+  "id": 1900696668,
+  "name": "The Initiative.",
+  "file": "logos/initiative.png",
+  "bytes": 100047
+ },
+ "蜜蜂 Goonswarm（Imperium）": {
+  "id": 1354830081,
+  "name": "Goonswarm Federation",
+  "file": "logos/goonswarm.png",
+  "bytes": 39075
+ },
+ "NC.（Northern Coalition.）／WC": {
+  "id": 1727758877,
+  "name": "Northern Coalition.",
+  "file": "logos/northern-coalition.png",
+  "bytes": 53800
+ },
+ "Insidious（蓝蛇）": {
+  "id": 99013537,
+  "name": "Insidious.",
+  "file": "logos/insidious.png",
+  "bytes": 144658
+ },
+ "SC（Shadow Cartel）": {
+  "id": 495729389,
+  "name": "Shadow Cartel",
+  "file": "logos/shadow-cartel.png",
+  "bytes": 91774
+ },
+ "TEST": {
+  "id": 498125261,
+  "name": "Test Alliance Please Ignore",
+  "file": "logos/test.png",
+  "bytes": 72208
+ },
+ "WOMP": {
+  "id": 99010468,
+  "name": "Weapons Of Mass Production.",
+  "file": "logos/womp.png",
+  "bytes": 87969
+ },
+ "IGC": {
+  "id": 99003995,
+  "name": "Invidia Gloriae Comes",
+  "file": "logos/igc.png",
+  "bytes": 146491
+ },
+ "BOSS": {
+  "id": 99007887,
+  "name": "Brotherhood of Spacers",
+  "file": "logos/boss.png",
+  "bytes": 77631
+ }
+}
