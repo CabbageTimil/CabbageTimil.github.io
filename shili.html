@@ -140,6 +140,15 @@ h1 em{font-style:normal;color:var(--warm)}
 .link{margin-top:10px;font-size:12.5px;letter-spacing:.02em}
 
 footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(--dim);font-size:12.5px;text-align:center}
+/* 返回首页入口 */
+.back{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.02em;
+  color:#04121c;background:linear-gradient(180deg,#8ae6ff,#4fd1ff);border-radius:999px;padding:8px 16px;
+  box-shadow:0 8px 22px -10px rgba(79,209,255,.9);transition:.18s;white-space:nowrap}
+.back:hover{text-decoration:none;transform:translateY(-1px);box-shadow:0 12px 26px -10px rgba(79,209,255,1);filter:brightness(1.06)}
+.back-top{position:absolute;top:2px;right:0;z-index:6}
+.site-foot{max-width:1180px;margin:64px auto 0;padding:26px 28px 58px;border-top:1px solid var(--line);
+  display:flex;justify-content:center}
+.site-foot .back{font-size:14px;padding:10px 24px}
 .hide{display:none!important}
 .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);
   background:rgba(12,20,36,.96);border:1px solid var(--line);border-radius:10px;padding:10px 18px;font-size:13px;
@@ -156,6 +165,8 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
   .fac-stats{gap:14px}
   .faction{margin-top:44px;padding-top:30px}
   .faction h2{font-size:22px}
+  .back-top{position:static;margin:0 0 14px}
+  .site-foot{margin-top:44px;padding:22px 18px 44px}
 }
 @media print{
   body{background:#fff;color:#111}
@@ -170,6 +181,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
 
 <header class="hero">
   <div class="hero-inner hero-row">
+    <a class="back back-top" href="index.html">← 返回首页</a>
     <div class="hero-main">
       <h1>2026 年活跃军团招募 · <em>按势力</em></h1>
       <div class="stats">
@@ -2030,6 +2042,10 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
       </article></div></div>
   </section>
 </main>
+
+<footer class="site-foot">
+  <a class="back" href="index.html">← 返回首页</a>
+</footer>
 
 <div class="toast" id="toast"></div>
 
