@@ -20,6 +20,7 @@
   --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.16);
   --text:#e9eef7; --muted:#8d9aae; --muted2:#65718a;
   --cyan:#4fd8ff; --cyan-dim:#1b7f9c; --amber:#ffb35c; --violet:#9d7bff;
+  --g:#3ddc97; --y:#ffd166; --b:#5eb1ff; --o:#ff8a5c; --n:#9aa7bd;
   --r:18px; --wrap:1180px;
   --mono:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
 }
@@ -216,13 +217,34 @@ section[id]{scroll-margin-top:84px}
 .tl-link:hover{color:#d7f6ff; border-color:rgba(79,216,255,.8)}
 .tl-link:hover span{transform:translate(2px,-2px)}
 
-/* contact */
-.contacts{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
-.contact{display:block; padding:26px 24px; border:1px solid var(--line); border-radius:var(--r); background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.012)); transition:border-color .25s, transform .25s}
-a.contact:hover{border-color:rgba(79,216,255,.45); transform:translateY(-4px)}
-.clabel{font:600 10px/1 var(--mono); letter-spacing:.22em; color:var(--muted2)}
-.contact h3{margin:14px 0 8px; font-size:19px; font-weight:700; letter-spacing:-.01em}
-.contact p{margin:0; font-size:13px; color:var(--muted); display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+/* recruitment (cards mirrored from shili.html) */
+.rgrid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px}
+.rcard{display:flex; flex-direction:column; gap:10px; padding:20px 21px 17px; border:1px solid var(--line); border-radius:var(--r);
+  background:linear-gradient(165deg,rgba(255,255,255,.045),rgba(255,255,255,.012));
+  transition:border-color .25s, transform .25s, background .25s}
+.rcard:hover{border-color:rgba(79,216,255,.45); transform:translateY(-4px); background:linear-gradient(165deg,rgba(79,216,255,.09),rgba(255,255,255,.012))}
+.rtop{display:flex; align-items:center; justify-content:space-between; gap:10px; font:600 9.5px/1 var(--mono); letter-spacing:.16em; color:var(--muted2)}
+.rkind{color:#8fd8ee}
+.rcorp{margin:0; font-size:18px; font-weight:700; letter-spacing:-.01em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.rtags{display:flex; flex-wrap:wrap; gap:6px; align-items:center; min-height:23px}
+.rreg{font:600 9.5px/1 var(--mono); letter-spacing:.12em; padding:5px 7px; border-radius:5px; border:1px solid currentColor; opacity:.9}
+.rreg.g{color:var(--g)} .rreg.y{color:var(--y)} .rreg.b{color:var(--b)} .rreg.o{color:var(--o)} .rreg.n{color:var(--n)}
+.rag{font-size:11.5px; line-height:1.4; color:var(--muted); padding:3px 8px; border-radius:5px;
+  background:rgba(255,255,255,.04); border:1px solid var(--line); max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.rhl{margin:0; font-size:13px; line-height:1.62; color:#c6d3e2;
+  display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden}
+.rqq{display:flex; align-items:center; gap:7px; font:500 10.5px/1 var(--mono); color:var(--muted2); letter-spacing:.06em}
+.rqq b{color:#bfefff; font-weight:600}
+.rmeta{display:flex; justify-content:space-between; gap:10px; margin-top:auto; padding-top:11px;
+  border-top:1px solid rgba(255,255,255,.06); font:500 10.5px/1 var(--mono); color:var(--muted2); letter-spacing:.05em}
+.rfoot{display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-top:26px}
+.rfoot .btn{font-size:13.5px; padding:11px 18px}
+.rhint{font:500 11px/1.6 var(--mono); color:var(--muted2); letter-spacing:.05em}
+.clinks{display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-top:34px; padding-top:22px; border-top:1px solid var(--line)}
+.clabel2{font:600 9.5px/1 var(--mono); letter-spacing:.2em; color:var(--muted2); margin-right:4px}
+.chip-link{display:inline-flex; align-items:center; gap:8px; font-size:12.5px; color:var(--muted); padding:7px 13px;
+  border-radius:999px; border:1px solid var(--line); background:rgba(255,255,255,.02); transition:color .2s, border-color .2s}
+a.chip-link:hover{color:var(--text); border-color:rgba(79,216,255,.45)}
 .copy{font:600 10.5px/1 var(--mono); padding:5px 9px; border-radius:5px; border:1px solid var(--line2); background:rgba(255,255,255,.04); color:var(--muted); cursor:pointer; transition:.2s}
 .copy:hover{color:var(--text); border-color:var(--cyan)}
 footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
@@ -237,6 +259,7 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
 @media (max-width:1080px){
   .pillars{grid-template-columns:repeat(2,1fr)}
   .vgrid{grid-template-columns:repeat(2,1fr)}
+  .rgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .contacts{grid-template-columns:1fr}
 }
 @media (max-width:940px){
@@ -254,6 +277,7 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
   .live-bar{gap:7px; padding:9px 11px; font-size:9px}
   .live-id{display:none}
   .vgrid{grid-template-columns:1fr}
+  .rgrid{grid-template-columns:1fr}
   .pillars{grid-template-columns:1fr}
   .quote{padding:22px 20px}
   .tl-item{grid-template-columns:1fr; gap:6px; padding-left:26px}
@@ -279,7 +303,7 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
       <a href="#works">精选</a>
       <a href="#series">合集</a>
       <a href="#timeline">时间线</a>
-      <a href="#contact">关注</a>
+      <a href="#recruit">招募</a>
     </nav>
     <a class="nav-cta" href="https://space.bilibili.com/279635057" target="_blank" rel="noopener">B 站主页 ↗</a>
   </div>
@@ -666,29 +690,49 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
     </div>
   </section>
 
-  <section id="contact" class="section">
+  <section id="recruit" class="section">
     <div class="wrap">
       <div class="sec-head" data-reveal>
-        <span class="eyebrow">05 / 关注与合作</span>
-        <h2>一起看这场战争</h2>
-        <p>视频首发 B 站，海外玩家可看 YouTube 备份。合作、投稿与战报线索，欢迎直接私信。</p>
+        <span class="eyebrow">05 / 军团招募</span>
+        <h2>2026，找一支合适的军团</h2>
+        <p>EVE 欧服吧 2026 招募信息汇总：83 条在招，含驻地、建制与联系方式，按势力归类。<br class="pc">下面三条随机抽取，刷新页面或点「换一批」会换一组。</p>
       </div>
-      <div class="contacts">
-        <a class="contact" href="https://space.bilibili.com/279635057" target="_blank" rel="noopener" data-reveal>
-          <span class="clabel">BILIBILI</span>
-          <h3>CabbageTimil</h3>
-          <p>主阵地 · 120 部投稿 / 3,229 关注</p>
-        </a>
-        <a class="contact" href="https://www.youtube.com/@CabbageTimil" target="_blank" rel="noopener" data-reveal>
-          <span class="clabel">YOUTUBE</span>
-          <h3>@CabbageTimil</h3>
-          <p>仅供海外玩家观看视频，未专门运营</p>
-        </a>
-        <div class="contact" data-reveal>
-          <span class="clabel">QQ 群</span>
-          <h3 id="qq">1027324687</h3>
-          <p>粉丝群 · 战报讨论与组队<button class="copy" data-copy="1027324687">复制</button></p>
-        </div>
+      <div class="rgrid" id="recruitGrid" data-reveal>
+      <a class="rcard" href="shili.html">
+        <div class="rtop"><span class="rno">#32</span><span class="rkind">军团招新</span></div>
+        <h3 class="rcorp">蓝蛇旗下华人军团</h3>
+        <div class="rtags"><span class="rreg o">零零</span><span class="rag">Insidious（蓝蛇）</span></div>
+        <p class="rhl">绝地蓝蛇，微小型团，集中炸鱼</p>
+        
+        <div class="rmeta"><span>顶贴 2026-11-05</span><span>回复 20 ↗</span></div>
+      </a>
+      <a class="rcard" href="shili.html">
+        <div class="rtop"><span class="rno">#54</span><span class="rkind">军团招新</span></div>
+        <h3 class="rcorp">Profane Proverb</h3>
+        <div class="rtags"><span class="rreg o">零零</span><span class="rag">Insidious（蓝蛇）</span></div>
+        <p class="rhl">西北绝地4星座主权，联盟战略级指挥坐镇</p>
+        
+        <div class="rmeta"><span>顶贴 2026-11-04</span><span>回复 105 ↗</span></div>
+      </a>
+      <a class="rcard" href="shili.html">
+        <div class="rtop"><span class="rno">#30</span><span class="rkind">军团招新</span></div>
+        <h3 class="rcorp">YSS</h3>
+        <div class="rtags"><span class="rreg o">零零</span><span class="rag">DC 龙焰（Dracarys）</span></div>
+        <p class="rhl">DC旗下YSS军团全新升级招募，每晚19-22点固定集结</p>
+        
+        <div class="rmeta"><span>顶贴 2026-11-05</span><span>回复 12 ↗</span></div>
+      </a>
+      </div>
+      <div class="rfoot" data-reveal>
+        <a class="btn primary" href="shili.html">更多招募信息 <span>→</span></a>
+        <button class="btn ghost" id="recruitShuffle" type="button">换一批</button>
+        <span class="rhint">共 83 条 · 按势力分组 · 支持搜索</span>
+      </div>
+      <div class="clinks" data-reveal>
+        <span class="clabel2">联系与关注</span>
+        <a class="chip-link" href="https://space.bilibili.com/279635057" target="_blank" rel="noopener">B 站主页 ↗</a>
+        <a class="chip-link" href="https://www.youtube.com/@CabbageTimil" target="_blank" rel="noopener">YouTube ↗</a>
+        <span class="chip-link">QQ 群 1027324687<button class="copy" data-copy="1027324687">复制</button></span>
       </div>
     </div>
   </section>
@@ -699,11 +743,50 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
     <span>EVE Online is a trademark of CCP hf.</span>
   </div>
 </footer>
+<script type="application/json" id="recruit-data">[{"no":"24","corp":"KDS","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"驻地摄魂/贝斯，语音在线30+、日常角色100+","qq":"","last":"2026-11-04","replies":"108"},{"no":"25","corp":"BOP","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"DC旗下00军团，2026年新一轮招新","qq":"","last":"2026-11-04","replies":"103"},{"no":"29","corp":"黄泉八号","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"DC旗下00/任务区，全时区开放招新","qq":"","last":"2026-11-04","replies":"4"},{"no":"30","corp":"YSS","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"DC旗下YSS军团全新升级招募，每晚19-22点固定集结","qq":"","last":"2026-11-05","replies":"12"},{"no":"37","corp":"兔飞 Tu Zi Fei","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"驻地摄魂/埃索/贝斯/非塔，萨沙天使血袭者怪","qq":"","last":"2026-11-05","replies":"24"},{"no":"42","corp":"狂野军团","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"面向回归玩家/国服移民/手游移民，50+活人中型团","qq":"","last":"2026-11-05","replies":"44"},{"no":"43","corp":"隐星军团","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"2018年老团，大量国服移民，PAP奖励","qq":"","last":"2026-11-04","replies":"26"},{"no":"46","corp":"Dusk0","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"揽魂/绝地/贝斯，9%税，工业体系完整","qq":"","last":"2026-11-03","replies":"18"},{"no":"62","corp":"GGA Gua Ferocious","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"Paragon Soul、Esoteria星域，KOOK＋QQ群","qq":"762688053","last":"2026-10-30","replies":"34"},{"no":"65","corp":"-120-","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"帝国DC旗下军团，贝斯旗舰","qq":"","last":"2026-10-31","replies":"32"},{"no":"71","corp":"Jagdgeschwader 52","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"老牌精英PVP团重组，人均多开","qq":"","last":"2026-11-05","replies":"162"},{"no":"75","corp":"Night Garden 花园宝宝","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"10+活跃小微团，8%税，每晚有队、单浪也补","qq":"","last":"2026-10-19","replies":"67"},{"no":"76","corp":"Dusk（DC旗下）","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"不强制出勤，0.5%军团税，全中文联盟","qq":"","last":"2026-10-19","replies":"35"},{"no":"78","corp":"J.Y.W 南镇抚司","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"埃索/摄魂全境运输，萨沙坟区","qq":"","last":"2026-10-29","replies":"123"},{"no":"28","corp":"Dangerous technical cooperatives (DTC)","region":"零零","alliance":"IGC","kind":"军团招新","hl":"非典型00主权团，5亿启动资金，4亿/KM无限补损","qq":"","last":"2026-11-05","replies":"5"},{"no":"44","corp":"Sparrow In Cage 笼中雀","region":"零零","alliance":"IGC","kind":"军团招新","hl":"埃索/非塔/摄魂三区刷怪，10人左右休闲团","qq":"","last":"2026-10-28","replies":"25"},{"no":"60","corp":"守望之鹰 Watch Eagle","region":"零零","alliance":"IGC","kind":"军团招新","hl":"10% ISK税/2.5% LP税，具备隐投能力","qq":"","last":"2026-10-28","replies":"31"},{"no":"68","corp":"bicn","region":"零零","alliance":"IGC","kind":"军团招新","hl":"阶梯式入团奖励（1-6个月），最高享100亿补贴","qq":"","last":"2026-10-30","replies":"56"},{"no":"36","corp":"SNCF","region":"零零","alliance":"帝国系 · 未具名（推断）","kind":"军团招新","hl":"因斯姆尔生产，自称不听极端荣耀","qq":"","last":"2026-11-05","replies":"23"},{"no":"83","corp":"伊梅的00团（未具名）","region":"零零","alliance":"帝国系 · 未具名（推断）","kind":"军团招新","hl":"伊梅瑟亚00腹地＋M卫队低安，12.5%税、全补损","qq":"","last":"2026-09-23","replies":"94"},{"no":"84","corp":"kzu","region":"未注明","alliance":"帝国系 · 未具名（推断）","kind":"军团招新","hl":"信息极少，借PLA成员流失招人（原帖仅一句话）","qq":"","last":"2026-11-01","replies":"5"},{"no":"23","corp":"特格拉","region":"零零","alliance":"蜜蜂 Goonswarm（Imperium）","kind":"军团招新","hl":"帝国系蜜蜂华人团，驻地距蜜蜂首都C-J6仅5跳，打标安全","qq":"","last":"2026-10-23","replies":"63"},{"no":"41","corp":"ES 帝国之镰","region":"零零","alliance":"INIT（The Initiative.）","kind":"军团招新","hl":"首都C-N4OD，源泉天蛇＋绝地血袭","qq":"","last":"2026-11-04","replies":"17"},{"no":"49","corp":"Co.Wa 宇宙流浪者","region":"零零","alliance":"INIT（The Initiative.）","kind":"军团招新","hl":"血袭者刷怪宝地，百亿补贴＋全战损补","qq":"","last":"2026-11-05","replies":"114"},{"no":"4","corp":"Phoenix City 凤凰城","region":"高安","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"高安团0税＋00团（星币税11%），双驻地、双路线","qq":"","last":"2026-11-04","replies":"16"},{"no":"26","corp":"北极星","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"00驻地寂静谷，可上维纳尔刷兔子官员、下三大星域电鱼","qq":"","last":"2026-10-06","replies":"259"},{"no":"34","corp":"CACX 混沌（反向招新）","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"以宣传视频反向招新，欧服最大华人军团","qq":"","last":"2026-10-28","replies":"0"},{"no":"39","corp":"叶落星海 YeLuo-xingHai","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"维纳尔海盗区完全控场，七周年招新","qq":"","last":"2026-11-05","replies":"23"},{"no":"40","corp":"CACX 混沌仲裁者","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"自称全EVE最大华人军团，月活1500+","qq":"","last":"2026-11-04","replies":"20"},{"no":"45","corp":"AOC","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"血脉主权团，静寂谷/血脉旗舰信标炸鱼＋五级任务","qq":"","last":"2026-11-05","replies":"184"},{"no":"50","corp":"红领鲸","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"斐德天蛇地，隔跳兔子地，军团合同400+","qq":"","last":"2026-11-04","replies":"20"},{"no":"58","corp":"D.N.E 新伊甸龙裔","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"FRT旗下主权小军团，主力驻北方00","qq":"323693762","last":"2026-11-05","replies":"48"},{"no":"67","corp":"伏羲","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"十三年老团，两座星城，斐德PvE/PVP","qq":"","last":"2026-11-04","replies":"54"},{"no":"69","corp":"领航员工会 Navigators' Union","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"凛冬华人社区“养老院”，高安萌新团星火学院","qq":"","last":"2026-11-04","replies":"52"},{"no":"70","corp":"小马 My Little Pony.","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"寂静谷 azbr，炸鱼队＋制造＋挖冰","qq":"","last":"2026-11-04","replies":"37"},{"no":"79","corp":"Phoenix City 凤凰城（早期帖）","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"FRT旗下凤凰城，面向全宇宙招新","qq":"","last":"2026-10-14","replies":"626"},{"no":"81","corp":"吃瓜军团","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"静寂谷/特纳兔子区，收割队活跃，新手团在高安","qq":"","last":"2026-11-05","replies":"3"},{"no":"33","corp":"北方十字军 Northern Crusades","region":"零零","alliance":"NA（NCdot新手联盟）／WC","kind":"军团招新","hl":"新人向，可选低安卫队／莫得团任务／00生产三条路线","qq":"","last":"2026-11-05","replies":"19"},{"no":"57","corp":"FOX 抵抗之狐","region":"零零","alliance":"NC.（Northern Coalition.）／WC","kind":"军团招新","hl":"西血脉独享，WC联盟群NC.旗下唯一华人团","qq":"","last":"2026-11-05","replies":"216"},{"no":"11","corp":"星火学院 N-V-S","region":"高安","alliance":"领航员工会／FRT","kind":"军团招新","hl":"高安纯萌新养老团，隶属领航员工会&凛冬华人社区","qq":"","last":"2026-11-04","replies":"41"},{"no":"38","corp":"Euphoria.0","region":"零零","alliance":"自由之翼（Wings Freedom）","kind":"军团招新","hl":"绝地WF领地，四级燃烧任务点＋血袭者","qq":"","last":"2026-10-27","replies":"12"},{"no":"74","corp":"创世倾域 Chuangshi","region":"零零","alliance":"自由之翼（Wings Freedom）","kind":"军团招新","hl":"2017年重建，2026年发展为自由之翼联盟","qq":"","last":"2026-11-03","replies":"94"},{"no":"35","corp":"夕阳红","region":"零零","alliance":"BOSS","kind":"军团招新","hl":"Boss旗下养老团，佩利根弗星域","qq":"","last":"2026-11-05","replies":"18"},{"no":"56","corp":"VKC（BOSS CN 社区）","region":"零零","alliance":"BOSS","kind":"军团招新","hl":"无人机区战报集中帖兼VKC军团招新","qq":"","last":"2026-10-12","replies":"4"},{"no":"64","corp":"BOSS华人军团","region":"零零","alliance":"BOSS","kind":"军团招新","hl":"BOSS联盟旗下主力华人团，驻扎无人机区","qq":"","last":"2026-10-29","replies":"42"},{"no":"51","corp":"无人机区华人军团","region":"零零","alliance":"RMC 联盟群（俄系）","kind":"军团招新","hl":"作战区域在毛子联盟及周边，教官带新","qq":"","last":"2026-10-21","replies":"18"},{"no":"73","corp":"战斗姐妹修道院","region":"零零","alliance":"RMC 联盟群（俄系）","kind":"军团招新","hl":"新八半壁江山，联盟内唯一华人团","qq":"","last":"2026-09-11","replies":"87"},{"no":"27","corp":"The Second Wind","region":"零零","alliance":"","kind":"军团招新","hl":"无人机区新独立团，已取得2个星系主权","qq":"","last":"2026-11-05","replies":"16"},{"no":"52","corp":"Mass Ascension 中文社区","region":"零零","alliance":"","kind":"联盟社区招新","hl":"无人机区卡勒瓦拉阔地，人就要、不用ESI、无出勤","qq":"","last":"2026-10-04","replies":"10"},{"no":"32","corp":"蓝蛇旗下华人军团","region":"零零","alliance":"Insidious（蓝蛇）","kind":"军团招新","hl":"绝地蓝蛇，微小型团，集中炸鱼","qq":"","last":"2026-11-05","replies":"20"},{"no":"54","corp":"Profane Proverb","region":"零零","alliance":"Insidious（蓝蛇）","kind":"军团招新","hl":"西北绝地4星座主权，联盟战略级指挥坐镇","qq":"","last":"2026-11-04","replies":"105"},{"no":"59","corp":"Insidious / EVIL","region":"零零","alliance":"Insidious（蓝蛇）","kind":"军团招新","hl":"西北绝地一星座主权，招募公司或个人","qq":"","last":"2026-11-04","replies":"116"},{"no":"18","corp":"Silent Sojourner","region":"低安","alliance":"SC（Shadow Cartel）","kind":"军团招新","hl":"低安土著团，4级燃烧合作社＋全服高效5级任务点","qq":"","last":"2026-10-26","replies":"58"},{"no":"53","corp":"Test 华人社区","region":"零零","alliance":"TEST","kind":"联盟社区招新","hl":"招个人与军团加入TEST，PVP全场景SRP 300M/km","qq":"","last":"2026-11-04","replies":"12"},{"no":"31","corp":"D.DS 死亡先锋","region":"零零","alliance":"WOMP","kind":"军团招新","hl":"逑瑞斯主权，WOMP旗下唯一华人军团","qq":"","last":"2026-11-05","replies":"11"},{"no":"61","corp":"king for crazy (kfc)","region":"零零","alliance":"鳄鱼联盟","kind":"军团招新","hl":"对舞/德克廉，养老向","qq":"","last":"2026-11-04","replies":"92"},{"no":"1","corp":"楠邑茶社 NYCS","region":"高安","alliance":"","kind":"军团招新","hl":"高安0税养老团，纯PVE＋唠嗑群，无福利、无势力倾向","qq":"","last":"2026-11-05","replies":"0"},{"no":"2","corp":"ES.A（皇帝镰刀第二帝国高安新手团）","region":"高安","alliance":"","kind":"军团招新","hl":"零税、无宣战，驻地吉他，收新老萌新","qq":"","last":"2026-11-05","replies":"13"},{"no":"6","corp":"潮汐（潮汐星空/潮汐星渊）","region":"高安","alliance":"","kind":"军团招新","hl":"高安0税＋低安轻税双团，安帕纳克驻地，姐妹会/国土","qq":"","last":"2026-11-04","replies":"96"},{"no":"8","corp":"宇宙终章 END OF THE UNIVERSE","region":"高安","alliance":"","kind":"军团招新","hl":"加达里高安0税，承诺永不依附00势力、无宣战","qq":"","last":"2026-10-10","replies":"58"},{"no":"9","corp":"北镇抚司","region":"高安","alliance":"","kind":"军团招新","hl":"高安姐妹会四级＋深渊＋国土一体团，进团5000万","qq":"","last":"2026-11-02","replies":"33"},{"no":"10","corp":"国土公会 Homefront Guild","region":"高安","alliance":"","kind":"军团招新","hl":"纯高安团、无势力关联，成员达标后可进洞（5级洞）","qq":"","last":"2026-10-27","replies":"9"},{"no":"12","corp":"海盗龙骑团","region":"低安","alliance":"","kind":"军团招新","hl":"低安五级任务＋卫队绕杆，纯低安PVP/海盗","qq":"","last":"2026-11-05","replies":"53"},{"no":"13","corp":"PAREV","region":"低安","alliance":"","kind":"军团招新","hl":"C卫队集结点欧拿蒙；低安燃烧/五级任务＋黑渊00生产","qq":"","last":"2026-11-05","replies":"4"},{"no":"15","corp":"Cathead Horde 猫猫头","region":"低安","alliance":"","kind":"军团招新","hl":"米玛塔尔卫队区，绕杆子/海军五级（2E+/h）","qq":"","last":"2026-09-24","replies":"8"},{"no":"16","corp":"加勒比血腥骷髅 RED","region":"低安","alliance":"","kind":"军团招新","hl":"艾玛低安海军五级＋G族科研燃烧任务，LP回收","qq":"","last":"2026-11-04","replies":"81"},{"no":"17","corp":"星际大学","region":"低安","alliance":"","kind":"军团招新","hl":"兔子卫队势力战争，新人向，LP 1400-1600全额回收","qq":"","last":"2026-10-27","replies":"13"},{"no":"19","corp":"老僧扫扫地","region":"低安","alliance":"","kind":"军团招新","hl":"新人绕杆补损、LP高价回收、贡献可视化的新生代团","qq":"","last":"2026-09-20","replies":"2"},{"no":"20","corp":"443 战斗虫洞团","region":"虫洞","alliance":"","kind":"军团招新","hl":"住443无天象洞，PVP为主PVE为辅，洞内生产无税","qq":"","last":"2026-10-28","replies":"16"},{"no":"21","corp":"虫洞团（含00地盘）","region":"虫洞","alliance":"","kind":"军团招新","hl":"洞内为主，同时在00有地盘，洞内厌倦可下00","qq":"","last":"2026-11-05","replies":"42"},{"no":"22","corp":"247虫洞","region":"虫洞","alliance":"","kind":"军团招新","hl":"有高安口的休闲洞，挖气云/刷冬眠/种菜，费用均摊","qq":"","last":"2026-10-12","replies":"41"},{"no":"3","corp":"高安萨沙入侵队","region":"高安","alliance":"","kind":"兴趣组招人","hl":"不用入团，只组队打高安萨沙入侵，无势力倾向","qq":"","last":"2026-10-25","replies":"35"},{"no":"5","corp":"高安国土兴趣队","region":"高安","alliance":"","kind":"兴趣组招人","hl":"无需加团，专收高安散人，国土/姐妹会燃烧拼队","qq":"","last":"2026-11-05","replies":"2"},{"no":"7","corp":"M高安国土拼好队","region":"高安","alliance":"","kind":"兴趣组招人","hl":"无需加团的高安国土拼车队","qq":"","last":"2026-09-11","replies":"5"},{"no":"85","corp":"个人1对1带新（中登）","region":"未注明","alliance":"","kind":"个人带新","hl":"不招军团成员，个人1对1针对性指导萌新","qq":"","last":"2026-10-14","replies":"59"},{"no":"77","corp":"Central Royal Force 皇家战斗部队","region":"零零","alliance":"","kind":"军团招新","hl":"入驻天蛇任务区，主打天蛇代理人燃烧任务","qq":"","last":"2026-02-11","replies":"12"},{"no":"86","corp":"Solo man fleet","region":"未注明","alliance":"","kind":"军团招新","hl":"全服白、0税、不语音、无出勤，只招Solo PVP玩家","qq":"","last":"2026-10-21","replies":"67"},{"no":"88","corp":"将进酒 Carouse","region":"未注明","alliance":"","kind":"军团招新","hl":"新建华人团，小规模收割，3E起步物资","qq":"","last":"2026-10-03","replies":"22"},{"no":"90","corp":"xlep","region":"未注明","alliance":"","kind":"军团招新","hl":"重发招新帖，内容以图片为主","qq":"","last":"2026-10-08","replies":"15"},{"no":"47","corp":"超级暗月（暗月重工）","region":"零零","alliance":"未标注","kind":"军团招新","hl":"因斯姆尔为后方；文案为战锤40K风格，未写明联盟","qq":"","last":"2026-11-03","replies":"27"},{"no":"48","corp":"德克萨斯故土团","region":"零零","alliance":"未标注","kind":"军团招新","hl":"故土战列掠夺对轰，要求12开以上（信息主要在图片）","qq":"","last":"2026-11-02","replies":"31"},{"no":"55","corp":"天工","region":"零零","alliance":"未标注","kind":"军团招新","hl":"驻扎邪恶湾流，天使怪生产，5%税率","qq":"","last":"2026-10-31","replies":"42"},{"no":"87","corp":"DVH","region":"未注明","alliance":"未标注","kind":"军团招新","hl":"第二波招新，内容以图片为主（原帖文字极少）","qq":"","last":"2026-10-19","replies":"314"}]</script>
 <script>
 (function(){
   var rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var STATIC = /[?&]static=1/.test(location.search);
   if (STATIC) document.documentElement.classList.add('is-static');
+
+  /* recruitment: draw a random few cards from the shili.html dataset */
+  (function(){
+    var data = document.getElementById('recruit-data');
+    var grid = document.getElementById('recruitGrid');
+    if (!data || !grid) return;
+    var items = [];
+    try { items = JSON.parse(data.textContent || '[]'); } catch (e) { return; }
+    if (!items.length) return;
+    var REG = { '高安': 'g', '低安': 'y', '虫洞': 'b', '零零': 'o', '未注明': 'n' };
+    function esc(s){
+      return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+      });
+    }
+    function card(it){
+      var reg = REG[it.region] || 'n';
+      return '<a class="rcard" href="shili.html">'
+        + '<div class="rtop"><span class="rno">#' + esc(it.no) + '</span><span class="rkind">' + esc(it.kind) + '</span></div>'
+        + '<h3 class="rcorp">' + esc(it.corp) + '</h3>'
+        + '<div class="rtags"><span class="rreg ' + reg + '">' + esc(it.region) + '</span>'
+        + (it.alliance ? '<span class="rag">' + esc(it.alliance) + '</span>' : '') + '</div>'
+        + '<p class="rhl">' + esc(it.hl) + '</p>'
+        + (it.qq ? '<div class="rqq"><span>QQ 群</span><b>' + esc(it.qq) + '</b></div>' : '')
+        + '<div class="rmeta"><span>顶贴 ' + esc(it.last) + '</span><span>回复 ' + esc(it.replies) + ' ↗</span></div>'
+        + '</a>';
+    }
+    function draw(){
+      var pool = items.slice(), out = [];
+      while (pool.length && out.length < 3) {
+        out.push(pool.splice(Math.floor(Math.random() * pool.length), 1)[0]);
+      }
+      grid.innerHTML = out.map(card).join('');
+    }
+    draw();
+    var btn = document.getElementById('recruitShuffle');
+    if (btn) btn.addEventListener('click', draw);
+  })();
 
   /* starfield */
   var cv = document.getElementById('stars');
