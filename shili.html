@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EVE欧服吧 2026 招募信息 · 按势力</title>
+<title>EVE欧服吧 2026 招募信息</title>
 <style>
 :root{
   --bg:#070b16; --bg2:#0d1424; --panel:rgba(18,26,44,.82); --line:rgba(120,160,220,.16);
@@ -24,7 +24,7 @@ a{color:var(--acc);text-decoration:none}
 a:hover{text-decoration:underline}
 
 /* ---------- hero ---------- */
-.hero{position:relative;padding:44px 28px 30px;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero{position:relative;padding:44px 28px 30px;overflow:hidden}
 .hero:before{content:"";position:absolute;inset:0;
   background-image:radial-gradient(1px 1px at 20% 30%, #fff 50%, transparent 51%),
                    radial-gradient(1px 1px at 70% 20%, #cfe6ff 50%, transparent 51%),
@@ -45,7 +45,7 @@ h1 em{font-style:normal;color:var(--warm)}
 
 /* ---------- toolbar ---------- */
 .toolbar{position:sticky;top:0;z-index:20;background:rgba(7,11,22,.92);backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--line);padding:12px 28px}
+  padding:12px 28px 8px}
 .toolbar-in{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .chips{display:flex;flex-wrap:wrap;gap:8px;flex:1 1 auto}
 .chip{font:inherit;font-size:13px;color:var(--txt);background:rgba(255,255,255,.04);
@@ -55,9 +55,13 @@ h1 em{font-style:normal;color:var(--warm)}
 .chip.on{background:linear-gradient(180deg,rgba(79,209,255,.26),rgba(79,209,255,.12));
   border-color:rgba(79,209,255,.7);color:#fff}
 .chip.on b{color:#dff3ff}
-.search{display:flex;align-items:center;gap:8px;align-self:flex-end}
-.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;flex-wrap:wrap}
-.hero-main{flex:1 1 auto;min-width:320px}
+.search{display:flex;align-items:center;gap:8px;flex:1 1 260px;max-width:420px;margin:0 auto;justify-content:center}
+.hero-row{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.hero-main{flex:0 1 auto;min-width:260px}
+.fac-logos{display:flex;gap:8px;align-items:center;justify-content:flex-end;flex-wrap:wrap;max-width:420px}
+.fac-logos img{width:44px;height:44px;border-radius:11px;object-fit:contain;padding:4px;
+  background:rgba(255,255,255,.045);border:1px solid var(--line);opacity:.9;transition:.18s}
+.fac-logos img:hover{opacity:1;transform:translateY(-2px);border-color:rgba(79,209,255,.55)}
 .search input{font:inherit;font-size:13px;color:var(--txt);background:rgba(255,255,255,.05);
   border:1px solid var(--line);border-radius:999px;padding:8px 16px;width:262px;outline:none}
 .search input:focus{border-color:rgba(79,209,255,.6);box-shadow:0 0 0 3px rgba(79,209,255,.12)}
@@ -170,7 +174,10 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
   .fac-stats{gap:14px}
   .faction{margin-top:44px;padding-top:30px}
   .faction h2{font-size:22px}
-  .back-top{position:static;margin:0 0 14px}
+  .hero-main{flex:1 1 auto}
+  .search{order:3;flex:1 1 100%;max-width:none;margin:0}
+  .back{order:2;margin-left:auto}
+  .fac-logos{justify-content:flex-start;max-width:none}
   .site-foot{margin-top:44px;padding:22px 18px 44px}
 }
 @media print{
@@ -186,17 +193,11 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
 
 <header class="hero">
   <div class="hero-inner hero-row">
-    <a class="back back-top" href="index.html">← 返回首页</a>
     <div class="hero-main">
-      <h1>2026 年活跃军团招募 · <em>按势力</em></h1>
-      <div class="stats">
-        <div class="stat"><b>81</b><span>招新帖</span></div>
-        <div class="stat"><b>81</b><span>军团 / 组织</span></div>
-        <div class="stat"><b>55</b><span>零零系帖</span></div>
-        <div class="stat"><b>11</b><span>势力阵营</span></div>
-      </div>
+      <h1>2026 年活跃军团招募</h1>
     </div>
     <div class="search"><input id="q" type="search" placeholder="搜索军团 / 联盟 / QQ群…" autocomplete="off"></div>
+    <a class="back" href="index.html">← 返回首页</a>
   </div>
 </header>
 
@@ -208,10 +209,6 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
 
 <div class="wrap">
   <div class="summary">
-    <section class="panel">
-      <h3>各势力招新帖数</h3>
-      <div class="bar-row"><span class="bar-lb">帝国系</span><span class="bar-track"><i style="width:25.9%"></i></span><span class="bar-v">21</span></div><div class="bar-row"><span class="bar-lb">INIT</span><span class="bar-track"><i style="width:2.5%"></i></span><span class="bar-v">2</span></div><div class="bar-row"><span class="bar-lb">凛冬系</span><span class="bar-track"><i style="width:22.2%"></i></span><span class="bar-v">18</span></div><div class="bar-row"><span class="bar-lb">创世系</span><span class="bar-track"><i style="width:2.5%"></i></span><span class="bar-v">2</span></div><div class="bar-row"><span class="bar-lb">无人机区势力</span><span class="bar-track"><i style="width:8.6%"></i></span><span class="bar-v">7</span></div><div class="bar-row"><span class="bar-lb">独立联盟</span><span class="bar-track"><i style="width:6.2%"></i></span><span class="bar-v">5</span></div><div class="bar-row"><span class="bar-lb">高安独立团</span><span class="bar-track"><i style="width:7.4%"></i></span><span class="bar-v">6</span></div><div class="bar-row"><span class="bar-lb">低安独立团</span><span class="bar-track"><i style="width:7.4%"></i></span><span class="bar-v">6</span></div><div class="bar-row"><span class="bar-lb">虫洞团</span><span class="bar-track"><i style="width:3.7%"></i></span><span class="bar-v">3</span></div><div class="bar-row"><span class="bar-lb">兴趣组/社区</span><span class="bar-track"><i style="width:3.7%"></i></span><span class="bar-v">3</span></div><div class="bar-row"><span class="bar-lb">未标注</span><span class="bar-track"><i style="width:9.9%"></i></span><span class="bar-v">8</span></div>
-    </section>
     <div class="strip">
       <span class="strip-k">区域图例</span>
       <div class="legend"><span class="lg"><i class="rg g"></i>高安 10</span><span class="lg"><i class="rg y"></i>低安 7</span><span class="lg"><i class="rg b"></i>虫洞 3</span><span class="lg"><i class="rg o"></i>零零 55</span><span class="lg"><i class="rg n"></i>未注明 6</span></div>
@@ -227,14 +224,10 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
         <div class="code">IMPERIUM</div>
         <h2>帝国系</h2>
       </div>
-      <div class="fac-stats">
-        <div><b>21</b><span>招新帖</span></div>
-        <div><b>21</b><span>军团/组织</span></div>
-        <div class="wide"><b>零零 20、未注明 1</b><span>区域分布</span></div>
-      </div>
+      <div class="fac-logos"><img src="logos/dracarys.png" alt="DC 龙焰（Dracarys）" title="DC 龙焰（Dracarys）" loading="lazy"><img src="logos/igc.png" alt="IGC" title="IGC" loading="lazy"><img src="logos/goonswarm.png" alt="蜜蜂 Goonswarm（Imperium）" title="蜜蜂 Goonswarm（Imperium）" loading="lazy"></div>
     </div>
     <p class="fac-desc">华人主力集中在 DC（龙焰）、IGC 与蜜蜂系华人团，驻地多为绝地、摄魂、贝斯、埃索等 00 星域。</p>
-    <div class="alliance"><div class="ag-head"><h3>DC 龙焰（Dracarys）</h3><span class="ag-cnt">13 帖</span></div><div class="cards">
+    <div class="alliance"><div class="ag-head"><h3>DC 龙焰（Dracarys）</h3><span class="ag-cnt">13 条</span></div><div class="cards">
       <article class="card" data-text="kds kds dc 龙焰（dracarys） 驻地摄魂/贝斯，语音在线30+、日常角色100+ 军团招新 零零 578434701">
         <div class="card-logo" style="background-image:url(&quot;logos/dracarys.png&quot;)"></div>
         <div class="card-top">
@@ -253,7 +246,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-06-05　·　顶贴 <b>2026-11-04</b></span>
           <span>回复 <b>108</b>　·　阅读 <b>3,574</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10770269343" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10770269343" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="bop bop dc 龙焰（dracarys） dc旗下00军团，2026年新一轮招新 军团招新 零零 912091135">
         <div class="card-logo" style="background-image:url(&quot;logos/dracarys.png&quot;)"></div>
@@ -273,7 +266,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-06-01　·　顶贴 <b>2026-11-04</b></span>
           <span>回复 <b>103</b>　·　阅读 <b>3,044</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10761763917" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10761763917" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="黄泉八号 黄泉八号 dc 龙焰（dracarys） dc旗下00/任务区，全时区开放招新 军团招新 零零 1030646928">
         <div class="card-logo" style="background-image:url(&quot;logos/dracarys.png&quot;)"></div>
@@ -293,7 +286,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-11-03　·　顶贴 <b>2026-11-04</b></span>
           <span>回复 <b>4</b>　·　阅读 <b>123</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11163401988" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11163401988" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="yss yss dc 龙焰（dracarys） dc旗下yss军团全新升级招募，每晚19-22点固定集结 军团招新 零零 623793986">
         <div class="card-logo" style="background-image:url(&quot;logos/dracarys.png&quot;)"></div>
@@ -313,7 +306,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-11-03　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>12</b>　·　阅读 <b>179</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11161858027" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11161858027" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="tu zi fei 兔飞 兔飞 tu zi fei dc 龙焰（dracarys） 驻地摄魂/埃索/贝斯/非塔，萨沙天使血袭者怪 军团招新 零零 784077365">
         <div class="card-logo" style="background-image:url(&quot;logos/dracarys.png&quot;)"></div>
@@ -333,7 +326,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-10-26　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>24</b>　·　阅读 <b>409</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11138035169" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11138035169" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="狂野军团 狂野军团 dc 龙焰（dracarys） 面向回归玩家/国服移民/手游移民，50+活人中型团 军团招新 零零 106196340">
         <div class="card-logo" style="background-image:url(&quot;logos/dracarys.png&quot;)"></div>
@@ -353,7 +346,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-10-14　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>44</b>　·　阅读 <b>886</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11104655440" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11104655440" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="隐星军团 隐星军团 dc 龙焰（dracarys） 2018年老团，大量国服移民，pap奖励 军团招新 零零 1108247946">
         <div class="card-logo" style="background-image:url(&quot;logos/dracarys.png&quot;)"></div>
@@ -373,7 +366,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-10-12　·　顶贴 <b>2026-11-04</b></span>
           <span>回复 <b>26</b>　·　阅读 <b>624</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11098788213" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11098788213" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="dusk dusk dc 龙焰（dracarys） 揽魂/绝地/贝斯，9%税，工业体系完整 军团招新 零零 595744417">
         <div class="card-logo" style="background-image:url(&quot;logos/dracarys.png&quot;)"></div>
@@ -393,7 +386,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-10-04　·　顶贴 <b>2026-11-03</b></span>
           <span>回复 <b>18</b>　·　阅读 <b>735</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11077094102" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11077094102" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="gua ferocious gua ferocious dc 龙焰（dracarys） paragon soul、esoteria星域，kook＋qq群 军团招新 零零 762688053">
         <div class="card-logo" style="background-image:url(&quot;logos/dracarys.png&quot;)"></div>
@@ -413,7 +406,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-07-28　·　顶贴 <b>2026-10-30</b></span>
           <span>回复 <b>34</b>　·　阅读 <b>1,253</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10900959863" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10900959863" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="-120- -120- dc 龙焰（dracarys） 帝国dc旗下军团，贝斯旗舰 军团招新 零零 302337435">
         <div class="card-logo" style="background-image:url(&quot;logos/dracarys.png&quot;)"></div>
@@ -433,7 +426,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-07-06　·　顶贴 <b>2026-10-31</b></span>
           <span>回复 <b>32</b>　·　阅读 <b>1,246</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10846209351" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10846209351" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="jagdgeschwader 52 jagdgeschwader 52 dc 龙焰（dracarys） 老牌精英pvp团重组，人均多开 军团招新 零零 1091837471">
         <div class="card-logo" style="background-image:url(&quot;logos/dracarys.png&quot;)"></div>
@@ -453,7 +446,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-05-11　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>162</b>　·　阅读 <b>4,577</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10707683921" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10707683921" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="night garden 花园宝宝 night garden 花园宝宝 dc 龙焰（dracarys） 10+活跃小微团，8%税，每晚有队、单浪也补 军团招新 零零 981066167">
         <div class="card-logo" style="background-image:url(&quot;logos/dracarys.png&quot;)"></div>
@@ -473,7 +466,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-04-10　·　顶贴 <b>2026-10-19</b></span>
           <span>回复 <b>67</b>　·　阅读 <b>3,528</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10627845229" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10627845229" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="j.y.w 南镇抚司 j.y.w 南镇抚司 dc 龙焰（dracarys） 埃索/摄魂全境运输，萨沙坟区 军团招新 零零 1039067937">
         <div class="card-logo" style="background-image:url(&quot;logos/dracarys.png&quot;)"></div>
@@ -493,8 +486,8 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2025-07-03　·　顶贴 <b>2026-10-29</b></span>
           <span>回复 <b>123</b>　·　阅读 <b>4,237</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/9842657230" target="_blank" rel="noopener">查看原帖 →</a>
-      </article></div></div><div class="alliance"><div class="ag-head"><h3>IGC</h3><span class="ag-cnt">4 帖</span></div><div class="cards">
+        <a class="link" href="https://tieba.baidu.com/p/9842657230" target="_blank" rel="noopener">查阅详情 →</a>
+      </article></div></div><div class="alliance"><div class="ag-head"><h3>IGC</h3><span class="ag-cnt">4 条</span></div><div class="cards">
       <article class="card" data-text="dangerous technical cooperatives dtc dangerous technical cooperatives (dtc) igc 非典型00主权团，5亿启动资金，4亿/km无限补损 军团招新 零零 921370602">
         <div class="card-logo" style="background-image:url(&quot;logos/igc.png&quot;)"></div>
         <div class="card-top">
@@ -513,7 +506,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-11-03　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>5</b>　·　阅读 <b>124</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11163587017" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11163587017" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="sparrow in cage 笼中雀 sparrow in cage 笼中雀 igc 埃索/非塔/摄魂三区刷怪，10人左右休闲团 军团招新 零零 1073899959">
         <div class="card-logo" style="background-image:url(&quot;logos/igc.png&quot;)"></div>
@@ -533,7 +526,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-10-08　·　顶贴 <b>2026-10-28</b></span>
           <span>回复 <b>25</b>　·　阅读 <b>822</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11088096593" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11088096593" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="watch eagle 守望之鹰 守望之鹰 watch eagle igc 10% isk税/2.5% lp税，具备隐投能力 军团招新 零零 464381277">
         <div class="card-logo" style="background-image:url(&quot;logos/igc.png&quot;)"></div>
@@ -553,7 +546,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-08-06　·　顶贴 <b>2026-10-28</b></span>
           <span>回复 <b>31</b>　·　阅读 <b>2,334</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10923319237" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10923319237" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="bicn bicn igc 阶梯式入团奖励（1-6个月），最高享100亿补贴 军团招新 零零 763569120">
         <div class="card-logo" style="background-image:url(&quot;logos/igc.png&quot;)"></div>
@@ -573,8 +566,8 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-06-05　·　顶贴 <b>2026-10-30</b></span>
           <span>回复 <b>56</b>　·　阅读 <b>2,057</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10771470433" target="_blank" rel="noopener">查看原帖 →</a>
-      </article></div></div><div class="alliance"><div class="ag-head"><h3>帝国系 · 未具名（推断）</h3><span class="ag-cnt">3 帖</span></div><div class="cards">
+        <a class="link" href="https://tieba.baidu.com/p/10771470433" target="_blank" rel="noopener">查阅详情 →</a>
+      </article></div></div><div class="alliance"><div class="ag-head"><h3>帝国系 · 未具名（推断）</h3><span class="ag-cnt">3 条</span></div><div class="cards">
       <article class="card" data-text="sncf sncf 帝国系 · 未具名（推断） 因斯姆尔生产，自称不听极端荣耀 军团招新 零零 1097081286">
         
         <div class="card-top">
@@ -593,16 +586,16 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-10-26　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>23</b>　·　阅读 <b>525</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11138896036" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11138896036" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
-      <article class="card" data-text="knight of zero ultra knight of zero ultra 帝国系 · 未具名（推断） 伊梅瑟亚00腹地＋m卫队低安，12.5%税、全补损 军团招新 零零 879553685">
+      <article class="card" data-text="knight of zero ultra knight of zero ultra 帝国系 · 未具名（推断） 伊梅瑟亚00腹地＋m卫队低安，12.5%税、全补损 军团招新 零零 低安 879553685">
         
         <div class="card-top">
           <span class="no">#73</span>
           <h4>knight of zero ultra</h4>
         </div>
         <div class="tags">
-          <span class="t rg o">零零</span>
+          <span class="t rg o">零零</span><span class="t rg y">低安</span>
           <span class="t ag">帝国系 · 未具名（推断）</span>
           <span class="t kind">军团招新</span>
           
@@ -613,7 +606,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-08-15　·　顶贴 <b>2026-09-23</b></span>
           <span>回复 <b>94</b>　·　阅读 <b>2,793</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10946385886" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10946385886" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="kzu kzu 帝国系 · 未具名（推断） 信息极少，借pla成员流失招人（原帖仅一句话） 军团招新 未注明 见原帖">
         
@@ -633,8 +626,8 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-10-30　·　顶贴 <b>2026-11-01</b></span>
           <span>回复 <b>5</b>　·　阅读 <b>543</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11150289154" target="_blank" rel="noopener">查看原帖 →</a>
-      </article></div></div><div class="alliance"><div class="ag-head"><h3>蜜蜂 Goonswarm（Imperium）</h3><span class="ag-cnt">1 帖</span></div><div class="cards">
+        <a class="link" href="https://tieba.baidu.com/p/11150289154" target="_blank" rel="noopener">查阅详情 →</a>
+      </article></div></div><div class="alliance"><div class="ag-head"><h3>蜜蜂 Goonswarm（Imperium）</h3><span class="ag-cnt">1 条</span></div><div class="cards">
       <article class="card" data-text="特格拉 特格拉 蜜蜂 goonswarm（imperium） 帝国系蜜蜂华人团，驻地距蜜蜂首都c-j6仅5跳，打标安全 军团招新 零零 882886587">
         <div class="card-logo" style="background-image:url(&quot;logos/goonswarm.png&quot;)"></div>
         <div class="card-top">
@@ -653,7 +646,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-06-08　·　顶贴 <b>2026-10-23</b></span>
           <span>回复 <b>63</b>　·　阅读 <b>2,862</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10776949874" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10776949874" target="_blank" rel="noopener">查阅详情 →</a>
       </article></div></div>
   </section>
   <section class="faction" id="init" data-faction="INIT" data-region="零零">
@@ -662,14 +655,10 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
         <div class="code">THE INITIATIVE.</div>
         <h2>INIT</h2>
       </div>
-      <div class="fac-stats">
-        <div><b>2</b><span>招新帖</span></div>
-        <div><b>2</b><span>军团/组织</span></div>
-        <div class="wide"><b>零零 2</b><span>区域分布</span></div>
-      </div>
+      <div class="fac-logos"><img src="logos/initiative.png" alt="INIT（The Initiative.）" title="INIT（The Initiative.）" loading="lazy"></div>
     </div>
     <p class="fac-desc">贴吧招新的 INIT 华人团是 ES 帝国之镰与 Co.Wa 宇宙流浪者，驻源泉 C-N4OD 一线，主打天蛇与血袭者生产。</p>
-    <div class="alliance"><div class="ag-head"><h3>INIT（The Initiative.）</h3><span class="ag-cnt">2 帖</span></div><div class="cards">
+    <div class="alliance"><div class="ag-head"><h3>INIT（The Initiative.）</h3><span class="ag-cnt">2 条</span></div><div class="cards">
       <article class="card" data-text="es 帝国之镰 es 帝国之镰 init（the initiative.） 首都c-n4od，源泉天蛇＋绝地血袭 军团招新 零零 744255314">
         <div class="card-logo" style="background-image:url(&quot;logos/initiative.png&quot;)"></div>
         <div class="card-top">
@@ -688,7 +677,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-10-15　·　顶贴 <b>2026-11-04</b></span>
           <span>回复 <b>17</b>　·　阅读 <b>696</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11107798823" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11107798823" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="co.wa 宇宙流浪者 co.wa 宇宙流浪者 init（the initiative.） 血袭者刷怪宝地，百亿补贴＋全战损补 军团招新 零零 817599800">
         <div class="card-logo" style="background-image:url(&quot;logos/initiative.png&quot;)"></div>
@@ -708,7 +697,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-09-22　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>114</b>　·　阅读 <b>2,540</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11043539636" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11043539636" target="_blank" rel="noopener">查阅详情 →</a>
       </article></div></div>
   </section>
   <section class="faction" id="winter" data-faction="凛冬系" data-region="高安 零零">
@@ -717,22 +706,18 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
         <div class="code">WINTER COALITION</div>
         <h2>凛冬系</h2>
       </div>
-      <div class="fac-stats">
-        <div><b>18</b><span>招新帖</span></div>
-        <div><b>18</b><span>军团/组织</span></div>
-        <div class="wide"><b>零零 16、高安 2</b><span>区域分布</span></div>
-      </div>
+      <div class="fac-logos"><img src="logos/fraternity.png" alt="FRT（WC联盟群）" title="FRT（WC联盟群）" loading="lazy"><img src="logos/test.png" alt="TEST" title="TEST" loading="lazy"><img src="logos/northern-coalition.png" alt="NC.（Northern Coalition.）／WC" title="NC.（Northern Coalition.）／WC" loading="lazy"></div>
     </div>
     <p class="fac-desc">以 FRT／WC 联盟群为核心，含 NC.、领航员工会、星火学院与 TEST，驻地为静寂谷、血脉、维纳尔、特纳等北方 00 与兔子区。</p>
-    <div class="alliance"><div class="ag-head"><h3>FRT（WC联盟群）</h3><span class="ag-cnt">14 帖</span></div><div class="cards">
-      <article class="card" data-text="phoenix city 凤凰城 phoenix city 凤凰城 frt（wc联盟群） 高安团0税＋00团（星币税11%），双驻地、双路线 军团招新 高安 883882218">
+    <div class="alliance"><div class="ag-head"><h3>FRT（WC联盟群）</h3><span class="ag-cnt">14 条</span></div><div class="cards">
+      <article class="card" data-text="phoenix city 凤凰城 phoenix city 凤凰城 frt（wc联盟群） 高安团0税＋00团（星币税11%），双驻地、双路线 军团招新 高安 零零 883882218">
         <div class="card-logo" style="background-image:url(&quot;logos/fraternity.png&quot;)"></div>
         <div class="card-top">
           <span class="no">#4</span>
           <h4>Phoenix City 凤凰城</h4>
         </div>
         <div class="tags">
-          <span class="t rg g">高安</span>
+          <span class="t rg g">高安</span><span class="t rg o">零零</span>
           <span class="t ag">FRT（WC联盟群）</span>
           <span class="t kind">军团招新</span>
           
@@ -743,16 +728,16 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-10-21　·　顶贴 <b>2026-11-04</b></span>
           <span>回复 <b>16</b>　·　阅读 <b>500</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11123103277" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11123103277" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
-      <article class="card" data-text="北极星 北极星 frt（wc联盟群） 00驻地寂静谷，可上维纳尔刷兔子官员、下三大星域电鱼 军团招新 零零 485365820">
+      <article class="card" data-text="北极星 北极星 frt（wc联盟群） 00驻地寂静谷，可上维纳尔刷兔子官员、下三大星域电鱼 军团招新 零零 低安 485365820">
         <div class="card-logo" style="background-image:url(&quot;logos/fraternity.png&quot;)"></div>
         <div class="card-top">
           <span class="no">#24</span>
           <h4>北极星</h4>
         </div>
         <div class="tags">
-          <span class="t rg o">零零</span>
+          <span class="t rg o">零零</span><span class="t rg y">低安</span>
           <span class="t ag">FRT（WC联盟群）</span>
           <span class="t kind">军团招新</span>
           
@@ -763,16 +748,16 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2025-09-23　·　顶贴 <b>2026-10-06</b></span>
           <span>回复 <b>259</b>　·　阅读 <b>4,107</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10065058374" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10065058374" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
-      <article class="card" data-text="northern crusades 北方十字军 北方十字军 northern crusades frt（wc联盟群） 新人向，可选低安卫队／莫得团任务／00生产三条路线 军团招新 零零 770214526">
+      <article class="card" data-text="northern crusades 北方十字军 北方十字军 northern crusades frt（wc联盟群） 新人向，可选低安卫队／莫得团任务／00生产三条路线 军团招新 零零 低安 770214526">
         <div class="card-logo" style="background-image:url(&quot;logos/fraternity.png&quot;)"></div>
         <div class="card-top">
           <span class="no">#31</span>
           <h4>Northern Crusades 北方十字军</h4>
         </div>
         <div class="tags">
-          <span class="t rg o">零零</span>
+          <span class="t rg o">零零</span><span class="t rg y">低安</span>
           <span class="t ag">FRT（WC联盟群）</span>
           <span class="t kind">军团招新</span>
           
@@ -783,7 +768,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-10-29　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>19</b>　·　阅读 <b>297</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11147505195" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11147505195" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="yeluo-xinghai 叶落星海 叶落星海 yeluo-xinghai frt（wc联盟群） 维纳尔海盗区完全控场，七周年招新 军团招新 零零 773032626">
         <div class="card-logo" style="background-image:url(&quot;logos/fraternity.png&quot;)"></div>
@@ -803,16 +788,16 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-10-18　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>23</b>　·　阅读 <b>485</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11115773544" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11115773544" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
-      <article class="card" data-text="cacx 混沌仲裁者 cacx 混沌仲裁者 frt（wc联盟群） 自称全eve最大华人军团，月活1500+ 军团招新 零零 1007805049">
+      <article class="card" data-text="cacx 混沌仲裁者 cacx 混沌仲裁者 frt（wc联盟群） 自称全eve最大华人军团，月活1500+ 军团招新 零零 低安 1007805049">
         <div class="card-logo" style="background-image:url(&quot;logos/fraternity.png&quot;)"></div>
         <div class="card-top">
           <span class="no">#37</span>
           <h4>CACX 混沌仲裁者</h4>
         </div>
         <div class="tags">
-          <span class="t rg o">零零</span>
+          <span class="t rg o">零零</span><span class="t rg y">低安</span>
           <span class="t ag">FRT（WC联盟群）</span>
           <span class="t kind">军团招新</span>
           
@@ -823,7 +808,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-10-17　·　顶贴 <b>2026-11-04</b></span>
           <span>回复 <b>20</b>　·　阅读 <b>1,150</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11113011968" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11113011968" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="aoc aoc frt（wc联盟群） 血脉主权团，静寂谷/血脉旗舰信标炸鱼＋五级任务 军团招新 零零 757065609">
         <div class="card-logo" style="background-image:url(&quot;logos/fraternity.png&quot;)"></div>
@@ -843,7 +828,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-10-06　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>184</b>　·　阅读 <b>1,922</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11081560219" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11081560219" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="红领鲸 红领鲸 frt（wc联盟群） 斐德天蛇地，隔跳兔子地，军团合同400+ 军团招新 零零 591517924">
         <div class="card-logo" style="background-image:url(&quot;logos/fraternity.png&quot;)"></div>
@@ -863,7 +848,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-09-22　·　顶贴 <b>2026-11-04</b></span>
           <span>回复 <b>20</b>　·　阅读 <b>806</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11042691052" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11042691052" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="d.n.e 新伊甸龙裔 d.n.e 新伊甸龙裔 frt（wc联盟群） frt旗下主权小军团，主力驻北方00 军团招新 零零 323693762">
         <div class="card-logo" style="background-image:url(&quot;logos/fraternity.png&quot;)"></div>
@@ -883,7 +868,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-08-21　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>48</b>　·　阅读 <b>1,293</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10962113645" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10962113645" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="伏羲 伏羲 frt（wc联盟群） 十三年老团，两座星城，斐德pve/pvp 军团招新 零零 101420721">
         <div class="card-logo" style="background-image:url(&quot;logos/fraternity.png&quot;)"></div>
@@ -903,7 +888,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-06-25　·　顶贴 <b>2026-11-04</b></span>
           <span>回复 <b>54</b>　·　阅读 <b>2,072</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10819025596" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10819025596" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="navigators&#x27; union 领航员工会 领航员工会 navigators&#x27; union frt（wc联盟群） 凛冬华人社区“养老院”，高安萌新团星火学院 军团招新 零零 1085979219">
         <div class="card-logo" style="background-image:url(&quot;logos/fraternity.png&quot;)"></div>
@@ -923,7 +908,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-05-17　·　顶贴 <b>2026-11-04</b></span>
           <span>回复 <b>52</b>　·　阅读 <b>2,734</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10721780885" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10721780885" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="my little pony. 小马 小马 my little pony. frt（wc联盟群） 寂静谷 azbr，炸鱼队＋制造＋挖冰 军团招新 零零 958184975">
         <div class="card-logo" style="background-image:url(&quot;logos/fraternity.png&quot;)"></div>
@@ -943,7 +928,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-05-12　·　顶贴 <b>2026-11-04</b></span>
           <span>回复 <b>37</b>　·　阅读 <b>1,619</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10710137374" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10710137374" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="吃瓜军团 吃瓜军团 frt（wc联盟群） 静寂谷/特纳兔子区，收割队活跃，新手团在高安 军团招新 零零 见原帖">
         <div class="card-logo" style="background-image:url(&quot;logos/fraternity.png&quot;)"></div>
@@ -963,7 +948,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-11-04　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>3</b>　·　阅读 <b>185</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11166176350" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11166176350" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="sg.cn 星尘守护 星尘守护（sg.cn） frt（wc联盟群） frt旗下常驻00区，c5海军卫队，1e启动金＋100%补损、dkp体系 军团招新 零零 454029157">
         <div class="card-logo" style="background-image:url(&quot;logos/fraternity.png&quot;)"></div>
@@ -983,7 +968,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2025-11-08　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>37</b>　·　阅读 <b>—</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10195348771" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10195348771" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="雪月城 雪月城 frt（wc联盟群） frt旗下老牌综合团，制造/pvp/pve/挖矿/任务/超网全面发展 军团招新 零零 205391865">
         <div class="card-logo" style="background-image:url(&quot;logos/fraternity.png&quot;)"></div>
@@ -1003,8 +988,8 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2022-05-09　·　顶贴 <b>2026-07-03</b></span>
           <span>回复 <b>403</b>　·　阅读 <b>—</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/7827083032" target="_blank" rel="noopener">查看原帖 →</a>
-      </article></div></div><div class="alliance"><div class="ag-head"><h3>TEST</h3><span class="ag-cnt">2 帖</span></div><div class="cards">
+        <a class="link" href="https://tieba.baidu.com/p/7827083032" target="_blank" rel="noopener">查阅详情 →</a>
+      </article></div></div><div class="alliance"><div class="ag-head"><h3>TEST</h3><span class="ag-cnt">2 条</span></div><div class="cards">
       <article class="card" data-text="test 华人社区 test 华人社区 test 招个人与军团加入test，pvp全场景srp 300m/km 联盟社区招新 零零 私信/游戏内联系">
         <div class="card-logo" style="background-image:url(&quot;logos/test.png&quot;)"></div>
         <div class="card-top">
@@ -1023,7 +1008,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-09-12　·　顶贴 <b>2026-11-04</b></span>
           <span>回复 <b>12</b>　·　阅读 <b>1,192</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11015990222" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11015990222" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="king for crazy king for crazy test 对舞/德克廉，养老向（原帖写作鳄鱼联盟） 军团招新 零零 1051931258">
         <div class="card-logo" style="background-image:url(&quot;logos/test.png&quot;)"></div>
@@ -1043,8 +1028,8 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-07-30　·　顶贴 <b>2026-11-04</b></span>
           <span>回复 <b>92</b>　·　阅读 <b>3,362</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10906318289" target="_blank" rel="noopener">查看原帖 →</a>
-      </article></div></div><div class="alliance"><div class="ag-head"><h3>NC.（Northern Coalition.）／WC</h3><span class="ag-cnt">1 帖</span></div><div class="cards">
+        <a class="link" href="https://tieba.baidu.com/p/10906318289" target="_blank" rel="noopener">查阅详情 →</a>
+      </article></div></div><div class="alliance"><div class="ag-head"><h3>NC.（Northern Coalition.）／WC</h3><span class="ag-cnt">1 条</span></div><div class="cards">
       <article class="card" data-text="fox 抵抗之狐 fox 抵抗之狐 nc.（northern coalition.）／wc 西血脉独享，wc联盟群nc.旗下唯一华人团 军团招新 零零 770214526">
         <div class="card-logo" style="background-image:url(&quot;logos/northern-coalition.png&quot;)"></div>
         <div class="card-top">
@@ -1063,8 +1048,8 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-09-05　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>216</b>　·　阅读 <b>2,750</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10998428085" target="_blank" rel="noopener">查看原帖 →</a>
-      </article></div></div><div class="alliance"><div class="ag-head"><h3>领航员工会／FRT</h3><span class="ag-cnt">1 帖</span></div><div class="cards">
+        <a class="link" href="https://tieba.baidu.com/p/10998428085" target="_blank" rel="noopener">查阅详情 →</a>
+      </article></div></div><div class="alliance"><div class="ag-head"><h3>领航员工会／FRT</h3><span class="ag-cnt">1 条</span></div><div class="cards">
       <article class="card" data-text="n-v-s 星火学院 星火学院 n-v-s 领航员工会／frt 高安纯萌新养老团，隶属领航员工会&amp;凛冬华人社区 军团招新 高安 1085979219">
         
         <div class="card-top">
@@ -1083,7 +1068,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-06-25　·　顶贴 <b>2026-11-04</b></span>
           <span>回复 <b>41</b>　·　阅读 <b>1,589</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10820722417" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10820722417" target="_blank" rel="noopener">查阅详情 →</a>
       </article></div></div>
   </section>
   <section class="faction" id="wings" data-faction="创世系" data-region="零零">
@@ -1092,14 +1077,10 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
         <div class="code">WINGS FREEDOM</div>
         <h2>创世系</h2>
       </div>
-      <div class="fac-stats">
-        <div><b>2</b><span>招新帖</span></div>
-        <div><b>2</b><span>军团/组织</span></div>
-        <div class="wide"><b>零零 2</b><span>区域分布</span></div>
-      </div>
+      
     </div>
     <p class="fac-desc">自由之翼（Wings Freedom）／创世倾域一系，控制绝地部分领地，2026 年由创世倾域发展为联盟。</p>
-    <div class="alliance"><div class="ag-head"><h3>自由之翼（Wings Freedom）</h3><span class="ag-cnt">2 帖</span></div><div class="cards">
+    <div class="alliance"><div class="ag-head"><h3>自由之翼（Wings Freedom）</h3><span class="ag-cnt">2 条</span></div><div class="cards">
       <article class="card" data-text="euphoria euphoria 自由之翼（wings freedom） 绝地wf领地，四级燃烧任务点＋血袭者 军团招新 零零 172676461">
         
         <div class="card-top">
@@ -1118,7 +1099,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-10-26　·　顶贴 <b>2026-10-27</b></span>
           <span>回复 <b>12</b>　·　阅读 <b>923</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11137032901" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11137032901" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="chuangshi 创世倾域 创世倾域 chuangshi 自由之翼（wings freedom） 2017年重建，2026年发展为自由之翼联盟 军团招新 零零 1169274757">
         
@@ -1138,7 +1119,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-04-23　·　顶贴 <b>2026-11-03</b></span>
           <span>回复 <b>94</b>　·　阅读 <b>6,092</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10663097152" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10663097152" target="_blank" rel="noopener">查阅详情 →</a>
       </article></div></div>
   </section>
   <section class="faction" id="drone" data-faction="无人机区势力" data-region="零零">
@@ -1147,14 +1128,10 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
         <div class="code">DRONE LANDS</div>
         <h2>无人机区势力</h2>
       </div>
-      <div class="fac-stats">
-        <div><b>7</b><span>招新帖</span></div>
-        <div><b>7</b><span>军团/组织</span></div>
-        <div class="wide"><b>零零 7</b><span>区域分布</span></div>
-      </div>
+      <div class="fac-logos"><img src="logos/boss.png" alt="BOSS" title="BOSS" loading="lazy"></div>
     </div>
     <p class="fac-desc">BOSS、RMC／天宫系等俄系与华系混编联盟，活动于无人机区（卡勒瓦拉等），以独立小团和社区为主。</p>
-    <div class="alliance"><div class="ag-head"><h3>BOSS</h3><span class="ag-cnt">3 帖</span></div><div class="cards">
+    <div class="alliance"><div class="ag-head"><h3>BOSS</h3><span class="ag-cnt">3 条</span></div><div class="cards">
       <article class="card" data-text="夕阳红 夕阳红 boss boss旗下养老团，佩利根弗星域 军团招新 零零 1029048523">
         <div class="card-logo" style="background-image:url(&quot;logos/boss.png&quot;)"></div>
         <div class="card-top">
@@ -1173,7 +1150,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-10-26　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>18</b>　·　阅读 <b>715</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11139549292" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11139549292" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="void kraken corps void kraken corps boss 无人机区战报集中帖兼vkc军团招新 军团招新 零零 见原帖图片">
         <div class="card-logo" style="background-image:url(&quot;logos/boss.png&quot;)"></div>
@@ -1193,7 +1170,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-09-05　·　顶贴 <b>2026-10-12</b></span>
           <span>回复 <b>4</b>　·　阅读 <b>824</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10998638677" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10998638677" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="boss 华人军团 boss华人军团 boss boss联盟旗下主力华人团，驻扎无人机区 军团招新 零零 546338716">
         <div class="card-logo" style="background-image:url(&quot;logos/boss.png&quot;)"></div>
@@ -1213,8 +1190,8 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-07-12　·　顶贴 <b>2026-10-29</b></span>
           <span>回复 <b>42</b>　·　阅读 <b>2,477</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10862727310" target="_blank" rel="noopener">查看原帖 →</a>
-      </article></div></div><div class="alliance"><div class="ag-head"><h3>RMC 联盟群（俄系）</h3><span class="ag-cnt">2 帖</span></div><div class="cards">
+        <a class="link" href="https://tieba.baidu.com/p/10862727310" target="_blank" rel="noopener">查阅详情 →</a>
+      </article></div></div><div class="alliance"><div class="ag-head"><h3>RMC 联盟群（俄系）</h3><span class="ag-cnt">2 条</span></div><div class="cards">
       <article class="card" data-text="无人机区华人军团 无人机区华人军团 rmc 联盟群（俄系） 作战区域在毛子联盟及周边，教官带新 军团招新 零零 2153464071">
         
         <div class="card-top">
@@ -1233,7 +1210,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-09-13　·　顶贴 <b>2026-10-21</b></span>
           <span>回复 <b>18</b>　·　阅读 <b>1,031</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11020310897" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11020310897" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="战斗姐妹修道院 战斗姐妹修道院 rmc 联盟群（俄系） 新八半壁江山，联盟内唯一华人团 军团招新 零零 939895951">
         
@@ -1253,8 +1230,8 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-05-09　·　顶贴 <b>2026-09-11</b></span>
           <span>回复 <b>87</b>　·　阅读 <b>5,778</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10701399796" target="_blank" rel="noopener">查看原帖 →</a>
-      </article></div></div><div class="alliance"><div class="ag-head"><h3>独立团（无联盟）</h3><span class="ag-cnt">2 帖</span></div><div class="cards">
+        <a class="link" href="https://tieba.baidu.com/p/10701399796" target="_blank" rel="noopener">查阅详情 →</a>
+      </article></div></div><div class="alliance"><div class="ag-head"><h3>独立团（无联盟）</h3><span class="ag-cnt">2 条</span></div><div class="cards">
       <article class="card" data-text="the second wind the second wind 无（无人机区独立） 无人机区新独立团，已取得2个星系主权 军团招新 零零 1042667906">
         
         <div class="card-top">
@@ -1273,7 +1250,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-11-03　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>16</b>　·　阅读 <b>379</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11162468846" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11162468846" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="mass ascension 中文社区 mass ascension 中文社区 无（无人机区） 无人机区卡勒瓦拉阔地，人就要、不用esi、无出勤 联盟社区招新 零零 私信/游戏内联系">
         
@@ -1293,7 +1270,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-09-12　·　顶贴 <b>2026-10-04</b></span>
           <span>回复 <b>10</b>　·　阅读 <b>705</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11016015293" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11016015293" target="_blank" rel="noopener">查阅详情 →</a>
       </article></div></div>
   </section>
   <section class="faction" id="indie" data-faction="独立联盟" data-region="低安 零零">
@@ -1302,14 +1279,10 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
         <div class="code">INDEPENDENT</div>
         <h2>独立联盟</h2>
       </div>
-      <div class="fac-stats">
-        <div><b>5</b><span>招新帖</span></div>
-        <div><b>5</b><span>军团/组织</span></div>
-        <div class="wide"><b>零零 4、低安 1</b><span>区域分布</span></div>
-      </div>
+      <div class="fac-logos"><img src="logos/insidious.png" alt="Insidious（蓝蛇）" title="Insidious（蓝蛇）" loading="lazy"><img src="logos/shadow-cartel.png" alt="SC（Shadow Cartel）" title="SC（Shadow Cartel）" loading="lazy"><img src="logos/womp.png" alt="WOMP" title="WOMP" loading="lazy"></div>
     </div>
     <p class="fac-desc">不属三大华人集团，如 WOMP、Insidious（俗称蓝蛇）、SC（Shadow Cartel）等。</p>
-    <div class="alliance"><div class="ag-head"><h3>Insidious（蓝蛇）</h3><span class="ag-cnt">3 帖</span></div><div class="cards">
+    <div class="alliance"><div class="ag-head"><h3>Insidious（蓝蛇）</h3><span class="ag-cnt">3 条</span></div><div class="cards">
       <article class="card" data-text="蓝蛇旗下华人军团 蓝蛇旗下华人军团 insidious（蓝蛇） 绝地蓝蛇，微小型团，集中炸鱼 军团招新 零零 1081176916">
         <div class="card-logo" style="background-image:url(&quot;logos/insidious.png&quot;)"></div>
         <div class="card-top">
@@ -1328,7 +1301,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-10-30　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>20</b>　·　阅读 <b>302</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11151986841" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11151986841" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="profane proverb profane proverb insidious（蓝蛇） 西北绝地4星座主权，联盟战略级指挥坐镇 军团招新 零零 1067341386">
         <div class="card-logo" style="background-image:url(&quot;logos/insidious.png&quot;)"></div>
@@ -1348,7 +1321,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-09-10　·　顶贴 <b>2026-11-04</b></span>
           <span>回复 <b>105</b>　·　阅读 <b>3,035</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11012494512" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11012494512" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="evil evil insidious（蓝蛇） 西北绝地一星座主权，招募公司或个人 军团招新 零零 见原帖">
         <div class="card-logo" style="background-image:url(&quot;logos/insidious.png&quot;)"></div>
@@ -1368,8 +1341,8 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-08-12　·　顶贴 <b>2026-11-04</b></span>
           <span>回复 <b>116</b>　·　阅读 <b>3,443</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10937647469" target="_blank" rel="noopener">查看原帖 →</a>
-      </article></div></div><div class="alliance"><div class="ag-head"><h3>SC（Shadow Cartel）</h3><span class="ag-cnt">1 帖</span></div><div class="cards">
+        <a class="link" href="https://tieba.baidu.com/p/10937647469" target="_blank" rel="noopener">查阅详情 →</a>
+      </article></div></div><div class="alliance"><div class="ag-head"><h3>SC（Shadow Cartel）</h3><span class="ag-cnt">1 条</span></div><div class="cards">
       <article class="card" data-text="silent sojourner silent sojourner sc（shadow cartel） 低安土著团，4级燃烧合作社＋全服高效5级任务点 军团招新 低安 1394563424">
         <div class="card-logo" style="background-image:url(&quot;logos/shadow-cartel.png&quot;)"></div>
         <div class="card-top">
@@ -1388,8 +1361,8 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-05-11　·　顶贴 <b>2026-10-26</b></span>
           <span>回复 <b>58</b>　·　阅读 <b>4,737</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10707662286" target="_blank" rel="noopener">查看原帖 →</a>
-      </article></div></div><div class="alliance"><div class="ag-head"><h3>WOMP</h3><span class="ag-cnt">1 帖</span></div><div class="cards">
+        <a class="link" href="https://tieba.baidu.com/p/10707662286" target="_blank" rel="noopener">查阅详情 →</a>
+      </article></div></div><div class="alliance"><div class="ag-head"><h3>WOMP</h3><span class="ag-cnt">1 条</span></div><div class="cards">
       <article class="card" data-text="d.ds 死亡先锋 d.ds 死亡先锋 womp 逑瑞斯主权，womp旗下唯一华人军团 军团招新 零零 1057805312">
         <div class="card-logo" style="background-image:url(&quot;logos/womp.png&quot;)"></div>
         <div class="card-top">
@@ -1408,7 +1381,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-11-01　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>11</b>　·　阅读 <b>316</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11157533027" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11157533027" target="_blank" rel="noopener">查阅详情 →</a>
       </article></div></div>
   </section>
   <section class="faction" id="highsec" data-faction="高安独立团" data-region="高安">
@@ -1417,14 +1390,10 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
         <div class="code">HIGH-SEC</div>
         <h2>高安独立团</h2>
       </div>
-      <div class="fac-stats">
-        <div><b>6</b><span>招新帖</span></div>
-        <div><b>6</b><span>军团/组织</span></div>
-        <div class="wide"><b>高安 6</b><span>区域分布</span></div>
-      </div>
+      
     </div>
     <p class="fac-desc">不依附任何 00 势力的高安团，主打 0 税、无宣战、姐妹会任务与国土行动。</p>
-    <div class="alliance"><div class="ag-head"><h3>独立团（无联盟）</h3><span class="ag-cnt">6 帖</span></div><div class="cards">
+    <div class="alliance"><div class="ag-head"><h3>独立团（无联盟）</h3><span class="ag-cnt">6 条</span></div><div class="cards">
       <article class="card" data-text="nycs 楠邑茶社 楠邑茶社 nycs 无（独立） 高安0税养老团，纯pve＋唠嗑群，无福利、无势力倾向 军团招新 高安 604108868">
         
         <div class="card-top">
@@ -1443,7 +1412,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-11-05　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>0</b>　·　阅读 <b>28</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11169293549" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11169293549" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="es.a（皇帝镰刀第二帝国高安新手团） es.a（皇帝镰刀第二帝国高安新手团） 无（独立） 零税、无宣战，驻地吉他，收新老萌新 军团招新 高安 1127665052">
         
@@ -1463,7 +1432,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-10-28　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>13</b>　·　阅读 <b>211</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11145545249" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11145545249" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="潮汐（潮汐星空/潮汐星渊） 潮汐（潮汐星空/潮汐星渊） 无（独立） 高安0税＋低安轻税双团，安帕纳克驻地，姐妹会/国土 军团招新 高安 715467309">
         
@@ -1483,7 +1452,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-09-07　·　顶贴 <b>2026-11-04</b></span>
           <span>回复 <b>96</b>　·　阅读 <b>1,796</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11004351986" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11004351986" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="end of the universe 宇宙终章 宇宙终章 end of the universe 无（独立） 加达里高安0税，承诺永不依附00势力、无宣战 军团招新 高安 189751220">
         
@@ -1503,7 +1472,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-09-03　·　顶贴 <b>2026-10-10</b></span>
           <span>回复 <b>58</b>　·　阅读 <b>40,009</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10993001514" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10993001514" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="北镇抚司 北镇抚司 无（独立） 高安姐妹会四级＋深渊＋国土一体团，进团5000万 军团招新 高安 740448726">
         
@@ -1523,7 +1492,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-07-06　·　顶贴 <b>2026-11-02</b></span>
           <span>回复 <b>33</b>　·　阅读 <b>2,037</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10846927494" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10846927494" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="homefront guild 国土公会 国土公会 homefront guild 无（独立） 纯高安团、无势力关联，成员达标后可进洞（5级洞） 军团招新 高安 kook 语音">
         
@@ -1543,7 +1512,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-06-29　·　顶贴 <b>2026-10-27</b></span>
           <span>回复 <b>9</b>　·　阅读 <b>951</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10830912459" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10830912459" target="_blank" rel="noopener">查阅详情 →</a>
       </article></div></div>
   </section>
   <section class="faction" id="lowsec" data-faction="低安独立团" data-region="低安">
@@ -1552,14 +1521,10 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
         <div class="code">LOW-SEC</div>
         <h2>低安独立团</h2>
       </div>
-      <div class="fac-stats">
-        <div><b>6</b><span>招新帖</span></div>
-        <div><b>6</b><span>军团/组织</span></div>
-        <div class="wide"><b>低安 6</b><span>区域分布</span></div>
-      </div>
+      
     </div>
     <p class="fac-desc">扎根低安的卫队／海盗团，玩法围绕绕杆子、势力战争与低安五级任务。</p>
-    <div class="alliance"><div class="ag-head"><h3>独立团（无联盟）</h3><span class="ag-cnt">6 帖</span></div><div class="cards">
+    <div class="alliance"><div class="ag-head"><h3>独立团（无联盟）</h3><span class="ag-cnt">6 条</span></div><div class="cards">
       <article class="card" data-text="海盗龙骑团 海盗龙骑团 无（艾玛卫队海盗团） 低安五级任务＋卫队绕杆，纯低安pvp/海盗 军团招新 低安 965974555">
         
         <div class="card-top">
@@ -1578,7 +1543,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-10-22　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>53</b>　·　阅读 <b>1,191</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11128106062" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11128106062" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="parev parev 无（独立） c卫队集结点欧拿蒙；低安燃烧/五级任务＋黑渊00生产 军团招新 低安 1053013034">
         
@@ -1598,7 +1563,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-10-19　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>4</b>　·　阅读 <b>283</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11119075476" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11119075476" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="cathead horde 猫猫头 cathead horde 猫猫头 无（独立） 米玛塔尔卫队区，绕杆子/海军五级（2e+/h） 军团招新 低安 926112475">
         
@@ -1618,7 +1583,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-09-22　·　顶贴 <b>2026-09-24</b></span>
           <span>回复 <b>8</b>　·　阅读 <b>414</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11043472354" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11043472354" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="red 加勒比血腥骷髅 加勒比血腥骷髅 red 无（独立） 艾玛低安海军五级＋g族科研燃烧任务，lp回收 军团招新 低安 1036458941">
         
@@ -1638,7 +1603,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-09-10　·　顶贴 <b>2026-11-04</b></span>
           <span>回复 <b>81</b>　·　阅读 <b>1,556</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11012759067" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11012759067" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="星际大学 星际大学 无（独立） 兔子卫队势力战争，新人向，lp 1400-1600全额回收 军团招新 低安 945154409">
         
@@ -1658,7 +1623,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-09-04　·　顶贴 <b>2026-10-27</b></span>
           <span>回复 <b>13</b>　·　阅读 <b>401</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10996014486" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10996014486" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="老僧扫扫地 老僧扫扫地 无（独立） 新人绕杆补损、lp高价回收、贡献可视化的新生代团 军团招新 低安 927818711">
         
@@ -1678,7 +1643,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-09-20　·　顶贴 <b>2026-09-20</b></span>
           <span>回复 <b>2</b>　·　阅读 <b>399</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11038008301" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11038008301" target="_blank" rel="noopener">查阅详情 →</a>
       </article></div></div>
   </section>
   <section class="faction" id="wormhole" data-faction="虫洞团" data-region="虫洞">
@@ -1687,14 +1652,10 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
         <div class="code">WORMHOLE</div>
         <h2>虫洞团</h2>
       </div>
-      <div class="fac-stats">
-        <div><b>3</b><span>招新帖</span></div>
-        <div><b>3</b><span>军团/组织</span></div>
-        <div class="wide"><b>虫洞 3</b><span>区域分布</span></div>
-      </div>
+      
     </div>
     <p class="fac-desc">住在虫洞内的团体，PVP 为主、洞内生产免税，个别同时在 00 有地盘。</p>
-    <div class="alliance"><div class="ag-head"><h3>独立团（无联盟）</h3><span class="ag-cnt">3 帖</span></div><div class="cards">
+    <div class="alliance"><div class="ag-head"><h3>独立团（无联盟）</h3><span class="ag-cnt">3 条</span></div><div class="cards">
       <article class="card" data-text="443 战斗虫洞团 443 战斗虫洞团 无（独立，tspa/黑海岸系） 住443无天象洞，pvp为主pve为辅，洞内生产无税 军团招新 虫洞 1077771060">
         
         <div class="card-top">
@@ -1713,7 +1674,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-10-10　·　顶贴 <b>2026-10-28</b></span>
           <span>回复 <b>16</b>　·　阅读 <b>863</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11091214410" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11091214410" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="虫洞团（含00地盘） 虫洞团（含00地盘） 无（独立） 洞内为主，同时在00有地盘，洞内厌倦可下00 军团招新 虫洞 106196340">
         
@@ -1733,7 +1694,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-09-23　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>42</b>　·　阅读 <b>1,403</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11048240696" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11048240696" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="247虫洞 247虫洞 无（独立） 有高安口的休闲洞，挖气云/刷冬眠/种菜，费用均摊 军团招新 虫洞 769628584">
         
@@ -1753,7 +1714,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2025-12-23　·　顶贴 <b>2026-10-12</b></span>
           <span>回复 <b>41</b>　·　阅读 <b>4,518</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10329088892" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10329088892" target="_blank" rel="noopener">查阅详情 →</a>
       </article></div></div>
   </section>
   <section class="faction" id="community" data-faction="兴趣组/社区" data-region="高安 未注明">
@@ -1762,14 +1723,10 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
         <div class="code">COMMUNITY</div>
         <h2>兴趣组/社区</h2>
       </div>
-      <div class="fac-stats">
-        <div><b>3</b><span>招新帖</span></div>
-        <div><b>3</b><span>军团/组织</span></div>
-        <div class="wide"><b>高安 2、未注明 1</b><span>区域分布</span></div>
-      </div>
+      
     </div>
     <p class="fac-desc">不需要入团的兴趣组、拼车队与华人社区群，严格说不算军团编制。</p>
-    <div class="alliance"><div class="ag-head"><h3>无联盟 · 兴趣组/社区</h3><span class="ag-cnt">3 帖</span></div><div class="cards">
+    <div class="alliance"><div class="ag-head"><h3>无联盟 · 兴趣组/社区</h3><span class="ag-cnt">3 条</span></div><div class="cards">
       <article class="card" data-text="高安萨沙入侵队 高安萨沙入侵队 无（独立） 不用入团，只组队打高安萨沙入侵，无势力倾向 兴趣组招人 高安 2897423511">
         
         <div class="card-top">
@@ -1788,7 +1745,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-10-21　·　顶贴 <b>2026-10-25</b></span>
           <span>回复 <b>35</b>　·　阅读 <b>871</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11123382470" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11123382470" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="高安国土兴趣队 高安国土兴趣队 无（独立） 无需加团，专收高安散人，国土/姐妹会燃烧拼队 兴趣组招人 高安 962016263">
         
@@ -1808,7 +1765,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-10-16　·　顶贴 <b>2026-11-05</b></span>
           <span>回复 <b>2</b>　·　阅读 <b>276</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11109677936" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11109677936" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="个人1对1带新（中登） 个人1对1带新（中登） 无 不招军团成员，个人1对1针对性指导萌新 个人带新 未注明 见原帖">
         
@@ -1828,7 +1785,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-04-15　·　顶贴 <b>2026-10-14</b></span>
           <span>回复 <b>59</b>　·　阅读 <b>2,370</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10640458302" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10640458302" target="_blank" rel="noopener">查阅详情 →</a>
       </article></div></div>
   </section>
   <section class="faction" id="unknown" data-faction="未标注" data-region="零零 未注明">
@@ -1837,14 +1794,10 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
         <div class="code">UNKNOWN</div>
         <h2>未标注</h2>
       </div>
-      <div class="fac-stats">
-        <div><b>8</b><span>招新帖</span></div>
-        <div><b>8</b><span>军团/组织</span></div>
-        <div class="wide"><b>零零 4、未注明 4</b><span>区域分布</span></div>
-      </div>
+      
     </div>
     <p class="fac-desc">原帖未写明区域或联盟（新团、社区群或以图片为主的帖子）；无联盟者统一归入各势力的“独立团（无联盟）”。</p>
-    <div class="alliance"><div class="ag-head"><h3>独立团（无联盟）</h3><span class="ag-cnt">4 帖</span></div><div class="cards">
+    <div class="alliance"><div class="ag-head"><h3>独立团（无联盟）</h3><span class="ag-cnt">4 条</span></div><div class="cards">
       <article class="card" data-text="central royal force 皇家战斗部队 central royal force 皇家战斗部队 无（独立） 入驻天蛇任务区，主打天蛇代理人燃烧任务 军团招新 零零 676796163">
         
         <div class="card-top">
@@ -1863,7 +1816,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2025-11-18　·　顶贴 <b>2026-02-11</b></span>
           <span>回复 <b>12</b>　·　阅读 <b>1,812</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10224006526" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10224006526" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="solo man fleet solo man fleet 无（全服白） 全服白、0税、不语音、无出勤，只招solo pvp玩家 军团招新 未注明 1474844321">
         
@@ -1883,7 +1836,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-01-29　·　顶贴 <b>2026-10-21</b></span>
           <span>回复 <b>67</b>　·　阅读 <b>3,499</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10442138946" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10442138946" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="carouse 将进酒 将进酒 carouse 无（独立） 新建华人团，小规模收割，3e起步物资 军团招新 未注明 959925543">
         
@@ -1903,7 +1856,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-08-17　·　顶贴 <b>2026-10-03</b></span>
           <span>回复 <b>22</b>　·　阅读 <b>1,217</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10949695821" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/10949695821" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="xlep xlep 无（独立） 重发招新帖，内容以图片为主 军团招新 未注明 3119677635">
         
@@ -1923,8 +1876,8 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-09-02　·　顶贴 <b>2026-10-08</b></span>
           <span>回复 <b>15</b>　·　阅读 <b>658</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/10991397852" target="_blank" rel="noopener">查看原帖 →</a>
-      </article></div></div><div class="alliance"><div class="ag-head"><h3>联盟未标注</h3><span class="ag-cnt">4 帖</span></div><div class="cards">
+        <a class="link" href="https://tieba.baidu.com/p/10991397852" target="_blank" rel="noopener">查阅详情 →</a>
+      </article></div></div><div class="alliance"><div class="ag-head"><h3>联盟未标注</h3><span class="ag-cnt">4 条</span></div><div class="cards">
       <article class="card" data-text="超级暗月（暗月重工） 超级暗月（暗月重工） 未标注 因斯姆尔为后方；文案为战锤40k风格，未写明联盟 军团招新 零零 655860147">
         
         <div class="card-top">
@@ -1943,7 +1896,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-09-28　·　顶贴 <b>2026-11-03</b></span>
           <span>回复 <b>27</b>　·　阅读 <b>868</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11059657565" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11059657565" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="德克萨斯故土团 德克萨斯故土团 未标注 故土战列掠夺对轰，要求12开以上（信息主要在图片） 军团招新 零零 2698131371">
         
@@ -1963,7 +1916,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-09-23　·　顶贴 <b>2026-11-02</b></span>
           <span>回复 <b>31</b>　·　阅读 <b>1,540</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11045446984" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11045446984" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="天工 天工 未标注 驻扎邪恶湾流，天使怪生产，5%税率 军团招新 零零 917996999">
         
@@ -1983,7 +1936,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2026-09-08　·　顶贴 <b>2026-10-31</b></span>
           <span>回复 <b>42</b>　·　阅读 <b>1,579</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/11006302616" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/11006302616" target="_blank" rel="noopener">查阅详情 →</a>
       </article>
       <article class="card" data-text="dvh dvh 未标注 第二波招新，内容以图片为主（原帖文字极少） 军团招新 未注明 929251227">
         
@@ -2003,7 +1956,7 @@ footer{margin:80px 0 0;padding:28px;border-top:1px solid var(--line);color:var(-
           <span>首贴 2024-01-09　·　顶贴 <b>2026-10-19</b></span>
           <span>回复 <b>314</b>　·　阅读 <b>12,812</b></span>
         </div>
-        <a class="link" href="https://tieba.baidu.com/p/8852299167" target="_blank" rel="noopener">查看原帖 →</a>
+        <a class="link" href="https://tieba.baidu.com/p/8852299167" target="_blank" rel="noopener">查阅详情 →</a>
       </article></div></div>
   </section>
 </main>
