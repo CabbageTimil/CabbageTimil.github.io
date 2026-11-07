@@ -141,7 +141,9 @@ section[id]{scroll-margin-top:84px}
   background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.13);
   box-shadow:0 6px 18px -12px rgba(0,0,0,.9); transition:transform .2s, border-color .2s, box-shadow .25s}
 .logo-chip:hover{transform:translateY(-3px); border-color:rgba(79,216,255,.55); box-shadow:0 10px 26px -12px rgba(79,216,255,.7)}
-.eyebrow{display:inline-block; font:600 11px/1 var(--mono); letter-spacing:.24em; color:var(--cyan); margin-bottom:16px}
+.eyebrow{display:inline-flex; align-items:baseline; font:700 16px/1.1 var(--mono); letter-spacing:.16em; color:var(--cyan); margin-bottom:15px}
+.eb-num{color:rgba(120,224,255,.62); letter-spacing:.14em}
+.eb-name{margin-left:.45em; color:#eafaff; font-weight:800; letter-spacing:.06em; text-shadow:0 0 20px rgba(79,216,255,.35)}
 .sec-head h2{font-size:clamp(26px,3.5vw,42px); font-weight:750; letter-spacing:-.03em}
 .sec-head p{margin:16px 0 0; color:var(--muted); font-size:15px}
 .pc{display:inline}
@@ -155,6 +157,7 @@ section[id]{scroll-margin-top:84px}
 .pillar p{margin:0; font-size:13.6px; color:var(--muted); line-height:1.72}
 .quote{margin:clamp(40px,5vw,64px) 0 0; padding:28px 32px; border-left:2px solid var(--cyan); background:linear-gradient(90deg,rgba(79,216,255,.09),transparent 72%); border-radius:0 12px 12px 0}
 .quote p{margin:0; font-size:clamp(16px,1.9vw,21px); font-weight:600; letter-spacing:-.01em}
+.quote cite{display:block; margin-top:10px; font-style:normal; font:500 12px/1 var(--mono); letter-spacing:.08em; color:var(--muted2)}
 
 /* video grid */
 .vgrid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
@@ -214,10 +217,15 @@ section[id]{scroll-margin-top:84px}
 .ccard.cta{align-items:center; border-color:rgba(79,216,255,.28); background:linear-gradient(140deg,rgba(79,216,255,.10),rgba(157,123,255,.06) 60%,rgba(255,255,255,.01))}
 .ccard.cta:hover{border-color:rgba(79,216,255,.6); transform:translateY(-3px)}
 .cta-inner{padding:0 4px}
+.cta-top{display:flex; align-items:center; gap:9px; height:26px}
+.bili-mark{display:inline-flex; align-items:center; justify-content:center; width:26px; height:26px; border-radius:8px;
+  color:#9fe4ff; background:linear-gradient(180deg,rgba(79,216,255,.22),rgba(79,216,255,.08));
+  border:1px solid rgba(79,216,255,.38); box-shadow:0 0 20px -10px rgba(79,216,255,.9)}
+.bili-mark svg{display:block}
 .cta-k{font:600 9.5px/1 var(--mono); letter-spacing:.2em; color:#8fd8ee}
-.ccard.cta h3{margin:10px 0 7px; font-size:17px}
+.ccard.cta h3{margin:6px 0 5px; font-size:17px}
 .ccard.cta p{margin:0; font-size:12.8px; color:var(--muted)}
-.cta-go{display:inline-flex; align-items:center; gap:8px; margin-top:14px; font:600 12.5px/1 var(--mono); color:#bff0ff}
+.cta-go{display:inline-flex; align-items:center; gap:8px; margin-top:8px; font:600 12.5px/1 var(--mono); color:#bff0ff}
 .cta-go span{transition:transform .2s}
 .ccard.cta:hover .cta-go span{transform:translateX(3px)}
 
@@ -406,7 +414,7 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
   <section id="about" class="section">
     <div class="wrap">
       <div class="sec-head" data-reveal>
-        <span class="eyebrow">01 / 关于</span>
+        <span class="eyebrow"><span class="eb-num">01 /</span><span class="eb-name">关于</span></span>
         <h2>把欧服战场，讲给中文玩家听</h2>
         <p>EVE Online 官方合作伙伴。长期跟拍欧服大型会战，做中文社区里少有人做的那件事：<br class="pc">在战报之外，留下画面、时间线和前因后果。</p>
       </div>
@@ -434,6 +442,7 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
       </div>
       <blockquote class="quote" data-reveal>
         <p>“星海灿烂，伊甸之广，容得下每一个热爱游戏的玩家。”</p>
+        <cite>—— CabbageTimil</cite>
       </blockquote>
     </div>
   </section>
@@ -441,7 +450,7 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
   <section id="works" class="section">
     <div class="wrap">
       <div class="sec-head" data-reveal>
-        <span class="eyebrow">02 / 精选</span>
+        <span class="eyebrow"><span class="eb-num">02 /</span><span class="eb-name">精选</span></span>
         <h2>值得先看的九部</h2>
       </div>
       <div class="vgrid">
@@ -591,15 +600,14 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
   <section id="series" class="section">
     <div class="wrap">
       <div class="sec-head" data-reveal>
-        <span class="eyebrow">03 / 合集</span>
+        <span class="eyebrow"><span class="eb-num">03 /</span><span class="eb-name">合集</span></span>
         <h2>按战役与主题归档</h2>
-        <p>九个合集，从 68 部规模的联盟战史到两三部的小专题，方便按线索一次看完。</p>
       </div>
       <div class="cgrid">
       <a class="ccard" href="https://space.bilibili.com/279635057/lists/1889240?type=season" target="_blank" rel="noopener" data-reveal>
         <div class="cthumb"><img src="https://archive.biliimg.com/bfs/archive/9a22a0e81b47da70aa35ebe149f53079805cfa8a.jpg" alt="DC联盟战斗合集" referrerpolicy="no-referrer" loading="lazy" onerror="this.parentElement.classList.add('noimg')"></div>
         <div class="cinfo">
-          <div class="ctop"><span class="tag">合集</span><span class="ccount">68 部</span></div>
+          <div class="ctop"><span class="tag">合集</span><span class="ccount" data-coll-count="1889240">68 部</span></div>
           <h3>DC联盟战斗合集</h3>
           <p>从 DC 联盟时代一路存档到 WWW 世界大战，欧服华人视角的完整战役库。</p>
           <div class="cstat" data-coll="1889240"><span>总播放 <b data-c-view>21.7万</b></span><span>总评论 <b data-c-reply>2,775</b></span></div>
@@ -608,7 +616,7 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
       <a class="ccard" href="https://space.bilibili.com/279635057/lists/2029472?type=season" target="_blank" rel="noopener" data-reveal>
         <div class="cthumb"><img src="https://archive.biliimg.com/bfs/archive/72f1e4bb6647e232f4a37f046fa4fbb988939215.jpg" alt="瞎编EVE" referrerpolicy="no-referrer" loading="lazy" onerror="this.parentElement.classList.add('noimg')"></div>
         <div class="cinfo">
-          <div class="ctop"><span class="tag">合集</span><span class="ccount">12 部</span></div>
+          <div class="ctop"><span class="tag">合集</span><span class="ccount" data-coll-count="2029472">12 部</span></div>
           <h3>瞎编EVE</h3>
           <p>不严肃的新伊甸观察：局势推演、脑洞与吐槽，聊点正史之外的东西。</p>
           <div class="cstat" data-coll="2029472"><span>总播放 <b data-c-view>2.2万</b></span><span>总评论 <b data-c-reply>199</b></span></div>
@@ -617,7 +625,7 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
       <a class="ccard" href="https://space.bilibili.com/279635057/lists/1406570?type=season" target="_blank" rel="noopener" data-reveal>
         <div class="cthumb"><img src="https://archive.biliimg.com/bfs/archive/d7fef1e44ee2f17290f1cb882906fa5e9e8bdd4f.jpg" alt="DC联盟会议记录" referrerpolicy="no-referrer" loading="lazy" onerror="this.parentElement.classList.add('noimg')"></div>
         <div class="cinfo">
-          <div class="ctop"><span class="tag">合集</span><span class="ccount">9 部</span></div>
+          <div class="ctop"><span class="tag">合集</span><span class="ccount" data-coll-count="1406570">9 部</span></div>
           <h3>DC联盟会议记录</h3>
           <p>联盟会议实录，听指挥层如何讨论战略、分配舰队、决定下一场战役。</p>
           <div class="cstat" data-coll="1406570"><span>总播放 <b data-c-view>1.6万</b></span><span>总评论 <b data-c-reply>224</b></span></div>
@@ -626,7 +634,7 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
       <a class="ccard" href="https://space.bilibili.com/279635057/lists/5159711?type=season" target="_blank" rel="noopener" data-reveal>
         <div class="cthumb"><img src="https://archive.biliimg.com/bfs/archive/c8f031d2bf9fab28c9998c89c8684918e842416a.jpg" alt="EVE宇宙记者第三方会战视角" referrerpolicy="no-referrer" loading="lazy" onerror="this.parentElement.classList.add('noimg')"></div>
         <div class="cinfo">
-          <div class="ctop"><span class="tag">合集</span><span class="ccount">8 部</span></div>
+          <div class="ctop"><span class="tag">合集</span><span class="ccount" data-coll-count="5159711">8 部</span></div>
           <h3>EVE宇宙记者第三方会战视角</h3>
           <p>不在任何一方的舰队里，只把战场本身记录下来。</p>
           <div class="cstat" data-coll="5159711"><span>总播放 <b data-c-view>3.2万</b></span><span>总评论 <b data-c-reply>346</b></span></div>
@@ -635,7 +643,7 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
       <a class="ccard" href="https://space.bilibili.com/279635057/lists/1204048?type=season" target="_blank" rel="noopener" data-reveal>
         <div class="cthumb"><img src="https://archive.biliimg.com/bfs/archive/a67fafa1ac53101c8e9588ac7dedfd95d43e9c4e.jpg" alt="EVE欧服 帝国北伐" referrerpolicy="no-referrer" loading="lazy" onerror="this.parentElement.classList.add('noimg')"></div>
         <div class="cinfo">
-          <div class="ctop"><span class="tag">合集</span><span class="ccount">6 部</span></div>
+          <div class="ctop"><span class="tag">合集</span><span class="ccount" data-coll-count="1204048">6 部</span></div>
           <h3>EVE欧服 帝国北伐</h3>
           <p>帝国北上的一条战线：X47、EX6-AO、SNFV-I 与沿途的每一场结构战。</p>
           <div class="cstat" data-coll="1204048"><span>总播放 <b data-c-view>3.0万</b></span><span>总评论 <b data-c-reply>366</b></span></div>
@@ -644,7 +652,7 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
       <a class="ccard" href="https://space.bilibili.com/279635057/lists/7798827?type=season" target="_blank" rel="noopener" data-reveal>
         <div class="cthumb"><img src="https://archive.biliimg.com/bfs/archive/afdd9d14b13e1d83a74c24fed0aaa611ec89231c.jpg" alt="EVE快讯" referrerpolicy="no-referrer" loading="lazy" onerror="this.parentElement.classList.add('noimg')"></div>
         <div class="cinfo">
-          <div class="ctop"><span class="tag">合集</span><span class="ccount">5 部</span></div>
+          <div class="ctop"><span class="tag">合集</span><span class="ccount" data-coll-count="7798827">5 部</span></div>
           <h3>EVE快讯</h3>
           <p>三分钟讲清楚这几天新伊甸发生了什么——适合没时间看战报的人。</p>
           <div class="cstat" data-coll="7798827"><span>总播放 <b data-c-view>3.3万</b></span><span>总评论 <b data-c-reply>324</b></span></div>
@@ -653,16 +661,16 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
       <a class="ccard" href="https://space.bilibili.com/279635057/lists/9485398?type=season" target="_blank" rel="noopener" data-reveal>
         <div class="cthumb"><img src="https://archive.biliimg.com/bfs/archive/3b247e0ed2d0f333006de705937e30b4b524a360.jpg" alt="燃烧低安" referrerpolicy="no-referrer" loading="lazy" onerror="this.parentElement.classList.add('noimg')"></div>
         <div class="cinfo">
-          <div class="ctop"><span class="tag">合集</span><span class="ccount">2 部</span></div>
+          <div class="ctop"><span class="tag">合集</span><span class="ccount" data-coll-count="9485398">3 部</span></div>
           <h3>燃烧低安</h3>
           <p>低安势力版图重划，小航队、联合围剿与低安战争的连锁反应。</p>
-          <div class="cstat" data-coll="9485398"><span>总播放 <b data-c-view>4,959</b></span><span>总评论 <b data-c-reply>82</b></span></div>
+          <div class="cstat" data-coll="9485398"><span>总播放 <b data-c-view>6,776</b></span><span>总评论 <b data-c-reply>127</b></span></div>
         </div>
       </a>
       <a class="ccard" href="https://space.bilibili.com/279635057/lists/6737922?type=season" target="_blank" rel="noopener" data-reveal>
         <div class="cthumb"><img src="https://i0.hdslb.com/bfs/archive/17aca84fc31c5e580070b56015942f4603683a8f.jpg" alt="PanFam系列" referrerpolicy="no-referrer" loading="lazy" onerror="this.parentElement.classList.add('noimg')"></div>
         <div class="cinfo">
-          <div class="ctop"><span class="tag">合集</span><span class="ccount">2 部</span></div>
+          <div class="ctop"><span class="tag">合集</span><span class="ccount" data-coll-count="6737922">2 部</span></div>
           <h3>PanFam系列</h3>
           <p>PanFam 阵营的来路与当下，理解欧服权力结构绕不开的一块拼图。</p>
           <div class="cstat" data-coll="6737922"><span>总播放 <b data-c-view>2.3万</b></span><span>总评论 <b data-c-reply>263</b></span></div>
@@ -671,7 +679,7 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
       <a class="ccard" href="https://space.bilibili.com/279635057/lists/6230997?type=season" target="_blank" rel="noopener" data-reveal>
         <div class="cthumb"><img src="https://archive.biliimg.com/bfs/archive/e157a69fcb5d54b7fd4a6b9f93df9627b81cf928.jpg" alt="EVE帝国东线战场" referrerpolicy="no-referrer" loading="lazy" onerror="this.parentElement.classList.add('noimg')"></div>
         <div class="cinfo">
-          <div class="ctop"><span class="tag">合集</span><span class="ccount">2 部</span></div>
+          <div class="ctop"><span class="tag">合集</span><span class="ccount" data-coll-count="6230997">2 部</span></div>
           <h3>EVE帝国东线战场</h3>
           <p>东线战事档案，帝国与凛冬在东部星域的攻防切片。</p>
           <div class="cstat" data-coll="6230997"><span>总播放 <b data-c-view>2,448</b></span><span>总评论 <b data-c-reply>55</b></span></div>
@@ -679,7 +687,16 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
       </a>
         <a class="ccard cta" href="https://space.bilibili.com/279635057/lists" target="_blank" rel="noopener" data-reveal>
           <div class="cta-inner">
-            <span class="cta-k">BILIBILI · COLLECTIONS</span>
+            <div class="cta-top">
+              <span class="bili-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6.4 3.4 9 6.6M17.6 3.4 15 6.6"/>
+                  <rect x="2.6" y="6.6" width="18.8" height="13.3" rx="3.4"/>
+                  <path d="M8.9 11.4v2.6M15.1 11.4v2.6"/>
+                </svg>
+              </span>
+              <span class="cta-k">BILIBILI · COLLECTIONS</span>
+            </div>
             <h3>在 B 站查看全部合集</h3>
             <p>九个合集持续更新，新战役会第一时间归入对应主题。</p>
             <span class="cta-go">打开合集页 <span>→</span></span>
@@ -692,9 +709,8 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
   <section id="timeline" class="section">
     <div class="wrap">
       <div class="sec-head" data-reveal>
-        <span class="eyebrow">04 / 时间线</span>
+        <span class="eyebrow"><span class="eb-num">04 /</span><span class="eb-name">时间线</span></span>
         <h2>镜头里的新伊甸</h2>
-        <p>四年，十三个节点。频道几乎与欧服最近一轮大战争同步生长。</p>
       </div>
       <div class="tl-wrap" data-reveal>
         <div class="tl-scroll" tabindex="0" role="region" aria-label="新伊甸时间线，可上下滚动">
@@ -814,7 +830,7 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
     <div class="wrap">
       <div class="sec-head sec-head-split" data-reveal>
         <div class="sec-head-copy">
-          <span class="eyebrow">05 / 军团招募</span>
+          <span class="eyebrow"><span class="eb-num">05 /</span><span class="eb-name">军团招募</span></span>
           <h2>2026，找一支合适的军团</h2>
           <p>EVE 欧服吧 2026 招募信息汇总：<b class="count-hl">81 条在招中文势力信息</b><br>下面三条随机抽取，刷新页面或点「换一批」会换一组。</p>
         </div>
@@ -833,29 +849,29 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
         </div>
       </div>
       <div class="rgrid" id="recruitGrid" data-reveal>
-      <a class="rcard" href="https://tieba.baidu.com/p/11045446984" target="_blank" rel="noopener">
-        <div class="rtop"><span class="rno">#45</span><span class="rkind">军团招新</span></div>
-        <h3 class="rcorp">德克萨斯故土团</h3>
-        <div class="rtags"><span class="rreg o">零零</span><span class="rag">未标注</span></div>
-        <p class="rhl">故土战列掠夺对轰，要求12开以上（信息主要在图片）</p>
+      <a class="rcard" href="https://tieba.baidu.com/p/10770269343" target="_blank" rel="noopener">
+        <div class="rtop"><span class="rno">#22</span><span class="rkind">军团招新</span></div>
+        <h3 class="rcorp">KDS</h3>
+        <div class="rtags"><span class="rreg o">零零</span><span class="rag">DC 龙焰（Dracarys）</span></div>
+        <p class="rhl">驻地摄魂/贝斯，语音在线30+、日常角色100+</p>
         
-        <div class="rmeta"><span>顶贴 2026-11-02</span><span>回复 31 ↗</span></div>
+        <div class="rmeta"><span>顶贴 2026-11-04</span><span>回复 108 ↗</span></div>
       </a>
-      <a class="rcard" href="https://tieba.baidu.com/p/11048240696" target="_blank" rel="noopener">
-        <div class="rtop"><span class="rno">#19</span><span class="rkind">军团招新</span></div>
-        <h3 class="rcorp">虫洞团（含00地盘）</h3>
-        <div class="rtags"><span class="rreg b">虫洞</span></div>
-        <p class="rhl">洞内为主，同时在00有地盘，洞内厌倦可下00</p>
+      <a class="rcard" href="https://tieba.baidu.com/p/11157533027" target="_blank" rel="noopener">
+        <div class="rtop"><span class="rno">#29</span><span class="rkind">军团招新</span></div>
+        <h3 class="rcorp">D.DS 死亡先锋</h3>
+        <div class="rtags"><span class="rreg o">零零</span><span class="rag">WOMP</span></div>
+        <p class="rhl">逑瑞斯主权，WOMP旗下唯一华人军团</p>
         
-        <div class="rmeta"><span>顶贴 2026-11-05</span><span>回复 42 ↗</span></div>
+        <div class="rmeta"><span>顶贴 2026-11-05</span><span>回复 11 ↗</span></div>
       </a>
-      <a class="rcard" href="https://tieba.baidu.com/p/10819025596" target="_blank" rel="noopener">
-        <div class="rtop"><span class="rno">#62</span><span class="rkind">军团招新</span></div>
-        <h3 class="rcorp">伏羲</h3>
-        <div class="rtags"><span class="rreg o">零零</span><span class="rag">FRT（WC联盟群）</span></div>
-        <p class="rhl">十三年老团，两座星城，斐德PvE/PVP</p>
+      <a class="rcard" href="https://tieba.baidu.com/p/10707662286" target="_blank" rel="noopener">
+        <div class="rtop"><span class="rno">#16</span><span class="rkind">军团招新</span></div>
+        <h3 class="rcorp">Silent Sojourner</h3>
+        <div class="rtags"><span class="rreg y">低安</span><span class="rag">SC（Shadow Cartel）</span></div>
+        <p class="rhl">低安土著团，4级燃烧合作社＋全服高效5级任务点</p>
         
-        <div class="rmeta"><span>顶贴 2026-11-04</span><span>回复 54 ↗</span></div>
+        <div class="rmeta"><span>顶贴 2026-10-26</span><span>回复 58 ↗</span></div>
       </a>
       </div>
       <div class="rfoot" data-reveal>
@@ -879,7 +895,6 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
     <span>EVE Online is a trademark of CCP hf.</span>
   </div>
 </footer>
-<script type="application/json" id="coll-data">{"1889240":["BV12rnnzqE7h","BV1Gv411c7pf","BV1wi421v7yM","BV1JSefe5ENm","BV1pFv9eKEFX","BV1ozmZYEE7n","BV16WPoetEgZ","BV1dt9VYzEBH","BV1ieXRYXEp8","BV1APRsYSEqS","BV12GRYYLEyR","BV1DuQDY8EZX","BV1baXyY5Epy","BV1oSodYKEZV","BV1GqL5zEEMP","BV1Y9Lmz1ERZ","BV1cc5uzyEJL","BV1PsVQzNE57","BV17kjMzyEke","BV1p3T4zLEeV","BV1184y1U7Qa","BV1SgjSz2EdJ","BV1h6j3zkEiq","BV1ZkjMzCESg","BV1hm421N76C","BV1yk4y1X7QL","BV1RN4y1B7oi","BV1uc4111754","BV1YC4y1S7c8","BV1sj41157wR","BV1sv411c7ng","BV1eu4y1a7nN","BV12N4y1S7ae","BV1pVMAzSEDP","BV1VFKPzhE8P","BV18S8nzvEqJ","BV1QLtZzvEpn","BV1xeYBzJEvB","BV1GaW8zjELG","BV1hT1gBtEBx","BV1isyDB5Eu1","BV1tNkQBFEn1","BV1ARC2B5EWX","BV1TjmoBREZH","BV1AfqCBpEEP","BV1PrBEBQENt","BV1xLizBGEhz","BV1mC6UBUEab","BV1s7kHBzEpR","BV1Ja63BaEpE","BV1AcFRz3EyK","BV1LvZTBRE3f","BV12EN3zqEFz","BV1Y4QDBtEys","BV1hgX2B2Ede","BV1CQDvBwEBN","BV1ACDJBpEGA","BV19BQVBsE1z","BV1V3dWBbEA1","BV1u8dDBcEPm","BV1htofBtEBp","BV1wJ92BvEhb","BV1tVT96UE7a","BV1koNA6bEoY","BV1DBN26hEkA","BV12JKB6vEwR","BV1tppp6KEKb","BV1st4P69EtB"],"2029472":["BV1uC4y1v7Ve","BV1194y1g7de","BV16K41147Gp","BV17C4y1i7Q8","BV1G64y1K74J","BV1A5411i7nX","BV1mw411u7vr","BV1TnjMzfE1C","BV1U78wzCEWM","BV1ztbWzpE1W","BV16zx1zCEX8","BV1S7kDBwE3B"],"1406570":["BV1hs4y197hV","BV12h411g7ZV","BV1Av4y1a7VD","BV1Lg4y1F7g6","BV1pX4y187Jd","BV1EF75zhEvD","BV1WGMAznE9z","BV1erM8zLE9X","BV1wHhPzCEdb"],"5159711":["BV15PdFYiE3i","BV15A72zUERR","BV1PDgfzSEW2","BV16UrNBJE8H","BV1gx69BiERo","BV1vru165Emb","BV1B3tN6EEEB","BV1sRno6sEb2"],"1204048":["BV17M411477Y","BV1Q84y1A7gH","BV1vx4y1P768","BV1eV4y1f7Ao","BV1is4y1K7ib","BV19N9EBgEUm"],"7798827":["BV1Pv9VBLEq9","BV1g195B4EE4","BV1iGDKBKEJq","BV1LfDMBkEWu","BV1sveh6JEky"],"9485398":["BV1eG4K6kES5","BV1qf4G6vEC5"],"6737922":["BV1JjCcBCE9P","BV1Bw23BCEkt"],"6230997":["BV15EhUzWEss","BV1dqhBz8EuH"]}</script>
 <script type="application/json" id="recruit-data">[{"no":"22","corp":"KDS","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"驻地摄魂/贝斯，语音在线30+、日常角色100+","qq":"","last":"2026-11-04","replies":"108","url":"https://tieba.baidu.com/p/10770269343"},{"no":"23","corp":"BOP","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"DC旗下00军团，2026年新一轮招新","qq":"","last":"2026-11-04","replies":"103","url":"https://tieba.baidu.com/p/10761763917"},{"no":"27","corp":"黄泉八号","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"DC旗下00/任务区，全时区开放招新","qq":"","last":"2026-11-04","replies":"4","url":"https://tieba.baidu.com/p/11163401988"},{"no":"28","corp":"YSS","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"DC旗下YSS军团全新升级招募，每晚19-22点固定集结","qq":"","last":"2026-11-05","replies":"12","url":"https://tieba.baidu.com/p/11161858027"},{"no":"34","corp":"Tu Zi Fei 兔飞","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"驻地摄魂/埃索/贝斯/非塔，萨沙天使血袭者怪","qq":"","last":"2026-11-05","replies":"24","url":"https://tieba.baidu.com/p/11138035169"},{"no":"39","corp":"狂野军团","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"面向回归玩家/国服移民/手游移民，50+活人中型团","qq":"","last":"2026-11-05","replies":"44","url":"https://tieba.baidu.com/p/11104655440"},{"no":"40","corp":"隐星军团","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"2018年老团，大量国服移民，PAP奖励","qq":"","last":"2026-11-04","replies":"26","url":"https://tieba.baidu.com/p/11098788213"},{"no":"43","corp":"Dusk","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"揽魂/绝地/贝斯，9%税，工业体系完整","qq":"","last":"2026-11-03","replies":"18","url":"https://tieba.baidu.com/p/11077094102"},{"no":"59","corp":"Gua Ferocious","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"Paragon Soul、Esoteria星域，KOOK＋QQ群","qq":"","last":"2026-10-30","replies":"34","url":"https://tieba.baidu.com/p/10900959863"},{"no":"61","corp":"-120-","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"帝国DC旗下军团，贝斯旗舰","qq":"","last":"2026-10-31","replies":"32","url":"https://tieba.baidu.com/p/10846209351"},{"no":"66","corp":"Jagdgeschwader 52","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"老牌精英PVP团重组，人均多开","qq":"","last":"2026-11-05","replies":"162","url":"https://tieba.baidu.com/p/10707683921"},{"no":"69","corp":"Night Garden 花园宝宝","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"10+活跃小微团，8%税，每晚有队、单浪也补","qq":"","last":"2026-10-19","replies":"67","url":"https://tieba.baidu.com/p/10627845229"},{"no":"71","corp":"J.Y.W 南镇抚司","region":"零零","alliance":"DC 龙焰（Dracarys）","kind":"军团招新","hl":"埃索/摄魂全境运输，萨沙坟区","qq":"","last":"2026-10-29","replies":"123","url":"https://tieba.baidu.com/p/9842657230"},{"no":"26","corp":"Dangerous technical cooperatives DTC","region":"零零","alliance":"IGC","kind":"军团招新","hl":"非典型00主权团，5亿启动资金，4亿/KM无限补损","qq":"","last":"2026-11-05","replies":"5","url":"https://tieba.baidu.com/p/11163587017"},{"no":"41","corp":"Sparrow In Cage 笼中雀","region":"零零","alliance":"IGC","kind":"军团招新","hl":"埃索/非塔/摄魂三区刷怪，10人左右休闲团","qq":"","last":"2026-10-28","replies":"25","url":"https://tieba.baidu.com/p/11088096593"},{"no":"57","corp":"Watch Eagle 守望之鹰","region":"零零","alliance":"IGC","kind":"军团招新","hl":"10% ISK税/2.5% LP税，具备隐投能力","qq":"","last":"2026-10-28","replies":"31","url":"https://tieba.baidu.com/p/10923319237"},{"no":"63","corp":"bicn","region":"零零","alliance":"IGC","kind":"军团招新","hl":"阶梯式入团奖励（1-6个月），最高享100亿补贴","qq":"","last":"2026-10-30","replies":"56","url":"https://tieba.baidu.com/p/10771470433"},{"no":"33","corp":"SNCF","region":"零零","alliance":"帝国系 · 未具名（推断）","kind":"军团招新","hl":"因斯姆尔生产，自称不听极端荣耀","qq":"","last":"2026-11-05","replies":"23","url":"https://tieba.baidu.com/p/11138896036"},{"no":"73","corp":"knight of zero ultra","region":"零零","alliance":"帝国系 · 未具名（推断）","kind":"军团招新","hl":"伊梅瑟亚00腹地＋M卫队低安，12.5%税、全补损","qq":"","last":"2026-09-23","replies":"94","url":"https://tieba.baidu.com/p/10946385886"},{"no":"76","corp":"kzu","region":"未注明","alliance":"帝国系 · 未具名（推断）","kind":"军团招新","hl":"信息极少，借PLA成员流失招人（原帖仅一句话）","qq":"","last":"2026-11-01","replies":"5","url":"https://tieba.baidu.com/p/11150289154"},{"no":"21","corp":"特格拉","region":"零零","alliance":"蜜蜂 Goonswarm（Imperium）","kind":"军团招新","hl":"帝国系蜜蜂华人团，驻地距蜜蜂首都C-J6仅5跳，打标安全","qq":"","last":"2026-10-23","replies":"63","url":"https://tieba.baidu.com/p/10776949874"},{"no":"38","corp":"ES 帝国之镰","region":"零零","alliance":"INIT（The Initiative.）","kind":"军团招新","hl":"首都C-N4OD，源泉天蛇＋绝地血袭","qq":"","last":"2026-11-04","replies":"17","url":"https://tieba.baidu.com/p/11107798823"},{"no":"46","corp":"Co.Wa 宇宙流浪者","region":"零零","alliance":"INIT（The Initiative.）","kind":"军团招新","hl":"血袭者刷怪宝地，百亿补贴＋全战损补","qq":"","last":"2026-11-05","replies":"114","url":"https://tieba.baidu.com/p/11043539636"},{"no":"4","corp":"Phoenix City 凤凰城","region":"高安","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"高安团0税＋00团（星币税11%），双驻地、双路线","qq":"","last":"2026-11-04","replies":"16","url":"https://tieba.baidu.com/p/11123103277"},{"no":"24","corp":"北极星","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"00驻地寂静谷，可上维纳尔刷兔子官员、下三大星域电鱼","qq":"","last":"2026-10-06","replies":"259","url":"https://tieba.baidu.com/p/10065058374"},{"no":"31","corp":"Northern Crusades 北方十字军","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"新人向，可选低安卫队／莫得团任务／00生产三条路线","qq":"","last":"2026-11-05","replies":"19","url":"https://tieba.baidu.com/p/11147505195"},{"no":"36","corp":"YeLuo-xingHai 叶落星海","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"维纳尔海盗区完全控场，七周年招新","qq":"","last":"2026-11-05","replies":"23","url":"https://tieba.baidu.com/p/11115773544"},{"no":"37","corp":"CACX 混沌仲裁者","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"自称全EVE最大华人军团，月活1500+","qq":"","last":"2026-11-04","replies":"20","url":"https://tieba.baidu.com/p/11113011968"},{"no":"42","corp":"AOC","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"血脉主权团，静寂谷/血脉旗舰信标炸鱼＋五级任务","qq":"","last":"2026-11-05","replies":"184","url":"https://tieba.baidu.com/p/11081560219"},{"no":"47","corp":"红领鲸","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"斐德天蛇地，隔跳兔子地，军团合同400+","qq":"","last":"2026-11-04","replies":"20","url":"https://tieba.baidu.com/p/11042691052"},{"no":"55","corp":"D.N.E 新伊甸龙裔","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"FRT旗下主权小军团，主力驻北方00","qq":"","last":"2026-11-05","replies":"48","url":"https://tieba.baidu.com/p/10962113645"},{"no":"62","corp":"伏羲","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"十三年老团，两座星城，斐德PvE/PVP","qq":"","last":"2026-11-04","replies":"54","url":"https://tieba.baidu.com/p/10819025596"},{"no":"64","corp":"Navigators' Union 领航员工会","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"凛冬华人社区“养老院”，高安萌新团星火学院","qq":"","last":"2026-11-04","replies":"52","url":"https://tieba.baidu.com/p/10721780885"},{"no":"65","corp":"My Little Pony. 小马","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"寂静谷 azbr，炸鱼队＋制造＋挖冰","qq":"","last":"2026-11-04","replies":"37","url":"https://tieba.baidu.com/p/10710137374"},{"no":"72","corp":"吃瓜军团","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"静寂谷/特纳兔子区，收割队活跃，新手团在高安","qq":"","last":"2026-11-05","replies":"3","url":"https://tieba.baidu.com/p/11166176350"},{"no":"74","corp":"SG.CN 星尘守护","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"FRT旗下常驻00区，C5海军卫队，1E启动金＋100%补损、DKP体系","qq":"","last":"2026-11-05","replies":"37","url":"https://tieba.baidu.com/p/10195348771"},{"no":"75","corp":"雪月城","region":"零零","alliance":"FRT（WC联盟群）","kind":"军团招新","hl":"FRT旗下老牌综合团，制造/PVP/PVE/挖矿/任务/超网全面发展","qq":"","last":"2026-07-03","replies":"403","url":"https://tieba.baidu.com/p/7827083032"},{"no":"50","corp":"Test 华人社区","region":"零零","alliance":"TEST","kind":"联盟社区招新","hl":"招个人与军团加入TEST，PVP全场景SRP 300M/km","qq":"","last":"2026-11-04","replies":"12","url":"https://tieba.baidu.com/p/11015990222"},{"no":"58","corp":"king for crazy","region":"零零","alliance":"TEST","kind":"军团招新","hl":"对舞/德克廉，养老向（原帖写作鳄鱼联盟）","qq":"","last":"2026-11-04","replies":"92","url":"https://tieba.baidu.com/p/10906318289"},{"no":"54","corp":"FOX 抵抗之狐","region":"零零","alliance":"NC.（Northern Coalition.）／WC","kind":"军团招新","hl":"西血脉独享，WC联盟群NC.旗下唯一华人团","qq":"","last":"2026-11-05","replies":"216","url":"https://tieba.baidu.com/p/10998428085"},{"no":"10","corp":"N-V-S 星火学院","region":"高安","alliance":"领航员工会／FRT","kind":"军团招新","hl":"高安纯萌新养老团，隶属领航员工会&凛冬华人社区","qq":"","last":"2026-11-04","replies":"41","url":"https://tieba.baidu.com/p/10820722417"},{"no":"35","corp":"Euphoria","region":"零零","alliance":"自由之翼（Wings Freedom）","kind":"军团招新","hl":"绝地WF领地，四级燃烧任务点＋血袭者","qq":"","last":"2026-10-27","replies":"12","url":"https://tieba.baidu.com/p/11137032901"},{"no":"68","corp":"Chuangshi 创世倾域","region":"零零","alliance":"自由之翼（Wings Freedom）","kind":"军团招新","hl":"2017年重建，2026年发展为自由之翼联盟","qq":"","last":"2026-11-03","replies":"94","url":"https://tieba.baidu.com/p/10663097152"},{"no":"32","corp":"夕阳红","region":"零零","alliance":"BOSS","kind":"军团招新","hl":"Boss旗下养老团，佩利根弗星域","qq":"","last":"2026-11-05","replies":"18","url":"https://tieba.baidu.com/p/11139549292"},{"no":"53","corp":"Void Kraken Corps","region":"零零","alliance":"BOSS","kind":"军团招新","hl":"无人机区战报集中帖兼VKC军团招新","qq":"","last":"2026-10-12","replies":"4","url":"https://tieba.baidu.com/p/10998638677"},{"no":"60","corp":"BOSS 华人军团","region":"零零","alliance":"BOSS","kind":"军团招新","hl":"BOSS联盟旗下主力华人团，驻扎无人机区","qq":"","last":"2026-10-29","replies":"42","url":"https://tieba.baidu.com/p/10862727310"},{"no":"48","corp":"无人机区华人军团","region":"零零","alliance":"RMC 联盟群（俄系）","kind":"军团招新","hl":"作战区域在毛子联盟及周边，教官带新","qq":"","last":"2026-10-21","replies":"18","url":"https://tieba.baidu.com/p/11020310897"},{"no":"67","corp":"战斗姐妹修道院","region":"零零","alliance":"RMC 联盟群（俄系）","kind":"军团招新","hl":"新八半壁江山，联盟内唯一华人团","qq":"","last":"2026-09-11","replies":"87","url":"https://tieba.baidu.com/p/10701399796"},{"no":"25","corp":"The Second Wind","region":"零零","alliance":"","kind":"军团招新","hl":"无人机区新独立团，已取得2个星系主权","qq":"","last":"2026-11-05","replies":"16","url":"https://tieba.baidu.com/p/11162468846"},{"no":"49","corp":"Mass Ascension 中文社区","region":"零零","alliance":"","kind":"联盟社区招新","hl":"无人机区卡勒瓦拉阔地，人就要、不用ESI、无出勤","qq":"","last":"2026-10-04","replies":"10","url":"https://tieba.baidu.com/p/11016015293"},{"no":"30","corp":"蓝蛇旗下华人军团","region":"零零","alliance":"Insidious（蓝蛇）","kind":"军团招新","hl":"绝地蓝蛇，微小型团，集中炸鱼","qq":"","last":"2026-11-05","replies":"20","url":"https://tieba.baidu.com/p/11151986841"},{"no":"51","corp":"Profane Proverb","region":"零零","alliance":"Insidious（蓝蛇）","kind":"军团招新","hl":"西北绝地4星座主权，联盟战略级指挥坐镇","qq":"","last":"2026-11-04","replies":"105","url":"https://tieba.baidu.com/p/11012494512"},{"no":"56","corp":"EVIL","region":"零零","alliance":"Insidious（蓝蛇）","kind":"军团招新","hl":"西北绝地一星座主权，招募公司或个人","qq":"","last":"2026-11-04","replies":"116","url":"https://tieba.baidu.com/p/10937647469"},{"no":"16","corp":"Silent Sojourner","region":"低安","alliance":"SC（Shadow Cartel）","kind":"军团招新","hl":"低安土著团，4级燃烧合作社＋全服高效5级任务点","qq":"","last":"2026-10-26","replies":"58","url":"https://tieba.baidu.com/p/10707662286"},{"no":"29","corp":"D.DS 死亡先锋","region":"零零","alliance":"WOMP","kind":"军团招新","hl":"逑瑞斯主权，WOMP旗下唯一华人军团","qq":"","last":"2026-11-05","replies":"11","url":"https://tieba.baidu.com/p/11157533027"},{"no":"1","corp":"NYCS 楠邑茶社","region":"高安","alliance":"","kind":"军团招新","hl":"高安0税养老团，纯PVE＋唠嗑群，无福利、无势力倾向","qq":"","last":"2026-11-05","replies":"0","url":"https://tieba.baidu.com/p/11169293549"},{"no":"2","corp":"ES.A（皇帝镰刀第二帝国高安新手团）","region":"高安","alliance":"","kind":"军团招新","hl":"零税、无宣战，驻地吉他，收新老萌新","qq":"","last":"2026-11-05","replies":"13","url":"https://tieba.baidu.com/p/11145545249"},{"no":"6","corp":"潮汐（潮汐星空/潮汐星渊）","region":"高安","alliance":"","kind":"军团招新","hl":"高安0税＋低安轻税双团，安帕纳克驻地，姐妹会/国土","qq":"","last":"2026-11-04","replies":"96","url":"https://tieba.baidu.com/p/11004351986"},{"no":"7","corp":"END OF THE UNIVERSE 宇宙终章","region":"高安","alliance":"","kind":"军团招新","hl":"加达里高安0税，承诺永不依附00势力、无宣战","qq":"","last":"2026-10-10","replies":"58","url":"https://tieba.baidu.com/p/10993001514"},{"no":"8","corp":"北镇抚司","region":"高安","alliance":"","kind":"军团招新","hl":"高安姐妹会四级＋深渊＋国土一体团，进团5000万","qq":"","last":"2026-11-02","replies":"33","url":"https://tieba.baidu.com/p/10846927494"},{"no":"9","corp":"Homefront Guild 国土公会","region":"高安","alliance":"","kind":"军团招新","hl":"纯高安团、无势力关联，成员达标后可进洞（5级洞）","qq":"","last":"2026-10-27","replies":"9","url":"https://tieba.baidu.com/p/10830912459"},{"no":"11","corp":"海盗龙骑团","region":"低安","alliance":"","kind":"军团招新","hl":"低安五级任务＋卫队绕杆，纯低安PVP/海盗","qq":"","last":"2026-11-05","replies":"53","url":"https://tieba.baidu.com/p/11128106062"},{"no":"12","corp":"PAREV","region":"低安","alliance":"","kind":"军团招新","hl":"C卫队集结点欧拿蒙；低安燃烧/五级任务＋黑渊00生产","qq":"","last":"2026-11-05","replies":"4","url":"https://tieba.baidu.com/p/11119075476"},{"no":"13","corp":"Cathead Horde 猫猫头","region":"低安","alliance":"","kind":"军团招新","hl":"米玛塔尔卫队区，绕杆子/海军五级（2E+/h）","qq":"","last":"2026-09-24","replies":"8","url":"https://tieba.baidu.com/p/11043472354"},{"no":"14","corp":"RED 加勒比血腥骷髅","region":"低安","alliance":"","kind":"军团招新","hl":"艾玛低安海军五级＋G族科研燃烧任务，LP回收","qq":"","last":"2026-11-04","replies":"81","url":"https://tieba.baidu.com/p/11012759067"},{"no":"15","corp":"星际大学","region":"低安","alliance":"","kind":"军团招新","hl":"兔子卫队势力战争，新人向，LP 1400-1600全额回收","qq":"","last":"2026-10-27","replies":"13","url":"https://tieba.baidu.com/p/10996014486"},{"no":"17","corp":"老僧扫扫地","region":"低安","alliance":"","kind":"军团招新","hl":"新人绕杆补损、LP高价回收、贡献可视化的新生代团","qq":"","last":"2026-09-20","replies":"2","url":"https://tieba.baidu.com/p/11038008301"},{"no":"18","corp":"443 战斗虫洞团","region":"虫洞","alliance":"","kind":"军团招新","hl":"住443无天象洞，PVP为主PVE为辅，洞内生产无税","qq":"","last":"2026-10-28","replies":"16","url":"https://tieba.baidu.com/p/11091214410"},{"no":"19","corp":"虫洞团（含00地盘）","region":"虫洞","alliance":"","kind":"军团招新","hl":"洞内为主，同时在00有地盘，洞内厌倦可下00","qq":"","last":"2026-11-05","replies":"42","url":"https://tieba.baidu.com/p/11048240696"},{"no":"20","corp":"247虫洞","region":"虫洞","alliance":"","kind":"军团招新","hl":"有高安口的休闲洞，挖气云/刷冬眠/种菜，费用均摊","qq":"","last":"2026-10-12","replies":"41","url":"https://tieba.baidu.com/p/10329088892"},{"no":"3","corp":"高安萨沙入侵队","region":"高安","alliance":"","kind":"兴趣组招人","hl":"不用入团，只组队打高安萨沙入侵，无势力倾向","qq":"","last":"2026-10-25","replies":"35","url":"https://tieba.baidu.com/p/11123382470"},{"no":"5","corp":"高安国土兴趣队","region":"高安","alliance":"","kind":"兴趣组招人","hl":"无需加团，专收高安散人，国土/姐妹会燃烧拼队","qq":"","last":"2026-11-05","replies":"2","url":"https://tieba.baidu.com/p/11109677936"},{"no":"77","corp":"个人1对1带新（中登）","region":"未注明","alliance":"","kind":"个人带新","hl":"不招军团成员，个人1对1针对性指导萌新","qq":"","last":"2026-10-14","replies":"59","url":"https://tieba.baidu.com/p/10640458302"},{"no":"70","corp":"Central Royal Force 皇家战斗部队","region":"零零","alliance":"","kind":"军团招新","hl":"入驻天蛇任务区，主打天蛇代理人燃烧任务","qq":"","last":"2026-02-11","replies":"12","url":"https://tieba.baidu.com/p/10224006526"},{"no":"78","corp":"Solo man fleet","region":"未注明","alliance":"","kind":"军团招新","hl":"全服白、0税、不语音、无出勤，只招Solo PVP玩家","qq":"","last":"2026-10-21","replies":"67","url":"https://tieba.baidu.com/p/10442138946"},{"no":"80","corp":"Carouse 将进酒","region":"未注明","alliance":"","kind":"军团招新","hl":"新建华人团，小规模收割，3E起步物资","qq":"","last":"2026-10-03","replies":"22","url":"https://tieba.baidu.com/p/10949695821"},{"no":"81","corp":"xlep","region":"未注明","alliance":"","kind":"军团招新","hl":"重发招新帖，内容以图片为主","qq":"","last":"2026-10-08","replies":"15","url":"https://tieba.baidu.com/p/10991397852"},{"no":"44","corp":"超级暗月（暗月重工）","region":"零零","alliance":"未标注","kind":"军团招新","hl":"因斯姆尔为后方；文案为战锤40K风格，未写明联盟","qq":"","last":"2026-11-03","replies":"27","url":"https://tieba.baidu.com/p/11059657565"},{"no":"45","corp":"德克萨斯故土团","region":"零零","alliance":"未标注","kind":"军团招新","hl":"故土战列掠夺对轰，要求12开以上（信息主要在图片）","qq":"","last":"2026-11-02","replies":"31","url":"https://tieba.baidu.com/p/11045446984"},{"no":"52","corp":"天工","region":"零零","alliance":"未标注","kind":"军团招新","hl":"驻扎邪恶湾流，天使怪生产，5%税率","qq":"","last":"2026-10-31","replies":"42","url":"https://tieba.baidu.com/p/11006302616"},{"no":"79","corp":"DVH","region":"未注明","alliance":"未标注","kind":"军团招新","hl":"第二波招新，内容以图片为主（原帖文字极少）","qq":"","last":"2026-10-19","replies":"314","url":"https://tieba.baidu.com/p/8852299167"}]</script>
 <script>
 (function(){
@@ -1045,99 +1060,36 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0 40px}
   })();
 
 
-  /* collection totals: re-sum every video of each 合集, cached for 15 minutes */
+  /* collection totals: collections.js is regenerated by fetch_collections.py */
   (function(){
-    var raw = document.getElementById('coll-data');
-    if (!raw) return;
-    var data;
-    try { data = JSON.parse(raw.textContent || '{}'); } catch (e) { return; }
-    var sids = Object.keys(data);
-    if (!sids.length) return;
-    var KEY = 'bili_coll_totals_v1', TTL = 15 * 60 * 1000, now = Date.now();
-    var cache = {};
-    try { cache = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { cache = {}; }
-    var stats = {}, queue = [], seen = {};
-    sids.forEach(function(sid){
-      (data[sid] || []).forEach(function(bv){
-        if (seen[bv]) return;
-        seen[bv] = 1;
-        var c = cache[bv];
-        if (c && typeof c.view === 'number' && now - c.t < TTL) stats[bv] = c;
-        else queue.push(bv);
-      });
-    });
-    function full(n){ return (+n || 0).toLocaleString('en-US'); }
-    function short(n){
-      n = +n || 0;
-      if (n >= 100000000) return (n / 100000000).toFixed(1) + '亿';
-      if (n >= 10000) return (n / 10000).toFixed(1) + '万';
-      return full(n);
-    }
-    function apply(){
-      sids.forEach(function(sid){
-        var list = data[sid] || [], v = 0, r = 0;
-        for (var i = 0; i < list.length; i++) {
-          var s = stats[list[i]];
-          if (!s) return;               // wait until the whole season is known
-          v += s.view || 0; r += s.reply || 0;
-        }
-        var box = document.querySelector('[data-coll="' + sid + '"]');
-        if (!box) return;
-        var ve = box.querySelector('[data-c-view]'), re = box.querySelector('[data-c-reply]');
-        if (ve) ve.textContent = short(v);
-        if (re) re.textContent = full(r);
-      });
-    }
-    apply();
-    if (!queue.length) return;
-    var active = 0, fails = 0, MAX = 4, saved = false;
-    function save(){
-      if (saved) return;
-      saved = true;
-      try { localStorage.setItem(KEY, JSON.stringify(cache)); } catch (e) {}
-    }
-    function worker(){
-      if (!queue.length || fails >= 5) {
-        if (active === 0) { save(); apply(); }
-        return;
+    var s = document.createElement('script');
+    s.src = 'collections.js?t=' + Date.now();
+    s.onload = function(){
+      var d = window.__COLLECTIONS__;
+      if (!d || !d.seasons) return;
+      function full(n){ return (+n || 0).toLocaleString('en-US'); }
+      function short(n){
+        n = +n || 0;
+        if (n >= 100000000) return (n / 100000000).toFixed(1) + '亿';
+        if (n >= 10000) return (n / 10000).toFixed(1) + '万';
+        return full(n);
       }
-      active++;
-      var bv = queue.shift();
-      var cbName = '__bc_' + Math.floor(Math.random() * 1e7);
-      var el = document.createElement('script');
-      var finished = false;
-      function done(hit){
-        if (finished) return;
-        finished = true;
-        clearTimeout(timer);
-        try { window[cbName] = null; } catch (e) {}
-        if (el.parentNode) el.parentNode.removeChild(el);
-        active--;
-        if (hit) { fails = 0; apply(); } else { fails++; }
-        setTimeout(worker, 70);
-      }
-      var timer = setTimeout(function(){ done(false); }, 9000);
-      window[cbName] = function(d){
-        if (d && d.code === 0 && d.data && d.data.stat) {
-          stats[bv] = cache[bv] = { view: d.data.stat.view, reply: d.data.stat.reply, t: Date.now() };
-          done(true);
-        } else done(false);
-      };
-      el.onerror = function(){ done(false); };
-      el.src = 'https://api.bilibili.com/x/web-interface/view?bvid=' + bv + '&jsonp=jsonp&callback=' + cbName;
-      document.head.appendChild(el);
-    }
-    var section = document.querySelector('#series');
-    if ('IntersectionObserver' in window && section) {
-      var io = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){ if (e.isIntersecting) { io.disconnect(); for (var i = 0; i < MAX; i++) worker(); } });
-      }, { rootMargin: '600px' });
-      io.observe(section);
-    } else {
-      for (var i = 0; i < MAX; i++) worker();
-    }
+      Object.keys(d.seasons).forEach(function(sid){
+        var info = d.seasons[sid] || {};
+        var stat = document.querySelector('[data-coll="' + sid + '"]');
+        if (!stat) return;
+        var card = stat.closest('.ccard') || stat;
+        var count = card.querySelector('[data-coll-count]');
+        if (count && info.count) count.textContent = info.count + ' 部';
+        var ve = stat.querySelector('[data-c-view]');
+        var re = stat.querySelector('[data-c-reply]');
+        if (ve && typeof info.view === 'number') ve.textContent = short(info.view);
+        if (re && typeof info.reply === 'number') re.textContent = full(info.reply);
+      });
+    };
+    s.onerror = function(){};
+    document.head.appendChild(s);
   })();
-
   /* starfield */
   var cv = document.getElementById('stars');
   if (cv && !rm) {
